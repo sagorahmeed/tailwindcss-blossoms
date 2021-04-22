@@ -1,0 +1,16 @@
+{
+  "name": "tailwind-blossoms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "tailwindcss build src/tailwind.css -o public/styles.css",
+    "build-css": "tailwindcss build src/tailwind.css -o public/styles.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^2.1.1"
+  }
+}

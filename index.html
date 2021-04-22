@@ -1,0 +1,524 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="public/styles.css">
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <style>
+        .content {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.2s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid divide-y-4 divide-yellow-600 divide-dashed">
+        <div class="container mx-auto">
+            <!-- navbar start -->
+            <div class="xl:w-full xl:flex xl:items-center xl:justify-center">
+                <div class="xl:flex xl:justify-around items-center py-3 fixed block top-0 w-full xl:border-b-2 border-gray-200 z-40 bg-gray-50 xl:mb-10" id="navbar" style="transition: 0.4s;">
+                    <a href="#" class="">
+                        <img src="images/logo (1).png" alt="">
+                    </a>
+                    <div class="">
+                        <ul class="xl:flex xl:items-center xl:justify-center">
+                            <li class="xl:mx-5 uppercase font-rubic text-gray-700 text-md transition duration-400 hover:text-red-600 transition duration-400">
+                                <a href="#" class="">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="xl:mx-5 uppercase font-rubic text-gray-700 text-md transition duration-400 hover:text-red-600 transition duration-400">
+                                <a href="#" class="">
+                                    About
+                                </a>
+                            </li>
+                            <li class="xl:mx-5 uppercase font-rubic text-gray-700 text-md transition duration-400 hover:text-red-600 transition duration-400">
+                                <a href="#" class="">
+                                    Shop
+                                </a>
+                            </li>
+                            <li class="xl:mx-5 uppercase font-rubic text-gray-700 text-md transition duration-400 hover:text-red-600 transition duration-400">
+                                <a href="#" class="">
+                                    Blog
+                                </a>
+                            </li>
+                            <li class="xl:mx-5 uppercase font-rubic text-gray-700 text-md transition duration-400 hover:text-red-600 transition duration-400">
+                                <a href="#" class="">
+                                    Pages
+                                </a>
+                            </li>
+                            <li class="xl:mx-5 uppercase font-rubic text-gray-700 text-md transition duration-400 hover:text-red-600 transition duration-400">
+                                <a href="#" class="">
+                                    Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <div class="">
+                            <img class="h-6 w-6 mx-3" src="images/search.png" alt="icon">
+                        </div>
+                        <div class="overflow-hidden">
+                            <a href="#" class="overflow-hidden">
+                                <img class="h-6 w-6 mx-3" src="images/heart.png" alt="icon">
+                            </a>
+                        </div>
+                        <div class="">
+                            <a href="#" class="">
+                                <img class="h-6 w-6 mx-3" src="images/shopping-cart.png" alt="icon">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- navbar end -->
+            <div class="max-w-screen-xl mx-auto">
+                <div class="xl:flex xl:justify-between x:items-center xl:pt-48">
+                    <div class="w-80 mx-auto border px-5 py-5 h-auto">
+                           <div class="border-b-2 border-gray-200">
+                               <h1 class="pb-3 text-xl font-semibold text-gray-800">Shop By Categories</h1>
+                           </div>
+                           <div class="border-b-2 border-gray-200 py-5">
+                                <div class="relative pb-2">
+                                    <li class="collapsible w-full text-left cursor-pointer list-none hover:text-red-600 transition duration-400 text-gray-600 font-rubic">Birthday Bouquets  <i class="fas fa-angle-down absolute right-0"></i></li>
+                                    <div class="content">
+                                        <ul class="pl-3 py-3">
+                                            <li class="hover:text-red-600 transition duration-400 text-gray-500 text-md font-rubic">
+                                                <a href="#" class="font-rubic">List one</a>
+                                            </li>
+                                            <li class="hover:text-red-600 transition duration-400 text-gray-500 text-md font-rubic">
+                                                <a href="#" class="">List two</a>
+                                            </li>
+                                            <li class="hover:text-red-600 transition duration-400 text-gray-500 text-md font-rubic">
+                                                <a href="#" class="">List three</a>
+                                            </li>
+                                            <li class="hover:text-red-600 transition duration-400 text-gray-500 text-md font-rubic">
+                                                <a href="#" class="">List four</a>
+                                            </li>
+                                            <li class="hover:text-red-600 transition duration-400 text-gray-500 text-md font-rubic">
+                                                <a href="#" class="">List five</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="relative pb-2">
+                                    <li class="collapsible w-full text-left cursor-pointer list-none hover:text-red-600 transition duration-400 text-gray-600 font-rubic">Birthday Bouquets  <i class="fas fa-angle-down absolute right-0"></i></li>
+                                    <div class="content">
+                                        <ul class="pl-3 py-3">
+                                            <li class="hover:text-red-600 transition duration-400 text-gray-500 text-md font-rubic">
+                                                <a href="#" class="font-rubic">List one</a>
+                                            </li>
+                                            <li class="hover:text-red-600 transition duration-400 text-gray-500 text-md font-rubic">
+                                                <a href="#" class="">List two</a>
+                                            </li>
+                                            <li class="hover:text-red-600 transition duration-400 text-gray-500 text-md font-rubic">
+                                                <a href="#" class="">List three</a>
+                                            </li>
+                                            <li class="hover:text-red-600 transition duration-400 text-gray-500 text-md font-rubic">
+                                                <a href="#" class="">List four</a>
+                                            </li>
+                                            <li class="hover:text-red-600 transition duration-400 text-gray-500 text-md font-rubic">
+                                                <a href="#" class="">List five</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="relative pb-2">
+                                    <li class="collapsible w-full text-left cursor-pointer list-none hover:text-red-600 transition duration-400 text-gray-600 font-rubic">Birthday Bouquets  <i class="fas fa-angle-down absolute right-0"></i></li>
+                                    <div class="content">
+                                        <ul class="pl-3 py-3">
+                                            <li class="hover:text-red-600 transition duration-400 text-gray-500 text-md font-rubic">
+                                                <a href="#" class="font-rubic">List one</a>
+                                            </li>
+                                            <li class="hover:text-red-600 transition duration-400 text-gray-500 text-md font-rubic">
+                                                <a href="#" class="">List two</a>
+                                            </li>
+                                            <li class="hover:text-red-600 transition duration-400 text-gray-500 text-md font-rubic">
+                                                <a href="#" class="">List three</a>
+                                            </li>
+                                            <li class="hover:text-red-600 transition duration-400 text-gray-500 text-md font-rubic">
+                                                <a href="#" class="">List four</a>
+                                            </li>
+                                            <li class="hover:text-red-600 transition duration-400 text-gray-500 text-md font-rubic">
+                                                <a href="#" class="">List five</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <ul class="">
+                                        <li class="hover:text-red-600 transition duration-400 text-gray-500 text-md font-rubic pb-2">
+                                            <a href="#" class="">Interior Decor</a>
+                                        </li>
+                                        <li class="hover:text-red-600 transition duration-400 text-gray-500 text-md font-rubic pb-2">
+                                            <a href="#" class="">Wedding Decor</a>
+                                        </li>
+                                        <li class="hover:text-red-600 transition duration-400 text-gray-500 text-md font-rubic pb-2">
+                                            <a href="#" class="">Custom Decor</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                           </div>
+                           <div class="border-b-2 border-gray-200 py-5">
+                               <h1 class="pb-3 text-xl font-semibold text-gray-800">Price Filter</h1>
+                               <p class="m-0">Range: $100.00 - 1,300.00</p>
+                               <button class="bg-gray-900 text-white rounded px-6 py-2 text-sm font-semibold">Filter</button>
+                           </div>
+                           <div class="border-b-2 border-gray-200 py-5">
+                            <h1 class="pb-3 text-xl font-semibold text-gray-800">By Brand</h1>
+                            <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember" />
+                                <label for="userRemember">Poure</label>
+                             </div>
+                             <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember1" />
+                                <label for="userRemember1">Poure</label>
+                             </div>
+                             <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember2" />
+                                <label for="userRemember2">Poure</label>
+                             </div>
+                             <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember3" />
+                                <label for="userRemember3">Poure</label>
+                             </div>
+                             <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember4" />
+                                <label for="userRemember4">Poure</label>
+                             </div>
+                             <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember5" />
+                                <label for="userRemember5">Poure</label>
+                             </div>
+                             <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember6" />
+                                <label for="userRemember6">Poure</label>
+                             </div>
+                             <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember7" />
+                                <label for="userRemember7">Poure</label>
+                             </div>
+                             <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember8" />
+                                <label for="userRemember8">Poure</label>
+                             </div>
+                        </div>
+                        <div class="border-b-2 border-gray-200 py-5">
+                            <h1 class="pb-3 text-xl font-semibold text-gray-800">By Color</h1>
+                            <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember9" />
+                                <label for="userRemember9">Black</label>
+                             </div>
+                             <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember10" />
+                                <label for="userRemember10">Blue</label>
+                             </div>
+                             <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember11" />
+                                <label for="userRemember11">Green</label>
+                             </div>
+                             <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember12" />
+                                <label for="userRemember12">Red</label>
+                             </div>
+                             <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember13" />
+                                <label for="userRemember13">Yellow</label>
+                             </div>
+                             <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember14" />
+                                <label for="userRemember14">Pink</label>
+                             </div>
+                             <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember15" />
+                                <label for="userRemember15">White</label>
+                             </div>
+                        </div>
+                        <div class="border-b-2 border-gray-200 py-5">
+                            <h1 class="pb-3 text-xl font-semibold text-gray-800">Compare Products</h1>
+                            <p class="">You have no item to compare.</p>
+                           <div class="flex justify-between items-center pt-3">
+                               <button type="button" class="bg-transparent py-1 px-4 hover:bg-red-600 hover:text-gray-50 transition duration-400 rounded border font-semibold\">Clear all</button>
+                               <button type="button" class="bg-gray-900 text-white rounded px-6 py-1 hover:bg-red-600 transition duration-400 font-semibold">Compare <i class="fas fa-check"></i></button>
+                           </div>
+                        </div>
+                        <div class="border-b-2 border-gray-200 py-5">
+                            <h1 class="pb-3 text-xl font-semibold text-gray-800">Popular Tags</h1>
+                           <div class="flex justify-between items-center pt-3">
+                                <button type="button" class="bg-transparent border text-gray-600 rounded px-4 py-1 hover:bg-red-600 hover:text-white transition duration-400 font-normal">Bouquet</button>
+                                <button type="button" class="bg-transparent border text-gray-600 rounded px-4 py-1 hover:bg-red-600 hover:text-white transition duration-400 font-normal">Event</button>
+                                <button type="button" class="bg-transparent border text-gray-600 rounded px-4 py-1 hover:bg-red-600 hover:text-white transition duration-400 font-normal">Gift</button>
+                           </div>
+                           <div class="flex justify-between items-center pt-3">
+                                <button type="button" class="bg-transparent border text-gray-600 rounded px-4 py-1 hover:bg-red-600 hover:text-white transition duration-400 font-normal">Joy</button>
+                                <button type="button" class="bg-transparent border text-gray-600 rounded px-4 py-1 hover:bg-red-600 hover:text-white transition duration-400 font-normal">Love</button>
+                                <button type="button" class="bg-transparent border text-gray-600 rounded px-4 py-1 hover:bg-red-600 hover:text-white transition duration-400 font-normal">Speacial</button>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="max-w-4xl mx-auto">
+                        <div class="">
+                            <img class="w-full" src="images/banner-49.jpg" alt="">
+                        </div>
+                        <div class="border my-8 py-3">
+                            <div class="flex justify-around items-center">
+                                <div class="">
+                                    <i class="fa fa-th text-gray-500 text-xl cursor-pointer" id="button2"></i>
+                                    <i class="fa fa-list-ul text-gray-500 text-xl ml-2 cursor-pointer" id="button1"></i>
+                                </div>
+                                <div class="">
+                                    <p class="">Showing 1 - 20 of 30 results</p>
+                                </div>
+                                <div class="flex items-center">
+                                    <label for="cars" class="mr-3">View:</label>
+
+                                    <select class="px-12 bg-transparent border py-2 rounded" id="cars">
+                                        <option value="20" class="text-gray-600">20</option>
+                                        <option value="23">23</option>
+                                        <option value="30">30</option>
+                                    </select>
+                                </div>
+                                <div class="flex items-center">
+                                    <label for="cars" class="mr-3">Short by:</label>
+
+                                    <select id="cars" class="px-20 bg-transparent border py-2 rounded">
+                                        <option value="Default">Default</option>
+                                        <option value="Name">Name</option>
+                                        <option value="Price">Price</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="max-w-4xl mx-auto">
+                            <div class="" id="content1">
+                                <div class="flex justify-left pb-7">
+                                    <div class="">
+                                        <a href="#" class="relative">
+                                            <img class="h-auto max-w-4xl" src="images/product-1.jpg" alt="">
+                                            <span class="bg-red-500 text-white absolute px-3 py-0 rounded top-0 left-0">-30%</span>
+                                        </a>
+                                    </div>
+                                    <div class="ml-5">
+                                        <a href="#" class="text-xl text-gray-900 font-semibold">Dutchman's Breeches</a>
+                                        <p class="text-gray-500 text-sm font-semibold py-2">$100.00 <span class="text-red-500 font-semibold line-through">$1200.00</span></p>
+                                        <p class="text-md text-gray-600 pb-2">Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <div class="flex items-center justify-left">
+                                            <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mr-3 group transition duration-400">
+                                                <i class="far fa-heart text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                            </a>
+                                            <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mx-3 group transition duration-400">
+                                                <i class="fas fa-shopping-bag text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                            </a>
+                                            <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mx-3 group transition duration-400">
+                                                <i class="fas fa-search-plus text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-left pb-7">
+                                    <div class="">
+                                        <a href="#" class="relative">
+                                            <img class="h-auto max-w-4xl" src="images/product-1.jpg" alt="">
+                                            <span class="bg-red-500 text-white absolute px-3 py-0 rounded top-0 left-0">-30%</span>
+                                        </a>
+                                    </div>
+                                    <div class="ml-5">
+                                        <a href="#" class="text-xl text-gray-900 font-semibold">Dutchman's Breeches</a>
+                                        <p class="text-gray-500 text-sm font-semibold py-2">$100.00 <span class="text-red-500 font-semibold line-through">$1200.00</span></p>
+                                        <p class="text-md text-gray-600 pb-2">Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <div class="flex items-center justify-left">
+                                            <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mr-3 group transition duration-400">
+                                                <i class="far fa-heart text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                            </a>
+                                            <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mx-3 group transition duration-400">
+                                                <i class="fas fa-shopping-bag text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                            </a>
+                                            <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mx-3 group transition duration-400">
+                                                <i class="fas fa-search-plus text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-left pb-7">
+                                    <div class="">
+                                        <a href="#" class="relative">
+                                            <img class="h-auto max-w-4xl" src="images/product-1.jpg" alt="">
+                                            <span class="bg-red-500 text-white absolute px-3 py-0 rounded top-0 left-0">-30%</span>
+                                        </a>
+                                    </div>
+                                    <div class="ml-5">
+                                        <a href="#" class="text-xl text-gray-900 font-semibold">Dutchman's Breeches</a>
+                                        <p class="text-gray-500 text-sm font-semibold py-2">$100.00 <span class="text-red-500 font-semibold line-through">$1200.00</span></p>
+                                        <p class="text-md text-gray-600 pb-2">Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <div class="flex items-center justify-left">
+                                            <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mr-3 group transition duration-400">
+                                                <i class="far fa-heart text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                            </a>
+                                            <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mx-3 group transition duration-400">
+                                                <i class="fas fa-shopping-bag text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                            </a>
+                                            <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mx-3 group transition duration-400">
+                                                <i class="fas fa-search-plus text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-left pb-7">
+                                    <div class="">
+                                        <a href="#" class="relative">
+                                            <img class="h-auto max-w-4xl" src="images/product-1.jpg" alt="">
+                                            <span class="bg-red-500 text-white absolute px-3 py-0 rounded top-0 left-0">-30%</span>
+                                        </a>
+                                    </div>
+                                    <div class="ml-5">
+                                        <a href="#" class="text-xl text-gray-900 font-semibold">Dutchman's Breeches</a>
+                                        <p class="text-gray-500 text-sm font-semibold py-2">$100.00 <span class="text-red-500 font-semibold line-through">$1200.00</span></p>
+                                        <p class="text-md text-gray-600 pb-2">Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <div class="flex items-center justify-left">
+                                            <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mr-3 group transition duration-400">
+                                                <i class="far fa-heart text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                            </a>
+                                            <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mx-3 group transition duration-400">
+                                                <i class="fas fa-shopping-bag text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                            </a>
+                                            <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mx-3 group transition duration-400">
+                                                <i class="fas fa-search-plus text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex justify-left pb-7">
+                                    <div class="">
+                                        <a href="#" class="relative">
+                                            <img class="h-auto max-w-4xl" src="images/product-1.jpg" alt="">
+                                            <span class="bg-red-500 text-white absolute px-3 py-0 rounded top-0 left-0">-30%</span>
+                                        </a>
+                                    </div>
+                                    <div class="ml-5">
+                                        <a href="#" class="text-xl text-gray-900 font-semibold">Dutchman's Breeches</a>
+                                        <p class="text-gray-500 text-sm font-semibold py-2">$100.00 <span class="text-red-500 font-semibold line-through">$1200.00</span></p>
+                                        <p class="text-md text-gray-600 pb-2">Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                        <div class="flex items-center justify-left">
+                                            <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mr-3 group transition duration-400">
+                                                <i class="far fa-heart text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                            </a>
+                                            <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mx-3 group transition duration-400">
+                                                <i class="fas fa-shopping-bag text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                            </a>
+                                            <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mx-3 group transition duration-400">
+                                                <i class="fas fa-search-plus text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hidden" id="content2">
+                                <div class="flex justify-between items-center">
+                                    <div class="text-center relative">
+                                        <a href="#" class="">
+                                            <img class="h-auto max-w-4xl" src="images/product-1.jpg" alt="">
+                                            <span class="bg-red-500 text-white absolute px-3 py-0 rounded top-0 left-0">-30%</span>
+                                        </a>
+                                        <div class="pt-2">
+                                            <a href="#" class="text-md text-gray-800 hover:text-red-600">Dutchman's Breeches</a>
+                                            <p class="text-gray-500 text-sm font-semibold py-2">$100.00 <span class="text-red-500 font-semibold line-through">$1200.00</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="text-center relative">
+                                        <a href="#" class="">
+                                            <img class="h-auto max-w-4xl" src="images/product-1.jpg" alt="">
+                                            <span class="bg-red-500 text-white absolute px-3 py-0 rounded top-0 left-0">-30%</span>
+                                        </a>
+                                        <div class="pt-2">
+                                            <a href="#" class="text-md text-gray-800 hover:text-red-600">Dutchman's Breeches</a>
+                                            <p class="text-gray-500 text-sm font-semibold py-2">$100.00 <span class="text-red-500 font-semibold line-through">$1200.00</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="text-center relative">
+                                        <a href="#" class="">
+                                            <img class="h-auto max-w-4xl" src="images/product-1.jpg" alt="">
+                                            <span class="bg-red-500 text-white absolute px-3 py-0 rounded top-0 left-0">-30%</span>
+                                        </a>
+                                        <div class="pt-2">
+                                            <a href="#" class="text-md text-gray-800 hover:text-red-600">Dutchman's Breeches</a>
+                                            <p class="text-gray-500 text-sm font-semibold py-2">$100.00 <span class="text-red-500 font-semibold line-through">$1200.00</span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer start -->
+        <div class="container-fluid bg-gray-20">
+            <div class="container mx-auto">
+                <div class="max-w-screen-xl mx-auto">
+                    <div class="xl:flex xl:justify-between xl:items-center">
+                        <div class=""></div>
+                        <div class=""></div>
+                        <div class=""></div>
+                        <div class=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!-- footer start -->
+    <script type="text/javascript">
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+            content.style.maxHeight = null;
+            } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            } 
+        });
+        }
+    </script>
+    <script>
+
+var bTnOne = document.getElementById('button1');
+var btntwo = document.getElementById('button2');
+
+bTnOne.addEventListener('click', function(){
+    var x = document.getElementById('content2');
+    var y = document.getElementById('content1');
+    if(y.style.display === 'none' && x.style.display === 'none'){
+        y.style.display = 'none'
+        x.style.display = 'block'
+    }
+    else{
+        y.style.display = 'block';
+        x.style.display = 'none'
+    }
+})
+btntwo.addEventListener('click', function(){
+    var x = document.getElementById('content2');
+    var y = document.getElementById('content1');
+    if(y.style.display === 'none' && x.style.display === 'none'){
+        y.style.display = 'block'
+        x.style.display = 'none'
+    }
+    else{
+        y.style.display = 'none';
+        x.style.display = 'block'
+    }
+})
+
+    </script>
+</body>
+</html>
