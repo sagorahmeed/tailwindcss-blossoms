@@ -10,19 +10,3 @@ window.onscroll = function(){
     }
     prevScrollpos = currentScrollpos;
 }
-
-// document.getElementById
-
-
-
-// var menuIcon = document.querySelector('navbarIcon');
-
-// menuIcon.addEventListener('click', function(){
-//     var menu = document.querySelector('navbar');
-//     if(menu.style.display === 'none'){
-//         menu.style.display = 'block'
-//     }else{
-//         menu.style.display = 'none'
-//     }
-// })
-
