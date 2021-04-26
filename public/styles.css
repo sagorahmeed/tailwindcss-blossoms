@@ -32391,7 +32391,6 @@ video {
 .sepia-0 {
   --tw-sepia: sepia(0);
 }
-
 .sepia {
   --tw-sepia: sepia(100%);
 }
@@ -44177,7 +44176,9 @@ video {
   .sm\:clear-none {
     clear: none;
   }
-
+.font-rubic{
+  font-family: 'Rubik', sans-serif;
+}
   .sm\:font-sans {
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   }
