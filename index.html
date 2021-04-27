@@ -22,7 +22,7 @@
     <body>
   
         <div class="">
-            <div class="flex justify-center items-center">
+            <div class="flex justify-center items-center bg-gray-50 w-full">
                 <div class="max-w-xs sm:max-w-xl md:max-w-2xl xl:max-w-full lg:max-w-full mx-atuo xl:px-0 lg:px-0 xl:px-6 lg:px-6 md:px-6 px-4 flex justify-between md:flex md:justify-around md:items-center lg:flex lg:justify-around lg:items-center xl:flex xl:justify-around items-center py-3 fixed block  top-0 w-full xl:border-b-2 border-gray-200 z-40 bg-gray-50" id="slideNav" style="transition: 0.4s;">
                     <a href="#" class="">
                         <img class="h-auto w-16 md:h-auto md:w-20 lg:h-auto lg:w-20 xl:h-auto xl:w-20" src="images/logo (1).png" alt="" />
@@ -75,7 +75,13 @@
                                 <img class="xl:h-6 lg:w-6 lg:h-6 lg:w-6 h-4 w-4 xl:mx-3 lg:mx-3 md:mx-3 mx-2" src="images/shopping-cart.png" alt="icon" />
                             </a>
                         </div>
-                        <button type="button" class="lg:invisible xl:invisible visible absolute -right-10 text-2xl text-white dark:text-white nav-toggler cursor-pointer text-gray-900 inline-flex lg:hidden p-3 ml-auto hover:text-red-600 transition duration-400" data-target="#navigation"><i class="fas fa-bars text-gray-500 md:text-md xl:text-md lg:text-md text-sm"></i></button>
+                        <button type="button" class="lg:invisible xl:invisible visible absolute -right-10 p-2 text-2xl text-white dark:text-white nav-toggler cursor-pointer text-gray-900 inline-flex lg:hidden p-1 ml-auto hover:text-red-600 transition duration-400 border border-gray-600" data-target="#navigation">
+                            <div class="">
+                                <div class="w-5 h-0.5 bg-gray-600 my-1" id="span1"></div>
+                                <div class="w-5 h-0.5 bg-gray-600 my-1" id="span2"></div>
+                                <div class="w-5 h-0.5 bg-gray-600 my-1" id="span3"></div>
+                            </div>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -307,8 +313,147 @@
                    </div>
                 </div>
             </div>
-            <div class="max-w-4xl mx-auto">
-                <div class="" id="content1">
+            <div class="w-full">
+                <div class="w-full" id="content1">
+                    <div class="md:flex md:justify-left lg:flex lg:justify-left xl:flex xl:justify-left sm:flex sm:justify-left pb-7">
+                        <div class="">
+                            <a href="#" class="relative">
+                                <img class="h-auto max-w-4xl" src="images/product-1.jpg" alt=""/>
+                                <span class="bg-red-500 text-white absolute px-3 py-0 rounded top-0 left-0">-30%</span>
+                            </a>
+                        </div>
+                        <div class="lg:ml-5 xl:ml-5 md:ml-4 sm:ml-3">
+                            <a href="#" class="text-xl text-gray-900 font-semibold">Dutchman's Breeches</a>
+                            <p class="text-gray-500 text-sm font-semibold py-2">$100.00 <span class="text-red-500 font-semibold line-through">$1200.00</span></p>
+                            <p class="text-md text-gray-600 pb-2">
+                                Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat.
+                            </p>
+                            <div class="flex items-center justify-left">
+                                <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mr-3 group transition duration-400">
+                                    <i class="far fa-heart text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                </a>
+                                <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mx-3 group transition duration-400">
+                                    <i class="fas fa-shopping-bag text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                </a>
+                                <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mx-3 group transition duration-400">
+                                    <i class="fas fa-search-plus text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:flex md:justify-left lg:flex lg:justify-left xl:flex xl:justify-left sm:flex sm:justify-left pb-7">
+                        <div class="">
+                            <a href="#" class="relative">
+                                <img class="h-auto max-w-4xl" src="images/product-1.jpg" alt=""/>
+                                <span class="bg-red-500 text-white absolute px-3 py-0 rounded top-0 left-0">-30%</span>
+                            </a>
+                        </div>
+                        <div class="lg:ml-5 xl:ml-5 md:ml-4 sm:ml-3">
+                            <a href="#" class="text-xl text-gray-900 font-semibold">Dutchman's Breeches</a>
+                            <p class="text-gray-500 text-sm font-semibold py-2">$100.00 <span class="text-red-500 font-semibold line-through">$1200.00</span></p>
+                            <p class="text-md text-gray-600 pb-2">
+                                Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat.
+                            </p>
+                            <div class="flex items-center justify-left">
+                                <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mr-3 group transition duration-400">
+                                    <i class="far fa-heart text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                </a>
+                                <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mx-3 group transition duration-400">
+                                    <i class="fas fa-shopping-bag text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                </a>
+                                <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mx-3 group transition duration-400">
+                                    <i class="fas fa-search-plus text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:flex md:justify-left lg:flex lg:justify-left xl:flex xl:justify-left sm:flex sm:justify-left pb-7">
+                        <div class="">
+                            <a href="#" class="relative">
+                                <img class="h-auto max-w-4xl" src="images/product-1.jpg" alt=""/>
+                                <span class="bg-red-500 text-white absolute px-3 py-0 rounded top-0 left-0">-30%</span>
+                            </a>
+                        </div>
+                        <div class="lg:ml-5 xl:ml-5 md:ml-4 sm:ml-3">
+                            <a href="#" class="text-xl text-gray-900 font-semibold">Dutchman's Breeches</a>
+                            <p class="text-gray-500 text-sm font-semibold py-2">$100.00 <span class="text-red-500 font-semibold line-through">$1200.00</span></p>
+                            <p class="text-md text-gray-600 pb-2">
+                                Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat.
+                            </p>
+                            <div class="flex items-center justify-left">
+                                <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mr-3 group transition duration-400">
+                                    <i class="far fa-heart text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                </a>
+                                <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mx-3 group transition duration-400">
+                                    <i class="fas fa-shopping-bag text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                </a>
+                                <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mx-3 group transition duration-400">
+                                    <i class="fas fa-search-plus text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:flex md:justify-left lg:flex lg:justify-left xl:flex xl:justify-left sm:flex sm:justify-left pb-7">
+                        <div class="">
+                            <a href="#" class="relative">
+                                <img class="h-auto max-w-4xl" src="images/product-1.jpg" alt=""/>
+                                <span class="bg-red-500 text-white absolute px-3 py-0 rounded top-0 left-0">-30%</span>
+                            </a>
+                        </div>
+                        <div class="lg:ml-5 xl:ml-5 md:ml-4 sm:ml-3">
+                            <a href="#" class="text-xl text-gray-900 font-semibold">Dutchman's Breeches</a>
+                            <p class="text-gray-500 text-sm font-semibold py-2">$100.00 <span class="text-red-500 font-semibold line-through">$1200.00</span></p>
+                            <p class="text-md text-gray-600 pb-2">
+                                Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat.
+                            </p>
+                            <div class="flex items-center justify-left">
+                                <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mr-3 group transition duration-400">
+                                    <i class="far fa-heart text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                </a>
+                                <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mx-3 group transition duration-400">
+                                    <i class="fas fa-shopping-bag text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                </a>
+                                <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mx-3 group transition duration-400">
+                                    <i class="fas fa-search-plus text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="md:flex md:justify-left lg:flex lg:justify-left xl:flex xl:justify-left sm:flex sm:justify-left pb-7">
+                        <div class="">
+                            <a href="#" class="relative">
+                                <img class="h-auto max-w-4xl" src="images/product-1.jpg" alt=""/>
+                                <span class="bg-red-500 text-white absolute px-3 py-0 rounded top-0 left-0">-30%</span>
+                            </a>
+                        </div>
+                        <div class="lg:ml-5 xl:ml-5 md:ml-4 sm:ml-3">
+                            <a href="#" class="text-xl text-gray-900 font-semibold">Dutchman's Breeches</a>
+                            <p class="text-gray-500 text-sm font-semibold py-2">$100.00 <span class="text-red-500 font-semibold line-through">$1200.00</span></p>
+                            <p class="text-md text-gray-600 pb-2">
+                                Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                                aliquip ex ea commodo consequat.
+                            </p>
+                            <div class="flex items-center justify-left">
+                                <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mr-3 group transition duration-400">
+                                    <i class="far fa-heart text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                </a>
+                                <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mx-3 group transition duration-400">
+                                    <i class="fas fa-shopping-bag text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                </a>
+                                <a href="#" class="bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 mx-3 group transition duration-400">
+                                    <i class="fas fa-search-plus text-2xl group-hover:text-gray-50 transition duration-400 text-gray-400"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="md:flex md:justify-left lg:flex lg:justify-left xl:flex xl:justify-left sm:flex sm:justify-left pb-7">
                         <div class="">
                             <a href="#" class="relative">
@@ -337,94 +482,235 @@
                         </div>
                     </div>
                 </div>
-                <div class="hidden" id="content2">
-                    <div class="grid xl:grid-cols-3 xl:grid-rows-3 sm:grid-cols-2 sm:grid-rows-2 md:grid-cols-2 xl:grid-rows-3 md:grid-rows-2 sm:grid-cols-1 sm:grid-rows-2  gap-4">
-                        <div class="text-center relative  group">
-                            <a href="#" class="">
-                                <img class="h-auto w-full relative" src="images/product-1.jpg" alt=""/>
-                                <span class="bg-red-500 text-white absolute px-3 py-0 rounded top-0 left-0">-30%</span>
-                                <div class="flex items-center justify-left absolute bottom-20 left-14">
-                                    <a href="#" class="transparent group-hover:bg-gray-200 text-transparent group-hover:text-gray-500 transition duration-600 px-3 py-3 rounded hover:bg-red-600 hover:text-gray-100">
-                                        <i class="far fa-heart text-2xl"></i>
-                                    </a>
-                                    <a href="#" class="transparent group-hover:bg-gray-200 text-transparent group-hover:text-gray-500 transition duration-500 px-3 py-3 rounded mx-1">
-                                        <i class="fas fa-shopping-bag text-2xl "></i>
-                                    </a>
-                                    <a href="#" class="transparent group-hover:bg-gray-200 text-transparent group-hover:text-gray-500 transition duration-500 px-3 py-3 rounded">
-                                        <i class="fas fa-search-plus text-2xl"></i>
-                                    </a>
+                <div class="w-full hidden" id="content2">
+                    <div class="">
+                        <div class="gird grid-cols-1 grid-rows-1 sm:grid sm:grid-cols-2 sm:grid-rows-2 md:grid md:grid-cols-2 md:grid-rows-2 lg:grid lg:grid-cols-3 lg:grid-rows-3 xl:grid xl:grid-cols-3 xl:grid-rows-3 gap-4">
+                            <div class="bg-white shadow-md">
+                               <a href="#" class=""> <img class="w-full" src="images/product-1.jpg" alt=""></a>
+                                <div class="px-5  pt-4 pb-3">
+                                    <a href="#" class="text-gray-800 text-sm font-rubic">Dutchman's Breeches</a>
+                                    <p class="text-gray-800 text-sm font-rubic pt-2">$100.00 <span class="line-through text-red-600">$120.00</span></p>
+                                    <div class="my-5">
+                                        <a href="" class="bg-white border border-1 border-red-300 p-3 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                            <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                        </a>
+                                        <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                            <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                        </a>
+                                        <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                            <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                        </a>
+                                    </div>
                                 </div>
-                            </a>
-                            <div class="pt-2">
-                                <a href="#" class="text-md text-gray-800 hover:text-red-600">Dutchman's Breeches</a>
-                                <p class="text-gray-500 text-sm font-semibold py-2">$100.00 <span class="text-red-500 font-semibold line-through">$1200.00</span></p>
                             </div>
-                        </div>
 
-                        <div class="text-center relative  group">
-                            <a href="#" class="">
-                                <img class="h-auto w-full relative" src="images/product-1.jpg" alt=""/>
-                                <span class="bg-red-500 text-white absolute px-3 py-0 rounded top-0 left-0">-30%</span>
-                                <div class="flex items-center justify-left absolute bottom-20 left-14">
-                                    <a href="#" class="transparent group-hover:bg-gray-200 text-transparent group-hover:text-gray-500 transition duration-600 px-3 py-3 rounded hover:bg-red-600 hover:text-gray-100">
-                                        <i class="far fa-heart text-2xl"></i>
-                                    </a>
-                                    <a href="#" class="transparent group-hover:bg-gray-200 text-transparent group-hover:text-gray-500 transition duration-500 px-3 py-3 rounded mx-1">
-                                        <i class="fas fa-shopping-bag text-2xl "></i>
-                                    </a>
-                                    <a href="#" class="transparent group-hover:bg-gray-200 text-transparent group-hover:text-gray-500 transition duration-500 px-3 py-3 rounded">
-                                        <i class="fas fa-search-plus text-2xl"></i>
-                                    </a>
-                                </div>
-                            </a>
-                            <div class="pt-2">
-                                <a href="#" class="text-md text-gray-800 hover:text-red-600">Dutchman's Breeches</a>
-                                <p class="text-gray-500 text-sm font-semibold py-2">$100.00 <span class="text-red-500 font-semibold line-through">$1200.00</span></p>
-                            </div>
-                        </div>
+                            <div class="bg-white shadow-md mt-4 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0">
+                                <a href="#" class=""> <img class="w-full" src="images/product-1.jpg" alt=""></a>
+                                 <div class="px-5  pt-4 pb-3">
+                                     <a href="#" class="text-gray-800 text-sm font-rubic">Dutchman's Breeches</a>
+                                     <p class="text-gray-800 text-sm font-rubic pt-2">$100.00 <span class="line-through text-red-600">$120.00</span></p>
+                                     <div class="my-5">
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                     </div>
+                                 </div>
+                             </div>
 
-                        <div class="text-center relative  group">
-                            <a href="#" class="">
-                                <img class="h-auto w-full relative" src="images/product-1.jpg" alt=""/>
-                                <span class="bg-red-500 text-white absolute px-3 py-0 rounded top-0 left-0">-30%</span>
-                                <div class="flex items-center justify-left absolute bottom-20 left-14">
-                                    <a href="#" class="transparent group-hover:bg-gray-200 text-transparent group-hover:text-gray-500 transition duration-600 px-3 py-3 rounded hover:bg-red-600 hover:text-gray-100">
-                                        <i class="far fa-heart text-2xl"></i>
-                                    </a>
-                                    <a href="#" class="transparent group-hover:bg-gray-200 text-transparent group-hover:text-gray-500 transition duration-500 px-3 py-3 rounded mx-1">
-                                        <i class="fas fa-shopping-bag text-2xl "></i>
-                                    </a>
-                                    <a href="#" class="transparent group-hover:bg-gray-200 text-transparent group-hover:text-gray-500 transition duration-500 px-3 py-3 rounded">
-                                        <i class="fas fa-search-plus text-2xl"></i>
-                                    </a>
-                                </div>
-                            </a>
-                            <div class="pt-2">
-                                <a href="#" class="text-md text-gray-800 hover:text-red-600">Dutchman's Breeches</a>
-                                <p class="text-gray-500 text-sm font-semibold py-2">$100.00 <span class="text-red-500 font-semibold line-through">$1200.00</span></p>
-                            </div>
-                        </div>
+                             <div class="bg-white shadow-md mt-4 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0">
+                                <a href="#" class=""> <img class="w-full" src="images/product-1.jpg" alt=""></a>
+                                 <div class="px-5  pt-4 pb-3">
+                                     <a href="#" class="text-gray-800 text-sm font-rubic">Dutchman's Breeches</a>
+                                     <p class="text-gray-800 text-sm font-rubic pt-2">$100.00 <span class="line-through text-red-600">$120.00</span></p>
+                                     <div class="my-5">
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                     </div>
+                                 </div>
+                             </div>
 
-                        <div class="text-center relative  group">
-                            <a href="#" class="">
-                                <img class="h-auto w-full relative" src="images/product-1.jpg" alt=""/>
-                                <span class="bg-red-500 text-white absolute px-3 py-0 rounded top-0 left-0">-30%</span>
-                                <div class="flex items-center justify-left absolute bottom-20 left-14">
-                                    <a href="#" class="transparent group-hover:bg-gray-200 text-transparent group-hover:text-gray-500 transition duration-600 px-3 py-3 rounded hover:bg-red-600 hover:text-gray-100">
-                                        <i class="far fa-heart text-2xl"></i>
-                                    </a>
-                                    <a href="#" class="transparent group-hover:bg-gray-200 text-transparent group-hover:text-gray-500 transition duration-500 px-3 py-3 rounded mx-1">
-                                        <i class="fas fa-shopping-bag text-2xl "></i>
-                                    </a>
-                                    <a href="#" class="transparent group-hover:bg-gray-200 text-transparent group-hover:text-gray-500 transition duration-500 px-3 py-3 rounded">
-                                        <i class="fas fa-search-plus text-2xl"></i>
-                                    </a>
-                                </div>
-                            </a>
-                            <div class="pt-2">
-                                <a href="#" class="text-md text-gray-800 hover:text-red-600">Dutchman's Breeches</a>
-                                <p class="text-gray-500 text-sm font-semibold py-2">$100.00 <span class="text-red-500 font-semibold line-through">$1200.00</span></p>
-                            </div>
+                             <div class="bg-white shadow-md mt-4 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0">
+                                <a href="#" class=""> <img class="w-full" src="images/product-1.jpg" alt=""></a>
+                                 <div class="px-5  pt-4 pb-3">
+                                     <a href="#" class="text-gray-800 text-sm font-rubic">Dutchman's Breeches</a>
+                                     <p class="text-gray-800 text-sm font-rubic pt-2">$100.00 <span class="line-through text-red-600">$120.00</span></p>
+                                     <div class="my-5">
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                     </div>
+                                 </div>
+                             </div>
+
+                             <div class="bg-white shadow-md mt-4 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0">
+                                <a href="#" class=""> <img class="w-full" src="images/product-1.jpg" alt=""></a>
+                                 <div class="px-5  pt-4 pb-3">
+                                     <a href="#" class="text-gray-800 text-sm font-rubic">Dutchman's Breeches</a>
+                                     <p class="text-gray-800 text-sm font-rubic pt-2">$100.00 <span class="line-through text-red-600">$120.00</span></p>
+                                     <div class="my-5">
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                     </div>
+                                 </div>
+                             </div>
+
+                             <div class="bg-white shadow-md mt-4 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0">
+                                <a href="#" class=""> <img class="w-full" src="images/product-1.jpg" alt=""></a>
+                                 <div class="px-5  pt-4 pb-3">
+                                     <a href="#" class="text-gray-800 text-sm font-rubic">Dutchman's Breeches</a>
+                                     <p class="text-gray-800 text-sm font-rubic pt-2">$100.00 <span class="line-through text-red-600">$120.00</span></p>
+                                     <div class="my-5">
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                     </div>
+                                 </div>
+                             </div>
+
+                             <div class="bg-white shadow-md mt-4 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0">
+                                <a href="#" class=""> <img class="w-full" src="images/product-1.jpg" alt=""></a>
+                                 <div class="px-5  pt-4 pb-3">
+                                     <a href="#" class="text-gray-800 text-sm font-rubic">Dutchman's Breeches</a>
+                                     <p class="text-gray-800 text-sm font-rubic pt-2">$100.00 <span class="line-through text-red-600">$120.00</span></p>
+                                     <div class="my-5">
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                     </div>
+                                 </div>
+                             </div>
+
+                             <div class="bg-white shadow-md mt-4 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0">
+                                <a href="#" class=""> <img class="w-full" src="images/product-1.jpg" alt=""></a>
+                                 <div class="px-5  pt-4 pb-3">
+                                     <a href="#" class="text-gray-800 text-sm font-rubic">Dutchman's Breeches</a>
+                                     <p class="text-gray-800 text-sm font-rubic pt-2">$100.00 <span class="line-through text-red-600">$120.00</span></p>
+                                     <div class="my-5">
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                     </div>
+                                 </div>
+                             </div>
+
+                             <div class="bg-white shadow-md mt-4 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0">
+                                <a href="#" class=""> <img class="w-full" src="images/product-1.jpg" alt=""></a>
+                                 <div class="px-5  pt-4 pb-3">
+                                     <a href="#" class="text-gray-800 text-sm font-rubic">Dutchman's Breeches</a>
+                                     <p class="text-gray-800 text-sm font-rubic pt-2">$100.00 <span class="line-through text-red-600">$120.00</span></p>
+                                     <div class="my-5">
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                     </div>
+                                 </div>
+                             </div>
+
+                             <div class="bg-white shadow-md mt-4 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0">
+                                <a href="#" class=""> <img class="w-full" src="images/product-1.jpg" alt=""></a>
+                                 <div class="px-5  pt-4 pb-3">
+                                     <a href="#" class="text-gray-800 text-sm font-rubic">Dutchman's Breeches</a>
+                                     <p class="text-gray-800 text-sm font-rubic pt-2">$100.00 <span class="line-through text-red-600">$120.00</span></p>
+                                     <div class="my-5">
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                     </div>
+                                 </div>
+                             </div>
+
+                             <div class="bg-white shadow-md mt-4 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0">
+                                <a href="#" class=""> <img class="w-full" src="images/product-1.jpg" alt=""></a>
+                                 <div class="px-5  pt-4 pb-3">
+                                     <a href="#" class="text-gray-800 text-sm font-rubic">Dutchman's Breeches</a>
+                                     <p class="text-gray-800 text-sm font-rubic pt-2">$100.00 <span class="line-through text-red-600">$120.00</span></p>
+                                     <div class="my-5">
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                     </div>
+                                 </div>
+                             </div>
+                             <div class="bg-white shadow-md mt-4 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0">
+                                <a href="#" class=""> <img class="w-full" src="images/product-1.jpg" alt=""></a>
+                                 <div class="px-5  pt-4 pb-3">
+                                     <a href="#" class="text-gray-800 text-sm font-rubic">Dutchman's Breeches</a>
+                                     <p class="text-gray-800 text-sm font-rubic pt-2">$100.00 <span class="line-through text-red-600">$120.00</span></p>
+                                     <div class="my-5">
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                         <a href="" class="bg-white border border-1 border-red-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition duration-400">
+                                             <i class="fas fa-search-plus flex justify-center items-center text-gray-400 group-hover:text-white transition duration-400"></i>
+                                         </a>
+                                     </div>
+                                 </div>
+                             </div>
                         </div>
                     </div>
                 </div>
@@ -478,7 +764,7 @@
                 <div class="max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-screen-xl xl:max-w-screen-xl mx-auto">
                     <div class="">
                         <div class="lg:flex lg:justify-around xl:flex xl:justify-between">
-                            <div class="lg:max-w-xs xl:max-w-sm mx-auto  leading-loose lg:mx-5 my-10">
+                            <div class="lg:max-w-xs xl:max-w-sm leading-loose ">
                                 <h1 class="text-xl text-gray-800 font-semibold pb-3 font-rubic">About Us</h1>
                                 <p class="text-sm text-gray-800 font-rubic pb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididun</p>
                                 <p class="text-sm text-gray-800 font-rubic pb-2">Address: 123 Main Street, Anytown, CA 12345 - USA.</p>
@@ -512,7 +798,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="max-w-md mx-auto leading-loose lg:mx-5 my-10">
+                            <div class="leading-loose lg:mx-5 my-10">
                                 <h1 class="text-xl text-gray-800 font-semibold pb-3 font-rubic">Information</h1>
                                 <ul class="">
                                     <li class="">
@@ -535,7 +821,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="max-w-md mx-auto leading-loose lg:mx-5 my-10">
+                            <div class="leading-loose lg:mx-5 my-10">
                                 <h1 class="text-xl text-gray-800 font-semibold pb-3 font-rubic">My Account</h1>
                                 <ul class="">
                                     <li class="">
@@ -558,7 +844,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="lg:max-w-xs xl:max-w-sm mx-auto  leading-loose lg:mx-5 my-10">
+                            <div class="lg:max-w-xs xl:max-w-sm leading-loose my-10">
                                 <h1 class="text-xl text-gray-800 font-semibold pb-3 font-rubic">Join Our News Letter Now</h1>
                                 <ul class="">
                                     <li class="text-md text-gray-800 font-rubic">
@@ -568,13 +854,29 @@
                                         <input type="text" class="bg-transparent border-b-2 border-gray-400 w-full text-sm outline-none pb-2" placeholder="Your Email Address...">
                                     </li>
                                     <li class="">
-                                        <button type="button" class="bg-red-600 text-gray-100 px-6 py-1 rounded hover:bg-red-700 transition duration-400">subscribe</button>
+                                        <button type="button" class="bg-red-600 text-gray-100 px-10 py-2 rounded hover:bg-red-700 transition duration-400 uppercase">subscribe</button>
                                     </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                  </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-gray-200">
+            <div class="container mx-auto">
+                <div class="max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-screen-xl xl:max-w-screen-xl mx-auto py-5">
+                    <div class="lg:flex lg:items-center lg:justify-between xl:items-center xl:flex xl:justify-between">
+                        <div class="">
+                            <p class="text-gray-800">Copyright © Phuler. All Right Reserved.</p>
+                        </div>
+                        <div class="">
+                            <a href="#" class="">
+                                <img class="" src="images/payment.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <script type="text/javascript">
