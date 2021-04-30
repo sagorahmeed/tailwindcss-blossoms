@@ -1,10 +1,11 @@
-
 module.exports = {
-  // ...
-  variants: {
-    extend: {
-      backgroundColor: ['checked'],
-      borderColor: ['checked'],
-    }
+  purge: [],
+  darkMode:'class',
+  theme: {
+    extend: {},
   },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
 }

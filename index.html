@@ -1,801 +1,895 @@
+<html lang="en" class="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Shop Page</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;1,300&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="public/styles.css" />
+        <script src="app.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    </head>
 
-
-
-        <html lang="en">
-            <head>
-                <meta charset="UTF-8" />
-                <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                <title>Shop Page</title>
-                <link rel="preconnect" href="https://fonts.gstatic.com" />
-                <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;1,300&display=swap" rel="stylesheet" />
-                <link rel="stylesheet" href="public/styles.css" />
-                <script src="app.js"></script>
-                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-                <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-            </head>
-            <div class="w-full text-gray-700 bg-gray-100 dark-mode:text-gray-200 dark-mode:bg-gray-800">
-              <div x-data="{ open: false }" class="flex flex-col max-w-screen-xl mx-auto md:items-center md:justify-between md:flex-row xl:px-0 lg:px-5 md:px-5 px-5">
+    <body class="bg-white text-gray-800 dark:text-gray-100 dark:bg-gray-800">
+        <div class="w-full text-gray-700 bg-gray-100 fixed top-0 z-40">
+            <div x-data="{ open: false }" class="py-2 flex flex-col max-w-screen-xl mx-auto md:items-center md:justify-between md:flex-row xl:px-0 lg:px-5 md:px-5 px-5">
                 <div class="p-4 flex flex-row items-center justify-between">
-                  <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase h-auto w-20 rounded-lg dark-mode:text-white focus:outline-none focus:shadow-outline"><img src="images/logo (1).png" alt=""></a>
-                  <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
-                    <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
-                      <path x-show="!open" fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-                      <path x-show="open" fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path>
-                    </svg>
-                  </button>
-                </div>
-                <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
-                  <a class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Blog</a>
-                  <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Portfolio</a>
-                  <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">About</a>
-                  <a class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Contact</a>
-                  <div @click.away="open = false" class="relative" x-data="{ open: false }">
-                    <button @click="open = !open" class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline">
-                      <span>My Account</span>
-                      <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase h-auto w-20 rounded-lg dark:text-white focus:outline-none focus:shadow-outline">
+                        <h1 class="text-gray-800 font-rubic dark:text-gray-800">something</h1>
+                    </a>
+                    <div class="md:ml-1 lg:ml-36 xl:ml-56">
+                        <div class="flex justify-end items-center space-x-2">
+                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-yellow-500 dark:text-gray-400 ransition-colors duration-200">
+                                <path
+                                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                ></path>
+                            </svg>
+
+                            <div class="">
+                                <input type="checkbox" name="" id="toggle" class="hidden" />
+                                <label for="toggle" class="cursor-pointer">
+                                    <div class="w-16 h-7 flex items-center bg-green-400 dark:bg-gray-800 rounded-full p-1">
+                                        <div class="toggle-dot w-6 h-6 bg-white rounded-full shadow-md transform transition duration-500 ease-in-out"></div>
+                                    </div>
+                                </label>
+                            </div>
+                            <svg width="24" height="24" fill="currentColor" class="dark:text-gray-800 transition-colors duration-200 text-gray-300">
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M9.353 2.939a1 1 0 01.22 1.08 8 8 0 0010.408 10.408 1 1 0 011.301 1.3A10.003 10.003 0 0112 22C6.477 22 2 17.523 2 12c0-4.207 2.598-7.805 6.273-9.282a1 1 0 011.08.22z"
+                                ></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                            <path
+                                x-show="!open"
+                                fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                                clip-rule="evenodd"
+                            ></path>
+                            <path
+                                x-show="open"
+                                fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"
+                            ></path>
+                        </svg>
                     </button>
-                    <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48">
-                      <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
-                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #1</a>
-                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #2</a>
-                        <a class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline" href="#">Link #3</a>
-                      </div>
-                    </div>
-                  </div>    
-                </nav>
-              </div>
-            </div>
-        
-            <div class="container mx-auto mt-36 flex justify-center">
-                <div class="main-body">
-                    <div class="left-dashboard">
-                        <div class="border-gray-200 border px-5 py-5">
-                            <div class="border-b-2 border-gray-200">
-                                <h1 class="pb-3 text-xl font-semibold text-gray-800">Shop By Categories</h1>
-                            </div>
-                            <div class="pt-4 border-b-2 border-gray-200">
-                                <div class="relative pb-2">
-                                    <li class="collapse-header collapsible font-rubic">Birthday Bouquets <i class="fas fa-angle-down absolute right-0"></i></li>
-                                    <div class="content max-h-0 overflow-hidden" style="transition: 0.4s;">
-                                        <ul class="pl-3 py-3">
-                                            <li class="col-item">
-                                                <a href="#" class="font-rubic">List one</a>
-                                            </li>
-                                            <li class="col-item">
-                                                <a href="#" class="">List two</a>
-                                            </li>
-                                            <li class="col-item">
-                                                <a href="#" class="">List three</a>
-                                            </li>
-                                            <li class="col-item">
-                                                <a href="#" class="">List four</a>
-                                            </li>
-                                            <li class="col-item">
-                                                <a href="#" class="">List five</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="relative pb-2">
-                                    <li class="collapse-header collapsible font-rubic">Birthday Bouquets <i class="fas fa-angle-down absolute right-0"></i></li>
-                                    <div class="content max-h-0 max-h-0 overflow-hidden" style="transition: 0.4s;">
-                                        <ul class="pl-3 py-3">
-                                            <li class="col-item">
-                                                <a href="#" class="font-rubic">List one</a>
-                                            </li>
-                                            <li class="col-item">
-                                                <a href="#" class="">List two</a>
-                                            </li>
-                                            <li class="col-item">
-                                                <a href="#" class="">List three</a>
-                                            </li>
-                                            <li class="col-item">
-                                                <a href="#" class="">List four</a>
-                                            </li>
-                                            <li class="col-item">
-                                                <a href="#" class="">List five</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="relative pb-2">
-                                    <li class="collapse-header collapsible font-rubic">Birthday Bouquets <i class="fas fa-angle-down absolute right-0"></i></li>
-                                    <div class="content max-h-0 max-h-0 overflow-hidden" style="transition: 0.4s;">
-                                        <ul class="pl-3 py-3">
-                                            <li class="col-item">
-                                                <a href="#" class="font-rubic">List one</a>
-                                            </li>
-                                            <li class="col-item">
-                                                <a href="#" class="">List two</a>
-                                            </li>
-                                            <li class="col-item">
-                                                <a href="#" class="">List three</a>
-                                            </li>
-                                            <li class="col-item">
-                                                <a href="#" class="">List four</a>
-                                            </li>
-                                            <li class="col-item">
-                                                <a href="#" class="">List five</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="">
-                                    <ul class="">
-                                        <li class="coll-item">
-                                            <a href="#" class="">Interior Decor</a>
-                                        </li>
-                                        <li class="coll-item">
-                                            <a href="#" class="">Wedding Decor</a>
-                                        </li>
-                                        <li class="coll-item">
-                                            <a href="#" class="">Custom Decor</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="border-b-2 border-gray-200 py-5">
-                                <h1 class="pb-3 text-xl font-semibold text-gray-800">Price Filter</h1>
-                                <p class="m-0">Range: $100.00 - 1,300.00</p>
-                                <button class="bg-gray-900 text-white rounded px-6 py-2 text-sm font-semibold">Filter</button>
-                            </div>
-                            <div class="border-b-2 border-gray-200 py-5">
-                                <h1 class="pb-3 text-xl font-semibold text-gray-800">By Brand</h1>
-                                <div class="my-4 flex items-center">
-                                    <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember" />
-                                    <label for="userRemember">Poure</label>
-                                </div>
-                                <div class="my-4 flex items-center">
-                                    <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember1" />
-                                    <label for="userRemember1">Poure</label>
-                                </div>
-                                <div class="my-4 flex items-center">
-                                    <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember2" />
-                                    <label for="userRemember2">Poure</label>
-                                </div>
-                                <div class="my-4 flex items-center">
-                                    <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember3" />
-                                    <label for="userRemember3">Poure</label>
-                                </div>
-                                <div class="my-4 flex items-center">
-                                    <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember4" />
-                                    <label for="userRemember4">Poure</label>
-                                </div>
-                                <div class="my-4 flex items-center">
-                                    <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember5" />
-                                    <label for="userRemember5">Poure</label>
-                                </div>
-                                <div class="my-4 flex items-center">
-                                    <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember6" />
-                                    <label for="userRemember6">Poure</label>
-                                </div>
-                                <div class="my-4 flex items-center">
-                                    <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember7" />
-                                    <label for="userRemember7">Poure</label>
-                                </div>
-                                <div class="my-4 flex items-center">
-                                    <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember8" />
-                                    <label for="userRemember8">Poure</label>
-                                </div>
-                            </div>
-                            <div class="border-b-2 border-gray-200 py-5">
-                                <h1 class="pb-3 text-xl font-semibold text-gray-800">By Color</h1>
-                                <div class="my-4 flex items-center">
-                                    <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember9" />
-                                    <label for="userRemember9">Black</label>
-                                </div>
-                                <div class="my-4 flex items-center">
-                                    <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember10" />
-                                    <label for="userRemember10">Blue</label>
-                                </div>
-                                <div class="my-4 flex items-center">
-                                    <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember11" />
-                                    <label for="userRemember11">Green</label>
-                                </div>
-                                <div class="my-4 flex items-center">
-                                    <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember12" />
-                                    <label for="userRemember12">Red</label>
-                                </div>
-                                <div class="my-4 flex items-center">
-                                    <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember13" />
-                                    <label for="userRemember13">Yellow</label>
-                                </div>
-                                <div class="my-4 flex items-center">
-                                    <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember14" />
-                                    <label for="userRemember14">Pink</label>
-                                </div>
-                                <div class="my-4 flex items-center">
-                                    <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember15" />
-                                    <label for="userRemember15">White</label>
-                                </div>
-                            </div>
-                            <div class="border-b-2 border-gray-200 py-5">
-                                <h1 class="pb-3 text-xl font-semibold text-gray-800">Compare Products</h1>
-                                <p class="">You have no item to compare.</p>
-                                <div class="flex justify-between items-center pt-3">
-                                    <button type="button" class="bg-transparent py-1 xl:px-4 lg:px-2 px-4 hover:bg-red-600 hover:text-gray-50 transition duration-400 rounded border font-semibold\">Clear all</button>
-                                    <button type="button" class="bg-gray-900 text-white rounded px-6 py-1 hover:bg-red-600 transition duration-400 font-semibold">Compare <i class="fas fa-check"></i></button>
-                                </div>
-                            </div>
-                            <div class="py-5">
-                                <h1 class="pb-3 text-xl font-semibold text-gray-800">Popular Tags</h1>
-                                <div class="flex justify-between items-center pt-3">
-                                    <button type="button" class="">Bouquet</button>
-                                    <button type="button" class="tag-button">Event</button>
-                                    <button type="button" class="tag-button">Gift</button>
-                                </div>
-                                <div class="flex justify-between items-center pt-3">
-                                    <button type="button" class="tag-button">Joy</button>
-                                    <button type="button" class="tag-button">Love</button>
-                                    <button type="button" class="tag-button">Speacial</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="right-dashboard">
-                        <div class="">
-                            <img class="w-full" src="images/banner-49.jpg" alt="" />
-                        </div>
-                        <div class="cart-history">
-                            <div class="cart-history-header">
-                                <div class="">
-                                    <i class="fa fa-th grid-btn" id="button2"></i>
-                                    <i class="fa fa-list-ul list-btn" id="button1"></i>
-                                </div>
-                                <div class="">
-                                    <p class="xl:text-md lg:text-sm">Showing 1 - 20 of 30 results</p>
-                                </div>
-                                <div class="input-option">
-                                    <div class="flex items-center mr-4">
-                                        <label for="cars" class="mr-3">View:</label>
-        
-                                        <select class="option-left" id="cars">
-                                            <option value="20" class="text-gray-600">20</option>
-                                            <option value="23">23</option>
-                                            <option value="30">30</option>
-                                        </select>
-                                    </div>
-                                    <div class="flex items-center xl:ml-4 lg:ml-3 xl:pt-0 lg:pt-0 md:pt-0 pt-3">
-                                        <label for="cars" class="mr-3">Short by:</label>
-        
-                                        <select id="cars" class="option-right">
-                                            <option value="Default">Default</option>
-                                            <option value="Name">Name</option>
-                                            <option value="Price">Price</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="w-full">
-                            <div class="w-full" id="content1">
-                                <div class="cart-list">
-                                    <div class="">
-                                        <a href="#" class="relative">
-                                            <img class="h-auto max-w-4xl" src="images/product-4.jpg" alt="" />
-                                            <span class="discount-title">-30%</span>
-                                        </a>
-                                    </div>
-                                    <div class="cart-desc">
-                                        <a href="#" class="cart-header">Dutchman's Breeches</a>
-                                        <p class="cart-price">$100.00 <span class="cart-price-through">$1200.00</span></p>
-                                        <p class="cart-title">
-                                            Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                                            ex ea commodo consequat.
-                                        </p>
-                                        <div class="cart-link">
-                                            <a href="#" class="cart-icon-link">
-                                                <i class="far fa-heart cart-icon"></i>
-                                            </a>
-                                            <a href="#" class="cart-icon-link">
-                                                <i class="fas fa-shopping-bag cart-icon"></i>
-                                            </a>
-                                            <a href="#" class="cart-icon-link">
-                                                <i class="fas fa-search-plus cart-icon"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-        
-                                <div class="cart-list">
-                                    <div class="">
-                                        <a href="#" class="relative">
-                                            <img class="h-auto max-w-4xl" src="images/product-2.jpg" alt="" />
-                                            <span class="discount-title">-30%</span>
-                                        </a>
-                                    </div>
-                                    <div class="cart-desc">
-                                        <a href="#" class="cart-header">Dutchman's Breeches</a>
-                                        <p class="cart-price">$100.00 <span class="cart-price-through">$1200.00</span></p>
-                                        <p class="cart-title">
-                                            Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                                            ex ea commodo consequat.
-                                        </p>
-                                        <div class="cart-link">
-                                            <a href="#" class="cart-icon-link">
-                                                <i class="far fa-heart cart-icon"></i>
-                                            </a>
-                                            <a href="#" class="cart-icon-link">
-                                                <i class="fas fa-shopping-bag cart-icon"></i>
-                                            </a>
-                                            <a href="#" class="cart-icon-link">
-                                                <i class="fas fa-search-plus cart-icon"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-        
-                                <div class="cart-list">
-                                    <div class="">
-                                        <a href="#" class="relative">
-                                            <img class="h-auto max-w-4xl" src="images/product-3.jpg" alt="" />
-                                            <span class="discount-title">-30%</span>
-                                        </a>
-                                    </div>
-                                    <div class="cart-desc">
-                                        <a href="#" class="cart-header">Dutchman's Breeches</a>
-                                        <p class="cart-price">$100.00 <span class="cart-price-through">$1200.00</span></p>
-                                        <p class="cart-title">
-                                            Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                                            ex ea commodo consequat.
-                                        </p>
-                                        <div class="cart-link">
-                                            <a href="#" class="cart-icon-link">
-                                                <i class="far fa-heart cart-icon"></i>
-                                            </a>
-                                            <a href="#" class="cart-icon-link">
-                                                <i class="fas fa-shopping-bag cart-icon"></i>
-                                            </a>
-                                            <a href="#" class="cart-icon-link">
-                                                <i class="fas fa-search-plus cart-icon"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-        
-                                <div class="cart-list">
-                                    <div class="">
-                                        <a href="#" class="relative">
-                                            <img class="h-auto max-w-4xl" src="images/product-4.jpg" alt="" />
-                                            <span class="discount-title">-30%</span>
-                                        </a>
-                                    </div>
-                                    <div class="cart-desc">
-                                        <a href="#" class="cart-header">Dutchman's Breeches</a>
-                                        <p class="cart-price">$100.00 <span class="cart-price-through">$1200.00</span></p>
-                                        <p class="cart-title">
-                                            Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                                            ex ea commodo consequat.
-                                        </p>
-                                        <div class="cart-link">
-                                            <a href="#" class="cart-icon-link">
-                                                <i class="far fa-heart cart-icon"></i>
-                                            </a>
-                                            <a href="#" class="cart-icon-link">
-                                                <i class="fas fa-shopping-bag cart-icon"></i>
-                                            </a>
-                                            <a href="#" class="cart-icon-link">
-                                                <i class="fas fa-search-plus cart-icon"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="w-full hidden" id="content2">
-                                <div class="">
-                                    <div class="prod-cart-header">
-                                        <div class="prod-single-cart">
-                                            <a href="#" class=""> <img class="w-full" src="images/product-1.jpg" alt="" /></a>
-                                            <div class="px-5 pt-4 pb-3">
-                                                <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
-                                                <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
-                                                <div class="my-5">
-                                                    <a href="" class="prod-cart-icon-link-1st">
-                                                        <i class="far fa-heart prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-shopping-bag prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-search-plus prod-cart-icon"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="prod-single-cart">
-                                            <a href="#" class=""> <img class="w-full" src="images/product-2.jpg" alt="" /></a>
-                                            <div class="px-5 pt-4 pb-3">
-                                                <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
-                                                <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
-                                                <div class="my-5">
-                                                    <a href="" class="prod-cart-icon-link-1st">
-                                                        <i class="far fa-heart prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-shopping-bag prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-search-plus prod-cart-icon"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="prod-single-cart">
-                                            <a href="#" class=""> <img class="w-full" src="images/product-3.jpg" alt="" /></a>
-                                            <div class="px-5 pt-4 pb-3">
-                                                <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
-                                                <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
-                                                <div class="my-5">
-                                                    <a href="" class="prod-cart-icon-link-1st">
-                                                        <i class="far fa-heart prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-shopping-bag prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-search-plus prod-cart-icon"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-        
-                                        <div class="prod-single-cart">
-                                            <a href="#" class=""> <img class="w-full" src="images/product-4.jpg" alt="" /></a>
-                                            <div class="px-5 pt-4 pb-3">
-                                                <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
-                                                <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
-                                                <div class="my-5">
-                                                    <a href="" class="prod-cart-icon-link-1st">
-                                                        <i class="far fa-heart prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-shopping-bag prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-search-plus prod-cart-icon"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="prod-single-cart">
-                                            <a href="#" class=""> <img class="w-full" src="images/product-1.jpg" alt="" /></a>
-                                            <div class="px-5 pt-4 pb-3">
-                                                <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
-                                                <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
-                                                <div class="my-5">
-                                                    <a href="" class="prod-cart-icon-link-1st">
-                                                        <i class="far fa-heart prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-shopping-bag prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-search-plus prod-cart-icon"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="prod-single-cart">
-                                            <a href="#" class=""> <img class="w-full" src="images/product-2.jpg" alt="" /></a>
-                                            <div class="px-5 pt-4 pb-3">
-                                                <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
-                                                <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
-                                                <div class="my-5">
-                                                    <a href="" class="prod-cart-icon-link-1st">
-                                                        <i class="far fa-heart prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-shopping-bag prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-search-plus prod-cart-icon"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="prod-single-cart">
-                                            <a href="#" class=""> <img class="w-full" src="images/product-3.jpg" alt="" /></a>
-                                            <div class="px-5 pt-4 pb-3">
-                                                <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
-                                                <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
-                                                <div class="my-5">
-                                                    <a href="" class="prod-cart-icon-link-1st">
-                                                        <i class="far fa-heart prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-shopping-bag prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-search-plus prod-cart-icon"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-        
-                                        <div class="prod-single-cart">
-                                            <a href="#" class=""> <img class="w-full" src="images/product-4.jpg" alt="" /></a>
-                                            <div class="px-5 pt-4 pb-3">
-                                                <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
-                                                <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
-                                                <div class="my-5">
-                                                    <a href="" class="prod-cart-icon-link-1st">
-                                                        <i class="far fa-heart prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-shopping-bag prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-search-plus prod-cart-icon"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="prod-single-cart">
-                                            <a href="#" class=""> <img class="w-full" src="images/product-1.jpg" alt="" /></a>
-                                            <div class="px-5 pt-4 pb-3">
-                                                <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
-                                                <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
-                                                <div class="my-5">
-                                                    <a href="" class="prod-cart-icon-link-1st">
-                                                        <i class="far fa-heart prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-shopping-bag prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-search-plus prod-cart-icon"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-        
-                                        <div class="prod-single-cart">
-                                            <a href="#" class=""> <img class="w-full" src="images/product-2.jpg" alt="" /></a>
-                                            <div class="px-5 pt-4 pb-3">
-                                                <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
-                                                <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
-                                                <div class="my-5">
-                                                    <a href="" class="prod-cart-icon-link-1st">
-                                                        <i class="far fa-heart prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-shopping-bag prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-search-plus prod-cart-icon"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="prod-single-cart">
-                                            <a href="#" class=""> <img class="w-full" src="images/product-3.jpg" alt="" /></a>
-                                            <div class="px-5 pt-4 pb-3">
-                                                <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
-                                                <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
-                                                <div class="my-5">
-                                                    <a href="" class="prod-cart-icon-link-1st">
-                                                        <i class="far fa-heart prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-shopping-bag prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-search-plus prod-cart-icon"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="prod-single-cart">
-                                            <a href="#" class=""> <img class="w-full" src="images/product-4.jpg" alt="" /></a>
-                                            <div class="px-5 pt-4 pb-3">
-                                                <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
-                                                <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
-                                                <div class="my-5">
-                                                    <a href="" class="prod-cart-icon-link-1st">
-                                                        <i class="far fa-heart prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-shopping-bag prod-cart-icon"></i>
-                                                    </a>
-                                                    <a href="" class="prod-cart-icon-link">
-                                                        <i class="fas fa-search-plus prod-cart-icon"></i>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="pt-5 pb-12">
-                            <div class="border px-4 py-5">
-                                <div class="page">
-                                    <div>
-                                        <ul class="flex pl-0 list-none rounded my-2">
-                                            <li class="relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-blue-700 border-r-0 ml-0 rounded-l hover:bg-gray-200"><a class="page-link" href="#">Previous</a></li>
-                                            <li class="relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-blue-700 border-r-0 hover:bg-gray-200"><a class="page-link" href="#">1</a></li>
-                                            <li class="relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-blue-700 border-r-0 hover:bg-gray-200"><a class="page-link" href="#">2</a></li>
-                                            <li class="relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-blue-700 border-r-0 hover:bg-gray-200"><a class="page-link" href="#">3</a></li>
-                                            <li class="relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-blue-700 rounded-r hover:bg-gray-200"><a class="page-link" href="#">Next</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="pt-3 sm:pt-0 md:pt-0 lg:pt-0 xl:pt-0">
-                                        <p class="">Showing 1 - 20 of 30 results</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-            </div>
-        
-            <div class="container-fluid bg-gray-100 py-20 mt-20">
-                <div class="container mx-auto">
-                    <div class="footer">
-                        <div class="">
-                            <div class="main-footer">
-                                <div class="footer-single-blog">
-                                    <h1 class="footer-single-blog-header font-rubic">About Us</h1>
-                                    <p class="footer-single-blog-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididun</p>
-                                    <p class="footer-single-blog-title">Address: 123 Main Street, Anytown, CA 12345 - USA.</p>
-                                    <p class="footer-single-blog-title">Address: 123 Main Street, Anytown, CA 12345 - USA.</p>
-                                    <p class="footer-single-blog-title">Email: <a href="#" class="hover:text-red-600 transition duration-400">yourmail@example.com</a></p>
-                                    <ul class="flex justify-left items-center">
-                                        <li class="">
-                                            <a href="#" class="">
-                                                <i class="fab fa-facebook-f social-link"></i>
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a href="#" class="">
-                                                <i class="fab fa-twitter social-link"></i>
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a href="#" class="">
-                                                <i class="fab fa-google social-link"></i>
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a href="#" class="">
-                                                <i class="fab fa-linkedin social-link"></i>
-                                            </a>
-                                        </li>
-                                        <li class="">
-                                            <a href="#" class="">
-                                                <i class="fab fa-instagram social-link"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="footer-single-blog-info">
-                                    <h1 class="footer-single-blog-info-heading font-rubic">Information</h1>
-                                    <ul class="">
-                                        <li class="">
-                                            <a href="#" class="footer-info-link">About Us</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="#" class="footer-info-link">Delivery Information</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="#" class="footer-info-link">Privacy Policy</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="#" class="footer-info-link">Terms & Conditions</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="#" class="footer-info-link">Customer Service</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="#" class="footer-info-link">Return Policy</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="footer-single-blog-info">
-                                    <h1 class="footer-single-blog-info-heading font-rubic">My Account</h1>
-                                    <ul class="">
-                                        <li class="">
-                                            <a href="#" class="footer-info-link">My Account</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="#" class="footer-info-link">Order History</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="#" class="footer-info-link">WishList</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="#" class="footer-info-link">News Letter</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="#" class="footer-info-link">Order Information</a>
-                                        </li>
-                                        <li class="">
-                                            <a href="#" class="footer-info-link">International Order</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="footer-newslatter">
-                                    <h1 class="footer-single-blog-info-heading font-rubic">Join Our News Letter Now</h1>
-                                    <ul class="">
-                                        <li class="text-md text-gray-800 font-rubic">
-                                            Get E-mail updates about our latest shop and special offers.
-                                        </li>
-                                        <li class="my-5">
-                                            <input type="text" class="footer-input" placeholder="Your Email Address..." />
-                                        </li>
-                                        <li class="">
-                                            <button type="button" class="footer-button">subscribe</button>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container-fluid bg-gray-200">
-                <div class="container mx-auto">
-                    <div class="md:max-w-2xl lg:max-w-screen-xl xl:max-w-screen-xl mx-auto py-5">
-                        <div class="lg:flex lg:items-center lg:justify-between xl:items-center xl:flex xl:justify-between">
-                            <div class="">
-                                <p class="text-gray-800">Copyright © Phuler. All Right Reserved.</p>
-                            </div>
-                            <div class="">
-                                <a href="#" class="">
-                                    <img class="" src="images/payment.png" alt="" />
+
+                <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+                    <a
+                        class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="#"
+                    >
+                        Blog
+                    </a>
+                    <a
+                        class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="#"
+                    >
+                        Portfolio
+                    </a>
+                    <a
+                        class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="#"
+                    >
+                        About
+                    </a>
+                    <a
+                        class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="contact.html"
+                    >
+                        Contact
+                    </a>
+                    <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                        <button
+                            @click="open = !open"
+                            class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        >
+                            <span>My Account</span>
+                            <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div
+                            x-show="open"
+                            x-transition:enter="transition ease-out duration-100"
+                            x-transition:enter-start="transform opacity-0 scale-95"
+                            x-transition:enter-end="transform opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-75"
+                            x-transition:leave-start="transform opacity-100 scale-100"
+                            x-transition:leave-end="transform opacity-0 scale-95"
+                            class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48"
+                        >
+                            <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                                <a
+                                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                    href="#"
+                                >
+                                    Link #1
+                                </a>
+                                <a
+                                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                    href="#"
+                                >
+                                    Link #2
+                                </a>
+                                <a
+                                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                    href="#"
+                                >
+                                    Link #3
                                 </a>
                             </div>
                         </div>
                     </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container mx-auto mt-36 flex justify-center">
+            <div class="main-body mx-auto">
+                <div class="left-dashboard">
+                    <div class="border-gray-200 border px-5 py-6 dark:border-gray-600">
+                        <div class="border-b-2 border-gray-200 dark:border-gray-600">
+                            <h1 class="pb-3 text-xl font-semibold text-gray-800 dark:text-white">Shop By Categories</h1>
+                        </div>
+                        <div class="pt-4 border-b-2 border-gray-200 dark:border-gray-600">
+                            <div class="relative pb-2">
+                                <li class="collapse-header collapsible font-rubic">Birthday Bouquets <i class="fas fa-angle-down absolute right-0"></i></li>
+                                <div class="content max-h-0 overflow-hidden" style="transition: 0.4s;">
+                                    <ul class="pl-3 py-3">
+                                        <li class="col-item">
+                                            <a href="#" class="font-rubic">List one</a>
+                                        </li>
+                                        <li class="col-item">
+                                            <a href="#" class="">List two</a>
+                                        </li>
+                                        <li class="col-item">
+                                            <a href="#" class="">List three</a>
+                                        </li>
+                                        <li class="col-item">
+                                            <a href="#" class="">List four</a>
+                                        </li>
+                                        <li class="col-item">
+                                            <a href="#" class="">List five</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="relative pb-2">
+                                <li class="collapse-header collapsible font-rubic">Birthday Bouquets <i class="fas fa-angle-down absolute right-0"></i></li>
+                                <div class="content max-h-0 max-h-0 overflow-hidden" style="transition: 0.4s;">
+                                    <ul class="pl-3 py-3">
+                                        <li class="col-item">
+                                            <a href="#" class="font-rubic">List one</a>
+                                        </li>
+                                        <li class="col-item">
+                                            <a href="#" class="">List two</a>
+                                        </li>
+                                        <li class="col-item">
+                                            <a href="#" class="">List three</a>
+                                        </li>
+                                        <li class="col-item">
+                                            <a href="#" class="">List four</a>
+                                        </li>
+                                        <li class="col-item">
+                                            <a href="#" class="">List five</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="relative pb-2">
+                                <li class="collapse-header collapsible font-rubic">Birthday Bouquets <i class="fas fa-angle-down absolute right-0"></i></li>
+                                <div class="content max-h-0 max-h-0 overflow-hidden" style="transition: 0.4s;">
+                                    <ul class="pl-3 py-3">
+                                        <li class="col-item">
+                                            <a href="#" class="font-rubic">List one</a>
+                                        </li>
+                                        <li class="col-item">
+                                            <a href="#" class="">List two</a>
+                                        </li>
+                                        <li class="col-item">
+                                            <a href="#" class="">List three</a>
+                                        </li>
+                                        <li class="col-item">
+                                            <a href="#" class="">List four</a>
+                                        </li>
+                                        <li class="col-item">
+                                            <a href="#" class="">List five</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="">
+                                <ul class="">
+                                    <li class="coll-item">
+                                        <a href="#" class="">Interior Decor</a>
+                                    </li>
+                                    <li class="coll-item">
+                                        <a href="#" class="">Wedding Decor</a>
+                                    </li>
+                                    <li class="coll-item">
+                                        <a href="#" class="">Custom Decor</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="border-b-2 border-gray-200 py-5 dark:border-gray-600">
+                            <h1 class="pb-3 text-xl font-semibold text-gray-800">Price Filter</h1>
+                            <p class="m-0">Range: $100.00 - 1,300.00</p>
+                            <button class="bg-gray-900 text-white rounded px-6 py-2 text-sm font-semibold dark:bg-white dark:text-gray-800">Filter</button>
+                        </div>
+                        <div class="border-b-2 border-gray-200 py-5 dark:border-gray-600">
+                            <h1 class="pb-3 text-xl font-semibold text-gray-800">By Brand</h1>
+                            <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember" />
+                                <label for="userRemember">Poure</label>
+                            </div>
+                            <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember1" />
+                                <label for="userRemember1">Poure</label>
+                            </div>
+                            <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember2" />
+                                <label for="userRemember2">Poure</label>
+                            </div>
+                            <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember3" />
+                                <label for="userRemember3">Poure</label>
+                            </div>
+                            <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember4" />
+                                <label for="userRemember4">Poure</label>
+                            </div>
+                            <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember5" />
+                                <label for="userRemember5">Poure</label>
+                            </div>
+                            <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember6" />
+                                <label for="userRemember6">Poure</label>
+                            </div>
+                            <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember7" />
+                                <label for="userRemember7">Poure</label>
+                            </div>
+                            <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember8" />
+                                <label for="userRemember8">Poure</label>
+                            </div>
+                        </div>
+                        <div class="border-b-2 border-gray-200 py-5 dark:border-gray-600">
+                            <h1 class="pb-3 text-xl font-semibold text-gray-800">By Color</h1>
+                            <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember9" />
+                                <label for="userRemember9">Black</label>
+                            </div>
+                            <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember10" />
+                                <label for="userRemember10">Blue</label>
+                            </div>
+                            <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember11" />
+                                <label for="userRemember11">Green</label>
+                            </div>
+                            <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember12" />
+                                <label for="userRemember12">Red</label>
+                            </div>
+                            <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember13" />
+                                <label for="userRemember13">Yellow</label>
+                            </div>
+                            <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember14" />
+                                <label for="userRemember14">Pink</label>
+                            </div>
+                            <div class="my-4 flex items-center">
+                                <input class="h-4 w-4 mr-2" type="checkbox" id="userRemember15" />
+                                <label for="userRemember15">White</label>
+                            </div>
+                        </div>
+                        <div class="border-b-2 border-gray-200 py-5">
+                            <h1 class="pb-3 text-xl font-semibold text-gray-800">Compare Products</h1>
+                            <p class="">You have no item to compare.</p>
+                            <div class="flex justify-between items-center pt-3">
+                                <button type="button" class="bg-transparent py-1 xl:px-4 lg:px-2 px-4 dark:bg-white dark:border-gray-600 dark:text-gray-800 hover:bg-red-600 hover:text-gray-50 transition duration-400 rounded border font-semibold">Clear all</button>
+                                <button type="button" class="bg-gray-900 text-white rounded px-6 py-1 hover:bg-red-600 transition duration-400 font-semibold dark:bg-white dark:text-gray-800">Compare <i class="fas fa-check"></i></button>
+                            </div>
+                        </div>
+                        <div class="py-5">
+                            <h1 class="pb-3 text-xl font-semibold text-gray-800">Popular Tags</h1>
+                            <div class="flex justify-between items-center pt-3">
+                                <button type="button" class="tag-button">Bouquet</button>
+                                <button type="button" class="tag-button">Event</button>
+                                <button type="button" class="tag-button">Gift</button>
+                            </div>
+                            <div class="flex justify-between items-center pt-3">
+                                <button type="button" class="tag-button">Joy</button>
+                                <button type="button" class="tag-button">Love</button>
+                                <button type="button" class="tag-button">Speacial</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-dashboard">
+                    <div class="">
+                        <img class="w-full" src="images/banner-49.jpg" alt="" />
+                    </div>
+                    <div class="cart-history">
+                        <div class="cart-history-header">
+                            <div class="">
+                                <i class="fa fa-th grid-btn dark:text-white" id="button2"></i>
+                                <i class="fa fa-list-ul list-btn dark:text-white" id="button1"></i>
+                            </div>
+                            <div class="">
+                                <p class="xl:text-md lg:text-sm">Showing 1 - 20 of 30 results</p>
+                            </div>
+                            <div class="input-option">
+                                <div class="flex items-center mr-4">
+                                    <label for="cars" class="mr-3">View:</label>
+
+                                    <select class="option-left" id="cars">
+                                        <option value="20" class="text-gray-600 dark:text-gray-800">20</option>
+                                        <option value="23" class="text-gray-600 dark:text-gray-800">23</option>
+                                        <option value="30" class="text-gray-600 dark:text-gray-800">30</option>
+                                    </select>
+                                </div>
+                                <div class="flex items-center xl:ml-4 lg:ml-3 xl:pt-0 lg:pt-0 md:pt-0 pt-3">
+                                    <label for="cars" class="mr-3">Short by:</label>
+
+                                    <select id="cars" class="option-right">
+                                        <option value="Default" class="text-gray-600 text-gray-800">Default</option>
+                                        <option value="Name" class="text-gray-600 text-gray-800">Name</option>
+                                        <option value="Price" class="text-gray-600 text-gray-800">Price</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full">
+                        <div class="w-full" id="content1">
+                            <div class="cart-list">
+                                <div class="">
+                                    <a href="#" class="relative">
+                                        <img class="h-auto max-w-4xl" src="images/product-4.jpg" alt="" />
+                                        <span class="discount-title">-30%</span>
+                                    </a>
+                                </div>
+                                <div class="cart-desc">
+                                    <a href="#" class="cart-header">Dutchman's Breeches</a>
+                                    <p class="cart-price">$100.00 <span class="cart-price-through">$1200.00</span></p>
+                                    <p class="cart-title">
+                                        Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                        ex ea commodo consequat.
+                                    </p>
+                                    <div class="cart-link">
+                                        <a href="#" class="cart-icon-link">
+                                            <i class="far fa-heart cart-icon"></i>
+                                        </a>
+                                        <a href="#" class="cart-icon-link">
+                                            <i class="fas fa-shopping-bag cart-icon"></i>
+                                        </a>
+                                        <a href="#" class="cart-icon-link">
+                                            <i class="fas fa-search-plus cart-icon"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cart-list">
+                                <div class="">
+                                    <a href="#" class="relative">
+                                        <img class="h-auto max-w-4xl" src="images/product-2.jpg" alt="" />
+                                        <span class="discount-title">-30%</span>
+                                    </a>
+                                </div>
+                                <div class="cart-desc">
+                                    <a href="#" class="cart-header">Dutchman's Breeches</a>
+                                    <p class="cart-price">$100.00 <span class="cart-price-through">$1200.00</span></p>
+                                    <p class="cart-title">
+                                        Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                        ex ea commodo consequat.
+                                    </p>
+                                    <div class="cart-link">
+                                        <a href="#" class="cart-icon-link">
+                                            <i class="far fa-heart cart-icon"></i>
+                                        </a>
+                                        <a href="#" class="cart-icon-link">
+                                            <i class="fas fa-shopping-bag cart-icon"></i>
+                                        </a>
+                                        <a href="#" class="cart-icon-link">
+                                            <i class="fas fa-search-plus cart-icon"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cart-list">
+                                <div class="">
+                                    <a href="#" class="relative">
+                                        <img class="h-auto max-w-4xl" src="images/product-3.jpg" alt="" />
+                                        <span class="discount-title">-30%</span>
+                                    </a>
+                                </div>
+                                <div class="cart-desc">
+                                    <a href="#" class="cart-header">Dutchman's Breeches</a>
+                                    <p class="cart-price">$100.00 <span class="cart-price-through">$1200.00</span></p>
+                                    <p class="cart-title">
+                                        Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                        ex ea commodo consequat.
+                                    </p>
+                                    <div class="cart-link">
+                                        <a href="#" class="cart-icon-link">
+                                            <i class="far fa-heart cart-icon"></i>
+                                        </a>
+                                        <a href="#" class="cart-icon-link">
+                                            <i class="fas fa-shopping-bag cart-icon"></i>
+                                        </a>
+                                        <a href="#" class="cart-icon-link">
+                                            <i class="fas fa-search-plus cart-icon"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cart-list">
+                                <div class="">
+                                    <a href="#" class="relative">
+                                        <img class="h-auto max-w-4xl" src="images/product-4.jpg" alt="" />
+                                        <span class="discount-title">-30%</span>
+                                    </a>
+                                </div>
+                                <div class="cart-desc">
+                                    <a href="#" class="cart-header">Dutchman's Breeches</a>
+                                    <p class="cart-price">$100.00 <span class="cart-price-through">$1200.00</span></p>
+                                    <p class="cart-title">
+                                        Lorem ipsum dolor sit amet, consectetur adipic it, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+                                        ex ea commodo consequat.
+                                    </p>
+                                    <div class="cart-link">
+                                        <a href="#" class="cart-icon-link">
+                                            <i class="far fa-heart cart-icon"></i>
+                                        </a>
+                                        <a href="#" class="cart-icon-link">
+                                            <i class="fas fa-shopping-bag cart-icon"></i>
+                                        </a>
+                                        <a href="#" class="cart-icon-link">
+                                            <i class="fas fa-search-plus cart-icon"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-full hidden" id="content2">
+                            <div class="">
+                                <div class="prod-cart-header">
+                                    <div class="prod-single-cart">
+                                        <a href="#" class=""> <img class="w-full" src="images/product-1.jpg" alt="" /></a>
+                                        <div class="px-5 pt-4 pb-3 prod-cart-content">
+                                            <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
+                                            <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
+                                            <div class="my-5">
+                                                <a href="" class="prod-cart-icon-link-1st">
+                                                    <i class="far fa-heart prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-shopping-bag prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-search-plus prod-cart-icon"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prod-single-cart">
+                                        <a href="#" class=""> <img class="w-full" src="images/product-2.jpg" alt="" /></a>
+                                        <div class="px-5 pt-4 pb-3 prod-cart-content">
+                                            <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
+                                            <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
+                                            <div class="my-5">
+                                                <a href="" class="prod-cart-icon-link-1st">
+                                                    <i class="far fa-heart prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-shopping-bag prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-search-plus prod-cart-icon"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prod-single-cart">
+                                        <a href="#" class=""> <img class="w-full" src="images/product-3.jpg" alt="" /></a>
+                                        <div class="px-5 pt-4 pb-3 prod-cart-content">
+                                            <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
+                                            <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
+                                            <div class="my-5">
+                                                <a href="" class="prod-cart-icon-link-1st">
+                                                    <i class="far fa-heart prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-shopping-bag prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-search-plus prod-cart-icon"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="prod-single-cart">
+                                        <a href="#" class=""> <img class="w-full" src="images/product-4.jpg" alt="" /></a>
+                                        <div class="px-5 pt-4 pb-3 prod-cart-content">
+                                            <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
+                                            <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
+                                            <div class="my-5">
+                                                <a href="" class="prod-cart-icon-link-1st">
+                                                    <i class="far fa-heart prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-shopping-bag prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-search-plus prod-cart-icon"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prod-single-cart">
+                                        <a href="#" class=""> <img class="w-full" src="images/product-1.jpg" alt="" /></a>
+                                        <div class="px-5 pt-4 pb-3 prod-cart-content">
+                                            <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
+                                            <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
+                                            <div class="my-5">
+                                                <a href="" class="prod-cart-icon-link-1st">
+                                                    <i class="far fa-heart prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-shopping-bag prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-search-plus prod-cart-icon"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prod-single-cart">
+                                        <a href="#" class=""> <img class="w-full" src="images/product-2.jpg" alt="" /></a>
+                                        <div class="px-5 pt-4 pb-3 prod-cart-content">
+                                            <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
+                                            <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
+                                            <div class="my-5">
+                                                <a href="" class="prod-cart-icon-link-1st">
+                                                    <i class="far fa-heart prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-shopping-bag prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-search-plus prod-cart-icon"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prod-single-cart">
+                                        <a href="#" class=""> <img class="w-full" src="images/product-3.jpg" alt="" /></a>
+                                        <div class="px-5 pt-4 pb-3 prod-cart-content">
+                                            <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
+                                            <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
+                                            <div class="my-5">
+                                                <a href="" class="prod-cart-icon-link-1st">
+                                                    <i class="far fa-heart prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-shopping-bag prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-search-plus prod-cart-icon"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="prod-single-cart">
+                                        <a href="#" class=""> <img class="w-full" src="images/product-4.jpg" alt="" /></a>
+                                        <div class="px-5 pt-4 pb-3 prod-cart-content">
+                                            <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
+                                            <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
+                                            <div class="my-5">
+                                                <a href="" class="prod-cart-icon-link-1st">
+                                                    <i class="far fa-heart prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-shopping-bag prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-search-plus prod-cart-icon"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prod-single-cart">
+                                        <a href="#" class=""> <img class="w-full" src="images/product-1.jpg" alt="" /></a>
+                                        <div class="px-5 pt-4 pb-3 prod-cart-content">
+                                            <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
+                                            <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
+                                            <div class="my-5">
+                                                <a href="" class="prod-cart-icon-link-1st">
+                                                    <i class="far fa-heart prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-shopping-bag prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-search-plus prod-cart-icon"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="prod-single-cart">
+                                        <a href="#" class=""> <img class="w-full" src="images/product-2.jpg" alt="" /></a>
+                                        <div class="px-5 pt-4 pb-3 prod-cart-content">
+                                            <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
+                                            <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
+                                            <div class="my-5">
+                                                <a href="" class="prod-cart-icon-link-1st">
+                                                    <i class="far fa-heart prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-shopping-bag prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-search-plus prod-cart-icon"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prod-single-cart">
+                                        <a href="#" class=""> <img class="w-full" src="images/product-3.jpg" alt="" /></a>
+                                        <div class="px-5 pt-4 pb-3 prod-cart-content">
+                                            <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
+                                            <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
+                                            <div class="my-5">
+                                                <a href="" class="prod-cart-icon-link-1st">
+                                                    <i class="far fa-heart prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-shopping-bag prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-search-plus prod-cart-icon"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="prod-single-cart">
+                                        <a href="#" class=""> <img class="w-full" src="images/product-4.jpg" alt="" /></a>
+                                        <div class="px-5 pt-4 pb-3 prod-cart-content">
+                                            <a href="#" class="prod-cart-heading font-rubic">Dutchman's Breeches</a>
+                                            <p class="prod-cart-price font-rubic">$100.00 <span class="prod-price-throught font-rubic">$120.00</span></p>
+                                            <div class="my-5">
+                                                <a href="" class="prod-cart-icon-link-1st">
+                                                    <i class="far fa-heart prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-shopping-bag prod-cart-icon"></i>
+                                                </a>
+                                                <a href="" class="prod-cart-icon-link">
+                                                    <i class="fas fa-search-plus prod-cart-icon"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-5 pb-12">
+                        <div class="border px-4 py-5 dark:border-gray-600">
+                            <div class="page">
+                                <div>
+                                    <ul class="flex pl-0 list-none rounded my-2">
+                                        <li class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-blue-700 border-r-0 ml-0 rounded-l hover:bg-gray-200"><a class="page-link" href="#">Previous</a></li>
+                                        <li class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-blue-700 border-r-0 hover:bg-gray-200"><a class="page-link" href="#">1</a></li>
+                                        <li class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-blue-700 border-r-0 hover:bg-gray-200"><a class="page-link" href="#">2</a></li>
+                                        <li class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-blue-700 border-r-0 hover:bg-gray-200"><a class="page-link" href="#">3</a></li>
+                                        <li class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-blue-700 rounded-r hover:bg-gray-200"><a class="page-link" href="#">Next</a></li>
+                                    </ul>
+                                </div>
+                                <div class="pt-3 sm:pt-0 md:pt-0 lg:pt-0 xl:pt-0">
+                                    <p class="">Showing 1 - 20 of 30 results</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <body>
-               
-                <script type="text/javascript">
-                    var coll = document.getElementsByClassName("collapsible");
-                    var i;
-        
-                    for (i = 0; i < coll.length; i++) {
-                        coll[i].addEventListener("click", function () {
-                            this.classList.toggle("active");
-                            var content = this.nextElementSibling;
-                            if (content.style.maxHeight) {
-                                content.style.maxHeight = null;
-                            } else {
-                                content.style.maxHeight = content.scrollHeight + "px";
-                            }
-                        });
+        </div>
+
+        <div class="container-fluid bg-gray-100 py-20 mt-20 dark:bg-gray-800 border-t border-gray-100 dark:border-t dark:border-gray-600">
+            <div class="container mx-auto">
+                <div class="footer">
+                    <div class="">
+                        <div class="main-footer">
+                            <div class="footer-single-blog">
+                                <h1 class="footer-single-blog-header font-rubic">About Us</h1>
+                                <p class="footer-single-blog-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididun</p>
+                                <p class="footer-single-blog-title">Address: 123 Main Street, Anytown, CA 12345 - USA.</p>
+                                <p class="footer-single-blog-title">Address: 123 Main Street, Anytown, CA 12345 - USA.</p>
+                                <p class="footer-single-blog-title">Email: <a href="#" class="hover:text-red-600 transition duration-400">yourmail@example.com</a></p>
+                                <ul class="flex justify-left items-center">
+                                    <li class="">
+                                        <a href="#" class="">
+                                            <i class="fab fa-facebook-f social-link"></i>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="">
+                                            <i class="fab fa-twitter social-link"></i>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="">
+                                            <i class="fab fa-google social-link"></i>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="">
+                                            <i class="fab fa-linkedin social-link"></i>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="">
+                                            <i class="fab fa-instagram social-link"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-single-blog-info">
+                                <h1 class="footer-single-blog-info-heading font-rubic">Information</h1>
+                                <ul class="">
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">About Us</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Delivery Information</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Privacy Policy</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Terms & Conditions</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Customer Service</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Return Policy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-single-blog-info">
+                                <h1 class="footer-single-blog-info-heading font-rubic">My Account</h1>
+                                <ul class="">
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">My Account</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Order History</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">WishList</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">News Letter</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Order Information</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">International Order</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-newslatter">
+                                <h1 class="footer-single-blog-info-heading font-rubic">Join Our News Letter Now</h1>
+                                <ul class="">
+                                    <li class="text-md text-gray-800 font-rubic dark:text-gray-100">
+                                        Get E-mail updates about our latest shop and special offers.
+                                    </li>
+                                    <li class="my-5">
+                                        <input type="text" class="footer-input" placeholder="Your Email Address..." />
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="footer-button">subscribe</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-gray-200 dark:bg-gray-800 border-t border-gray-100 dark:border-t dark:border-gray-600">
+            <div class="container mx-auto">
+                <div class="md:max-w-2xl lg:max-w-screen-xl xl:max-w-screen-xl mx-auto py-5">
+                    <div class="lg:flex lg:items-center lg:justify-between xl:items-center xl:flex xl:justify-between">
+                        <div class="">
+                            <p class="text-gray-800 dark:text-gray-100">Copyright © Phuler. All Right Reserved.</p>
+                        </div>
+                        <div class="">
+                            <a href="#" class="">
+                                <img class="" src="images/payment.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const checkbox = document.querySelector("#toggle");
+            const html = document.querySelector("html");
+            const toggleDarkMode = function () {
+                checkbox.checked ? html.classList.add("dark") : html.classList.remove("dark");
+            };
+            toggleDarkMode();
+            checkbox.addEventListener("click", toggleDarkMode);
+        </script>
+        <script type="text/javascript">
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
                     }
-                </script>
-                <script>
-                    var bTnOne = document.getElementById("button1");
-                    var btntwo = document.getElementById("button2");
-        
-                    bTnOne.addEventListener("click", function () {
-                        var x = document.getElementById("content2");
-                        var y = document.getElementById("content1");
-                        if (y.style.display === "none" && x.style.display === "none") {
-                            y.style.display = "none";
-                            x.style.display = "block";
-                        } else {
-                            y.style.display = "block";
-                            x.style.display = "none";
-                        }
-                    });
-                    btntwo.addEventListener("click", function () {
-                        var x = document.getElementById("content2");
-                        var y = document.getElementById("content1");
-                        if (y.style.display === "none" && x.style.display === "none") {
-                            y.style.display = "block";
-                            x.style.display = "none";
-                        } else {
-                            y.style.display = "none";
-                            x.style.display = "block";
-                        }
-                    });
-                </script>
-            </body>
-        </html>
-        
+                });
+            }
+        </script>
+        <script>
+            var bTnOne = document.getElementById("button1");
+            var btntwo = document.getElementById("button2");
+
+            bTnOne.addEventListener("click", function () {
+                var x = document.getElementById("content2");
+                var y = document.getElementById("content1");
+                if (y.style.display === "none" && x.style.display === "none") {
+                    y.style.display = "none";
+                    x.style.display = "block";
+                } else {
+                    y.style.display = "block";
+                    x.style.display = "none";
+                }
+            });
+            btntwo.addEventListener("click", function () {
+                var x = document.getElementById("content2");
+                var y = document.getElementById("content1");
+                if (y.style.display === "none" && x.style.display === "none") {
+                    y.style.display = "block";
+                    x.style.display = "none";
+                } else {
+                    y.style.display = "none";
+                    x.style.display = "block";
+                }
+            });
+        </script>
+    </body>
+</html>
