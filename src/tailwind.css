@@ -200,10 +200,10 @@ input[type="range"]::-ms-thumb {
     @apply flex items-center;
 }
 .cart-icon-link{
-    @apply bg-gray-100 rounded-md h-14 w-14 flex justify-center items-center hover:bg-red-600 hover:text-gray-100 mr-2 group transition duration-700 ease-in-out;
+    @apply bg-gray-100 rounded-md h-14 w-14 border dark:hover:bg-red-500 border-gray-300 dark:bg-gray-800 dark:border-gray-600 flex justify-center items-center hover:bg-red-600 mr-2 transition duration-700 ease-in-out;
 }
 .cart-icon{
-    @apply text-gray-600 text-lg group-hover:text-gray-100 transition duration-700 ease-in-out text-gray-400;
+    @apply text-gray-400 text-lg transition duration-700 ease-in-out;
 }
 /* list-cart-item end */
 
@@ -229,10 +229,10 @@ input[type="range"]::-ms-thumb {
     @apply line-through text-red-600 ml-2;
 }
 .prod-cart-icon-link{
-    @apply bg-white border border border-gray-300 p-3 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition  duration-700 ease-in-out;
+    @apply bg-white border dark:bg-transparent dark:hover:bg-red-500 dark:border-gray-600 dark:text-white border-gray-300 p-4 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition  duration-700 ease-in-out;
 }
 .prod-cart-icon-link-1st{
-    @apply bg-white border border border-gray-300 p-3 rounded hover:bg-red-600 hover:border-red-600 group transition  duration-700 ease-in-out;
+    @apply bg-white border border-gray-300 dark:hover:bg-red-500 dark:bg-transparent dark:border-gray-600 dark:text-white p-4 rounded hover:bg-red-600 hover:border-red-600 group transition  duration-700 ease-in-out;
 }
 .prod-cart-icon{
     @apply flex justify-center items-center text-gray-400 group-hover:text-white transition  duration-700 ease-in-out;
