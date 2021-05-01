@@ -13,14 +13,14 @@
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
         <style>
-          input[type=range]::-webkit-slider-thumb {
-            pointer-events: all;
-            width: 24px;
-            height: 24px;
-            -webkit-appearance: none;
-          /* @apply w-6 h-6 appearance-none pointer-events-auto; */
-          }
-        </style> 
+            input[type="range"]::-webkit-slider-thumb {
+                pointer-events: all;
+                width: 24px;
+                height: 24px;
+                -webkit-appearance: none;
+                /* @apply w-6 h-6 appearance-none pointer-events-auto; */
+            }
+        </style>
     </head>
 
     <body class="bg-white text-gray-800 dark:text-gray-100 dark:bg-gray-800">
@@ -239,48 +239,60 @@
                             <p class="m-0 pb-5">Range: $100.00 - $1,300.00</p>
                             <div class="flex justify-center items-center">
                                 <div x-data="range()" x-init="mintrigger(); maxtrigger()" class="relative max-w-xl w-full">
-                                  <div>
-                                    <input type="range"
-                                           step="1"
-                                           x-bind:min="min" x-bind:max="max"
-                                           x-on:input="mintrigger"
-                                           x-model="minprice"
-                                           class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer">
-                              
-                                    <input type="range" 
-                                           step="1"
-                                           x-bind:min="min" x-bind:max="max"
-                                           x-on:input="maxtrigger"
-                                           x-model="maxprice"
-                                           class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer">
-                              
-                                    <div class="relative z-10 h-1.5">
-                              
-                                      <div class="absolute z-10 left-0 right-0 bottom-0 top-0 rounded-md bg-gray-200"></div>
-                              
-                                      <div class="absolute z-20 top-0 bottom-0 rounded-md bg-red-500" x-bind:style="'right:'+maxthumb+'%; left:'+minthumb+'%'"></div>
-                              
-                                      <div class="absolute z-30 w-3 h-3 top-1 left-0 bg-red-500 rounded-full -mt-2 -ml-1" x-bind:style="'left: '+minthumb+'%'" style="top: 4px !important;"></div>
-                              
-                                      <div class="absolute z-30 w-3 h-3 top-1 right-0 bg-red-500 rounded-full -mt-2 -mr-3" x-bind:style="'right: '+maxthumb+'%'"></div>
-                               
-                                    </div>
-                              
-                                  </div>
-                                  
-                                  <div class="flex justify-between items-center py-5">
                                     <div>
-                                      <input type="text" maxlength="5" x-on:input="mintrigger" x-model="minprice" class="px-3 py-2 border border-gray-200 rounded w-24 dark:border-gray-600 text-center dark:bg-gray-800 text-gray-900 dark:text-gray-100">
+                                        <input
+                                            type="range"
+                                            step="1"
+                                            x-bind:min="min"
+                                            x-bind:max="max"
+                                            x-on:input="mintrigger"
+                                            x-model="minprice"
+                                            class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer"
+                                        />
+
+                                        <input
+                                            type="range"
+                                            step="1"
+                                            x-bind:min="min"
+                                            x-bind:max="max"
+                                            x-on:input="maxtrigger"
+                                            x-model="maxprice"
+                                            class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer"
+                                        />
+
+                                        <div class="relative z-10 h-1.5">
+                                            <div class="absolute z-10 left-0 right-0 bottom-0 top-0 rounded-md bg-gray-200"></div>
+
+                                            <div class="absolute z-20 top-0 bottom-0 rounded-md bg-red-500" x-bind:style="'right:'+maxthumb+'%; left:'+minthumb+'%'"></div>
+
+                                            <div class="absolute z-30 w-3 h-3 top-1 left-0 bg-red-500 rounded-full -mt-2 -ml-1" x-bind:style="'left: '+minthumb+'%'" style="top: 4px !important;"></div>
+
+                                            <div class="absolute z-30 w-3 h-3 top-1 right-0 bg-red-500 rounded-full -mt-2 -mr-3" x-bind:style="'right: '+maxthumb+'%'"></div>
+                                        </div>
                                     </div>
-                                    <div>
-                                      <input type="text" maxlength="5" x-on:input="maxtrigger" x-model="maxprice" class="px-3 py-2 border border-gray-200 rounded w-24 dark:border-gray-600 text-center dark:bg-gray-800 text-gray-900 dark:text-gray-100">
+
+                                    <div class="flex justify-between items-center py-5">
+                                        <div>
+                                            <input
+                                                type="text"
+                                                maxlength="5"
+                                                x-on:input="mintrigger"
+                                                x-model="minprice"
+                                                class="px-3 py-2 border border-gray-200 rounded w-24 dark:border-gray-600 text-center dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                                            />
+                                        </div>
+                                        <div>
+                                            <input
+                                                type="text"
+                                                maxlength="5"
+                                                x-on:input="maxtrigger"
+                                                x-model="maxprice"
+                                                class="px-3 py-2 border border-gray-200 rounded w-24 dark:border-gray-600 text-center dark:bg-gray-800 text-gray-900 dark:text-gray-100"
+                                            />
+                                        </div>
                                     </div>
-                                  </div>
-                                  
                                 </div>
-                              
-                              
-                              </div>
+                            </div>
                             <button class="bg-gray-900 text-white rounded px-6 py-2 text-sm font-semibold dark:bg-white dark:text-gray-800">Filter</button>
                         </div>
                         <div class="border-b-2 border-gray-200 py-5 dark:border-gray-600">
@@ -357,7 +369,12 @@
                             <h1 class="pb-3 text-xl font-semibold text-gray-800">Compare Products</h1>
                             <p class="">You have no item to compare.</p>
                             <div class="flex justify-between items-center pt-3">
-                                <button type="button" class="bg-transparent py-1 xl:px-4 lg:px-2 px-4 dark:bg-white dark:border-gray-600 dark:text-gray-800 hover:bg-red-600 hover:text-gray-50 transition duration-400 rounded border font-semibold">Clear all</button>
+                                <button
+                                    type="button"
+                                    class="bg-transparent py-1 xl:px-4 lg:px-2 px-4 dark:bg-white dark:border-gray-600 dark:text-gray-800 hover:bg-red-600 hover:text-gray-50 transition duration-400 rounded border font-semibold"
+                                >
+                                    Clear all
+                                </button>
                                 <button type="button" class="bg-gray-900 text-white rounded px-6 py-1 hover:bg-red-600 transition duration-400 font-semibold dark:bg-white dark:text-gray-800">Compare <i class="fas fa-check"></i></button>
                             </div>
                         </div>
@@ -377,9 +394,14 @@
                     </div>
                 </div>
                 <div class="right-dashboard">
-                    <div class="">
-                        <img class="w-full" src="images/banner-49.jpg" alt="" />
-                    </div>
+                    <div class="bg-red-200 relative overflow-hidden px-10 py-10 dark:bg-gray-800 border border-red-200 dark:border-gray-600">
+                       <div class="h-32 w-full">
+                            <h1 class="text-red-500 text-2xl font-rubic pb-1 pt-3">New Collection</h1>
+                            <h1 class="text-gray-800 text-2xl font-rubic font-semibold pb-3 dark:text-gray-100">FLowers Bouquet Pink</h1>
+                            <p class="text-lg font-rubic">From: <span class="text-xl font-rubic text-red-500 font-semibold">$18.00</span></p>
+                            <img src="images/f-bg.png" class="absolute h-auto w-96 bottom-0 -right-20 xl:block lg:block md:block hidden" alt="">
+                       </div>
+                     </div>
                     <div class="cart-history">
                         <div class="cart-history-header">
                             <div class="">
@@ -756,11 +778,23 @@
                             <div class="page">
                                 <div>
                                     <ul class="flex pl-0 list-none rounded my-2">
-                                        <li class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-blue-700 border-r-0 ml-0 rounded-l hover:bg-gray-200"><a class="page-link" href="#">Previous</a></li>
-                                        <li class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-blue-700 border-r-0 hover:bg-gray-200"><a class="page-link" href="#">1</a></li>
-                                        <li class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-blue-700 border-r-0 hover:bg-gray-200"><a class="page-link" href="#">2</a></li>
-                                        <li class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-blue-700 border-r-0 hover:bg-gray-200"><a class="page-link" href="#">3</a></li>
-                                        <li class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-blue-700 rounded-r hover:bg-gray-200"><a class="page-link" href="#">Next</a></li>
+                                        <li
+                                            class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-blue-700 border-r-0 ml-0 rounded-l hover:bg-gray-200"
+                                        >
+                                            <a class="page-link" href="#">Previous</a>
+                                        </li>
+                                        <li class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-blue-700 border-r-0 hover:bg-gray-200">
+                                            <a class="page-link" href="#">1</a>
+                                        </li>
+                                        <li class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-blue-700 border-r-0 hover:bg-gray-200">
+                                            <a class="page-link" href="#">2</a>
+                                        </li>
+                                        <li class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-blue-700 border-r-0 hover:bg-gray-200">
+                                            <a class="page-link" href="#">3</a>
+                                        </li>
+                                        <li class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 relative block py-2 px-3 leading-tight bg-white border border-gray-300 text-blue-700 rounded-r hover:bg-gray-200">
+                                            <a class="page-link" href="#">Next</a>
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="pt-3 sm:pt-0 md:pt-0 lg:pt-0 xl:pt-0">
@@ -948,23 +982,23 @@
         <script>
             function range() {
                 return {
-                  minprice: 300, 
-                  maxprice: 800,
-                  min: 0, 
-                  max: 1200,
-                  minthumb: 0,
-                  maxthumb: 0, 
-                  
-                  mintrigger() {   
-                    this.minprice = Math.min(this.minprice, this.maxprice - 0);      
-                    this.minthumb = ((this.minprice - this.min) / (this.max - this.min)) * 100;
-                  },
-                   
-                  maxtrigger() {
-                    this.maxprice = Math.max(this.maxprice, this.minprice + 0); 
-                    this.maxthumb = 100 - (((this.maxprice - this.min) / (this.max - this.min)) * 100);    
-                  }, 
-                }
+                    minprice: 300,
+                    maxprice: 800,
+                    min: 0,
+                    max: 1200,
+                    minthumb: 0,
+                    maxthumb: 0,
+
+                    mintrigger() {
+                        this.minprice = Math.min(this.minprice, this.maxprice - 0);
+                        this.minthumb = ((this.minprice - this.min) / (this.max - this.min)) * 100;
+                    },
+
+                    maxtrigger() {
+                        this.maxprice = Math.max(this.maxprice, this.minprice + 0);
+                        this.maxthumb = 100 - ((this.maxprice - this.min) / (this.max - this.min)) * 100;
+                    },
+                };
             }
         </script>
     </body>
