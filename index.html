@@ -11,6 +11,16 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        <style>
+          input[type=range]::-webkit-slider-thumb {
+            pointer-events: all;
+            width: 24px;
+            height: 24px;
+            -webkit-appearance: none;
+          /* @apply w-6 h-6 appearance-none pointer-events-auto; */
+          }
+        </style> 
     </head>
 
     <body class="bg-white text-gray-800 dark:text-gray-100 dark:bg-gray-800">
@@ -226,12 +236,51 @@
                         </div>
                         <div class="border-b-2 border-gray-200 py-5 dark:border-gray-600">
                             <h1 class="pb-3 text-xl font-semibold text-gray-800">Price Filter</h1>
-                            <p class="m-0 pb-5">Range: $100.00 - 1,300.00</p>
-                            <div class="range-slider mb-8">
-                                <input value="300" min="0" max="1200" step="1" type="range" />
-                                <input value="800" min="0" max="1200" step="1" type="range" />
-                                <span><input class="dark:text-gray-100  dark:bg-transparent" type="number" value="300" min="0" max="0" step="1" />-<input class="dark:text-gray-100 dark:bg-transparent" type="number" value="800" min="0" max="1200" step="1" /></span>
-                            </div>
+                            <p class="m-0 pb-5">Range: $100.00 - $1,300.00</p>
+                            <div class="flex justify-center items-center">
+                                <div x-data="range()" x-init="mintrigger(); maxtrigger()" class="relative max-w-xl w-full">
+                                  <div>
+                                    <input type="range"
+                                           step="1"
+                                           x-bind:min="min" x-bind:max="max"
+                                           x-on:input="mintrigger"
+                                           x-model="minprice"
+                                           class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer">
+                              
+                                    <input type="range" 
+                                           step="1"
+                                           x-bind:min="min" x-bind:max="max"
+                                           x-on:input="maxtrigger"
+                                           x-model="maxprice"
+                                           class="absolute pointer-events-none appearance-none z-20 h-2 w-full opacity-0 cursor-pointer">
+                              
+                                    <div class="relative z-10 h-1.5">
+                              
+                                      <div class="absolute z-10 left-0 right-0 bottom-0 top-0 rounded-md bg-gray-200"></div>
+                              
+                                      <div class="absolute z-20 top-0 bottom-0 rounded-md bg-red-500" x-bind:style="'right:'+maxthumb+'%; left:'+minthumb+'%'"></div>
+                              
+                                      <div class="absolute z-30 w-3 h-3 top-1 left-0 bg-red-500 rounded-full -mt-2 -ml-1" x-bind:style="'left: '+minthumb+'%'" style="top: 4px !important;"></div>
+                              
+                                      <div class="absolute z-30 w-3 h-3 top-1 right-0 bg-red-500 rounded-full -mt-2 -mr-3" x-bind:style="'right: '+maxthumb+'%'"></div>
+                               
+                                    </div>
+                              
+                                  </div>
+                                  
+                                  <div class="flex justify-between items-center py-5">
+                                    <div>
+                                      <input type="text" maxlength="5" x-on:input="mintrigger" x-model="minprice" class="px-3 py-2 border border-gray-200 rounded w-24 text-center">
+                                    </div>
+                                    <div>
+                                      <input type="text" maxlength="5" x-on:input="maxtrigger" x-model="maxprice" class="px-3 py-2 border border-gray-200 rounded w-24 text-center">
+                                    </div>
+                                  </div>
+                                  
+                                </div>
+                              
+                              
+                              </div>
                             <button class="bg-gray-900 text-white rounded px-6 py-2 text-sm font-semibold dark:bg-white dark:text-gray-800">Filter</button>
                         </div>
                         <div class="border-b-2 border-gray-200 py-5 dark:border-gray-600">
@@ -897,48 +946,26 @@
             });
         </script>
         <script>
-
-            // range slider
-            (function () {
-                const parent = document.querySelector(".range-slider");
-
-                if (!parent) {
-                    return;
+            function range() {
+                return {
+                  minprice: 300, 
+                  maxprice: 800,
+                  min: 0, 
+                  max: 1200,
+                  minthumb: 0,
+                  maxthumb: 0, 
+                  
+                  mintrigger() {   
+                    this.minprice = Math.min(this.minprice, this.maxprice - 0);      
+                    this.minthumb = ((this.minprice - this.min) / (this.max - this.min)) * 100;
+                  },
+                   
+                  maxtrigger() {
+                    this.maxprice = Math.max(this.maxprice, this.minprice + 0); 
+                    this.maxthumb = 100 - (((this.maxprice - this.min) / (this.max - this.min)) * 100);    
+                  }, 
                 }
-
-                const rangeS = parent.querySelectorAll('input[type="range"]'),
-                    numberS = parent.querySelectorAll('input[type="number"]');
-
-                rangeS.forEach((el) => {
-                    el.oninput = () => {
-                        let slide1 = parseFloat(rangeS[0].value),
-                            slide2 = parseFloat(rangeS[1].value);
-
-                        if (slide1 > slide2) {
-                            [slide1, slide2] = [slide2, slide1];
-                        }
-
-                        numberS[0].value = slide1;
-                        numberS[1].value = slide2;
-                    };
-                });
-
-                numberS.forEach((el) => {
-                    el.oninput = () => {
-                        let number1 = parseFloat(numberS[0].value),
-                            number2 = parseFloat(numberS[1].value);
-
-                        if (number1 > number2) {
-                            let tmp = number1;
-                            numberS[0].value = number2;
-                            numberS[1].value = tmp;
-                        }
-
-                        rangeS[0].value = number1;
-                        rangeS[1].value = number2;
-                    };
-                });
-            })();
+            }
         </script>
     </body>
 </html>
