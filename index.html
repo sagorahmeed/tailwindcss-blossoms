@@ -68,7 +68,7 @@
                 <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
                     <a
                         class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                        href="#"
+                        href="about.html"
                     >
                         Blog
                     </a>
@@ -226,7 +226,12 @@
                         </div>
                         <div class="border-b-2 border-gray-200 py-5 dark:border-gray-600">
                             <h1 class="pb-3 text-xl font-semibold text-gray-800">Price Filter</h1>
-                            <p class="m-0">Range: $100.00 - 1,300.00</p>
+                            <p class="m-0 pb-5">Range: $100.00 - 1,300.00</p>
+                            <div class="range-slider mb-8">
+                                <input value="300" min="0" max="1200" step="1" type="range" />
+                                <input value="800" min="0" max="1200" step="1" type="range" />
+                                <span><input class="dark:text-gray-100  dark:bg-transparent" type="number" value="300" min="0" max="0" step="1" />-<input class="dark:text-gray-100 dark:bg-transparent" type="number" value="800" min="0" max="1200" step="1" /></span>
+                            </div>
                             <button class="bg-gray-900 text-white rounded px-6 py-2 text-sm font-semibold dark:bg-white dark:text-gray-800">Filter</button>
                         </div>
                         <div class="border-b-2 border-gray-200 py-5 dark:border-gray-600">
@@ -890,6 +895,50 @@
                     x.style.display = "block";
                 }
             });
+        </script>
+        <script>
+
+            // range slider
+            (function () {
+                const parent = document.querySelector(".range-slider");
+
+                if (!parent) {
+                    return;
+                }
+
+                const rangeS = parent.querySelectorAll('input[type="range"]'),
+                    numberS = parent.querySelectorAll('input[type="number"]');
+
+                rangeS.forEach((el) => {
+                    el.oninput = () => {
+                        let slide1 = parseFloat(rangeS[0].value),
+                            slide2 = parseFloat(rangeS[1].value);
+
+                        if (slide1 > slide2) {
+                            [slide1, slide2] = [slide2, slide1];
+                        }
+
+                        numberS[0].value = slide1;
+                        numberS[1].value = slide2;
+                    };
+                });
+
+                numberS.forEach((el) => {
+                    el.oninput = () => {
+                        let number1 = parseFloat(numberS[0].value),
+                            number2 = parseFloat(numberS[1].value);
+
+                        if (number1 > number2) {
+                            let tmp = number1;
+                            numberS[0].value = number2;
+                            numberS[1].value = tmp;
+                        }
+
+                        rangeS[0].value = number1;
+                        rangeS[1].value = number2;
+                    };
+                });
+            })();
         </script>
     </body>
 </html>
