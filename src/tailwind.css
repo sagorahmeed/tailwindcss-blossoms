@@ -8,24 +8,21 @@
 @tailwind components;
 /* ====navbar :start */
 .actived-menu{
-    @apply px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 dark:text-gray-100 focus:outline-none focus:shadow-outline;
+    @apply px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 dark:text-gray-100 focus:outline-none;
 }
 .portfolio-menu{
-    @apply px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 dark:text-gray-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline;
+    @apply px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 dark:text-gray-800 focus:bg-gray-200 focus:outline-none;
 }
 .about-menu{
-    @apply px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 dark:text-gray-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline;
+    @apply px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 dark:text-gray-800 focus:bg-gray-200 focus:outline-none;
 }
 .contact-menu{
-    @apply px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 dark:text-gray-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline;
+    @apply px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 dark:text-gray-800 focus:bg-gray-200 focus:outline-none;
 }
 dropdown{
-    @apply flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark:bg-transparent dark:focus:text-white dark:hover:text-white dark:focus:bg-gray-600 dark:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline;
+    @apply flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark:bg-transparent dark:focus:text-white dark:hover:text-white dark:focus:bg-gray-600 dark:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none;
 }
 
-
-/* ================shop page start */
-/* pricing desc start */
 
 .collapse-item{
     @apply border-b-2 border-gray-200 py-5;
@@ -197,6 +194,139 @@ dropdown{
 
 
 
+
+
+/*===============single-product page start */
+
+.projuct-gallery{
+    @apply pt-44 max-w-xs md:max-w-2xl lg:max-w-screen-xl xl:max-w-screen-2xl mx-auto lg:flex lg:justify-center xl:flex xl:justify-center;
+}
+.main-img{
+    @apply w-full h-auto border border-gray-200 dark:border-gray-400;
+}
+.discount-t{
+    @apply absolute bg-red-500 text-white px-3 py-0 rounded top-0 left-0;
+}
+.single-img{
+    @apply xl:w-24 xl:h-auto lg:w-16 lg:h-auto md:w-20 md:h-auto w-12 h-auto mr-2 cursor-pointer border border-gray-200;
+}
+.gallery-desc-heading{
+    @apply text-xs md:text-base xl:text-base lg:text-base dark:text-gray-100 text-gray-700 font-semibold;
+}
+.gallery-review{
+    @apply text-gray-700 text-xs md:text-base xl:text-base lg:text-base dark:text-gray-100;
+}
+.add-review{
+    @apply text-gray-700 text-xs md:text-base xl:text-base lg:text-base dark:text-gray-100;
+}
+.stock{
+    @apply text-gray-600 pb-2 text-xs md:text-base xl:text-base lg:text-base dark:text-gray-100;
+}
+.stock-title{
+    @apply text-gray-600 text-xs md:text-base xl:text-base lg:text-base dark:text-gray-100;
+}
+.inp-check{
+    @apply h-3 h-3 xl:h-4 xl:w-4 xl:h-4 lg:w-4 xl:h-4 md:w-4 mr-2;
+}
+.inp-title{
+    @apply pt-1 text-xs md:text-base xl:text-base lg:text-base;
+}
+.decrement-btn{
+    @apply dark:bg-gray-600 dark:hover:text-white bg-gray-100 text-gray-400 hover:text-gray-700 hover:bg-gray-200 h-full w-20 rounded-l cursor-pointer outline-none;
+}
+.increment-btn{
+    @apply dark:bg-gray-600 dark:hover:text-white bg-gray-100 text-gray-400 hover:text-gray-700 hover:bg-gray-200 h-full w-20 rounded-r cursor-pointer;
+}
+.total-value-btn{
+    @apply dark:bg-gray-600 dark:text-gray-100 dark:hover:text-white outline-none focus:outline-none text-center w-full bg-gray-100 font-semibold hover:text-black focus:text-black flex items-center text-gray-500  outline-none;
+}
+.gallery-shopping-cart-icon{
+    @apply dark:bg-gray-600 dark:text-gray-100 dark:hover:bg-red-500 dark:hover:text-white p-3 bg-gray-100 rounded text-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out;
+}
+.gallery-heart-cart-icon{
+    @apply dark:bg-gray-600 dark:text-gray-100 dark:hover:bg-red-500 dark:hover:text-white p-3 bg-gray-100 rounded text-gray-400 ml-2 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out;
+}
+.category{
+    @apply text-gray-600 text-xs leading-loose text-xs md:text-base xl:text-base lg:text-base dark:text-gray-100;
+}
+.tag{
+    @apply text-gray-600 text-xs leading-loose text-xs md:text-base xl:text-base lg:text-base dark:text-gray-100;
+}
+.sub-category{
+    @apply hover:text-red-600 transition duration-300 ease-in-out;
+}
+.tweet-btn{
+    @apply bg-blue-400 text-gray-100 px-4 border border-blue-400 py-2 rounded hover:bg-transparent hover:text-blue-400 border hover:border-blue-400 transition duration-300 ease-in-out;
+}
+.fb-icon{
+    @apply mx-1 bg-blue-600 text-gray-100 px-2 border border-blue-600 py-2 rounded hover:bg-transparent hover:text-blue-600 border hover:border-blue-600 transition duration-300 ease-in-out;
+}
+.google-icon{
+    @apply mr-1 bg-red-400 text-gray-100 px-2 border border-red-400 py-2 rounded hover:bg-transparent hover:text-red-400 border hover:border-red-400 transition duration-300 ease-in-out;
+}
+.pinterest-icon{
+    @apply bg-red-600 text-gray-100 px-2 border border-red-600 py-2 rounded hover:bg-transparent hover:text-red-600 border hover:border-red-600 transition duration-300 ease-in-out;
+}
+.gallery-details{
+    @apply max-w-xs md:max-w-2xl lg:max-w-screen-xl xl:max-w-screen-xl mx-auto mt-4;
+}
+.tabs{
+    @apply lg:flex lg:justify-center lg:items-center xl:flex xl:justify-center xl:items-center w-full text-center bg-gray-900;
+}
+.tabs-btn{
+    @apply px-4 py-3 font-semibold text-gray-100  w-full uppercase xl:text-base lg:text-base md:text-sm text-xs;
+}
+.review-head{
+    @apply text-gray-900 font-bold font-rubic dark:text-gray-100;
+}
+.email-title{
+    @apply pt-1 text-gray-600 xl:text-base lg:text-base md:text-base text-sm dark:text-gray-100;
+}
+.tabs-title{
+    @apply text-gray-600 xl:text-base lg:text-base md:text-base text-sm dark:text-gray-100;
+}
+.submit-btn{
+    @apply bg-gray-900 text-gray-100 px-7 py-2 rounded hover:bg-red-600 hover:text-white;
+}
+.inp-form-left{
+    @apply dark:bg-gray-800 dark:border-gray-500  h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5 px-5 border border-gray-200 rounded outline-none xl:mr-5 lg:mr-3;
+}
+.inp-form-right{
+    @apply dark:bg-gray-800 dark:border-gray-500  h-12 px-5 border border-gray-200 rounded outline-none xl:ml-5 lg:ml-3;
+}
+.messenge-inp{
+    @apply dark:bg-gray-800 dark:border-gray-500 mt-5 tracking-wide py-2 h-32 px-5 mb-3 leading-relaxed appearance-none block w-full bg-white border border-gray-200 rounded border border-gray-200 rounded outline-none;
+}
+.chart-btn{
+    @apply dark:bg-gray-600 hidden bg-gray-100 xl:px-10 xl:py-7 lg:px-10 lg:py-7 md:px-3 md:py-3 px-2 py-2;
+}
+.table{
+    @apply m-5 w-full mx-auto bg-gray-100 border border-gray-200 dark:border-gray-400;
+}
+.table-tr-td{
+    @apply text-left border-b-2 border-gray-200  dark:bg-gray-800 dark:border-gray-400;
+}
+.t-content{
+    @apply px-4 py-3 text-gray-700 dark:text-gray-100 dark:text-gray-100 xl:text-base lg:text-base md:text-sm text-xs;
+}
+.shop-policy-tab{
+    @apply dark:bg-gray-600 hidden bg-gray-100 xl:px-10 xl:py-7 lg:px-10 lg:py-7 md:px-3 md:py-3 px-2 py-2;
+}
+.policy-heading{
+    @apply text-gray-600 xl:text-base lg:text-base md:text-base text-sm dark:text-gray-100;
+}
+.policy-title{
+    @apply text-gray-600 xl:text-base lg:text-base md:text-base text-sm dark:text-gray-100;
+}
+.policy-list-item{
+    @apply text-gray-600 xl:text-base lg:text-base md:text-base text-sm dark:text-gray-100;
+}
+.policy-desc{
+    @apply pt-2 text-gray-600 xl:text-base lg:text-base md:text-base text-sm dark:text-gray-100;
+}
+/*===============single-product page end */
+
+
 /* footer start */
 
 .footer{
@@ -242,6 +372,11 @@ dropdown{
     @apply bg-red-600 text-gray-100 px-10 py-2 rounded hover:bg-red-700 transition duration-700 ease-in-out uppercase;
 }
 /* footer start */
+
+
+
+
+
 @tailwind utilities;
 
 
