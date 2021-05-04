@@ -1,0 +1,507 @@
+<html lang="en" class="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Checkout</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;1,300&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="public/styles.css" />
+        <script src="app.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+
+        <style>
+            input[type='number']::-webkit-inner-spin-button,
+            input[type='number']::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+            }
+        
+            .custom-number-input input:focus {
+            outline: none !important;
+            }
+        
+            .custom-number-input button:focus {
+            outline: none !important;
+            }
+        </style>
+        <style>
+            input[type="range"]::-webkit-slider-thumb {
+                pointer-events: all;
+                width: 24px;
+                height: 24px;
+                -webkit-appearance: none;
+                /* @apply w-6 h-6 appearance-none pointer-events-auto; */
+            }
+        </style>
+    </head>
+
+    <body class="bg-white text-gray-800 dark:text-gray-100 dark:bg-gray-800">
+        <div class="w-full text-gray-700 bg-gray-100 fixed top-0 z-40">
+            <div x-data="{ open: false }" class="py-2 flex flex-col max-w-screen-xl mx-auto md:items-center md:justify-between md:flex-row xl:px-0 lg:px-10 md:px-5 px-5">
+                <div class="p-4 flex flex-row items-center justify-between">
+                    <a href="index.html" class="text-lg font-semibold tracking-widest text-gray-900 uppercase h-auto w-20 rounded-lg dark:text-white focus:outline-none focus:shadow-outline">
+                        <h1 class="text-gray-800 font-rubic dark:text-gray-800">Logo</h1>
+                    </a>
+                    <div class="md:ml-1 lg:ml-36 xl:ml-56">
+                        <div class="flex justify-end items-center space-x-2">
+                            <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="text-yellow-500 dark:text-gray-400 ransition-colors duration-200">
+                                <path
+                                    d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                ></path>
+                            </svg>
+
+                            <div class="">
+                                <input type="checkbox" name="" id="toggle" class="hidden" />
+                                <label for="toggle" class="cursor-pointer">
+                                    <div class="w-10 h-5 flex items-center bg-green-400 dark:bg-gray-800 rounded-full p-1">
+                                        <div class="toggle-dot w-4 h-4 bg-white rounded-full shadow-md transform transition duration-500 ease-in-out"></div>
+                                    </div>
+                                </label>
+                            </div>
+                            <svg width="24" height="24" fill="currentColor" class="dark:text-gray-800 transition-colors duration-200 text-gray-300">
+                                <path
+                                    fill-rule="evenodd"
+                                    clip-rule="evenodd"
+                                    d="M9.353 2.939a1 1 0 01.22 1.08 8 8 0 0010.408 10.408 1 1 0 011.301 1.3A10.003 10.003 0 0112 22C6.477 22 2 17.523 2 12c0-4.207 2.598-7.805 6.273-9.282a1 1 0 011.08.22z"
+                                ></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <button class="md:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                            <path
+                                x-show="!open"
+                                fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                                clip-rule="evenodd"
+                            ></path>
+                            <path
+                                x-show="open"
+                                fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"
+                            ></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <nav :class="{'flex': open, 'hidden': !open}" class="flex-col flex-grow pb-4 md:pb-0 hidden md:flex md:justify-end md:flex-row">
+                    <a
+                        class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 dark:text-gray-100 focus:outline-none focus:shadow-outline"
+                        href="about.html"
+                    >
+                        Blog
+                    </a>
+                    <a
+                        class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 dark:text-gray-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="#"
+                    >
+                        Portfolio
+                    </a>
+                    <a
+                        class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 dark:text-gray-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="#"
+                    >
+                        About
+                    </a>
+                    <a
+                        class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 dark:text-gray-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="contact.html"
+                    >
+                        Contact
+                    </a>
+                    <div @click.away="open = false" class="relative" x-data="{ open: false }">
+                        <button
+                            @click="open = !open"
+                            class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark:bg-transparent dark:focus:text-white dark:hover:text-white dark:focus:bg-gray-600 dark:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        >
+                            <span>My Account</span>
+                            <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                            </svg>
+                        </button>
+                        <div
+                            x-show="open"
+                            x-transition:enter="transition ease-out duration-100"
+                            x-transition:enter-start="transform opacity-0 scale-95"
+                            x-transition:enter-end="transform opacity-100 scale-100"
+                            x-transition:leave="transition ease-in duration-75"
+                            x-transition:leave-start="transform opacity-100 scale-100"
+                            x-transition:leave-end="transform opacity-0 scale-95"
+                            class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48"
+                        >
+                            <div class="px-2 py-2 bg-white rounded-md shadow dark:bg-gray-800">
+                                <a
+                                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:text-gray-100 dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                    href="#"
+                                >
+                                    Link #1
+                                </a>
+                                <a
+                                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:text-gray-100 dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                    href="#"
+                                >
+                                    Link #2
+                                </a>
+                                <a
+                                    class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent dark:text-gray-100 rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                    href="#"
+                                >
+                                    Link #3
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container mx-auto mt-44">
+            <div class="max-w-xs md:max-w-2xl lg:max-w-screen-xl xl:max-w-screen-xl mx-auto">
+                <div class="mb-10">
+                    <div class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 bg-gray-100 w-full border border-gray-100 px-5 py-5 text-xl text-gray-700 font-semibold font-rubic text-xs lg:text-base xl:text-base">Returning customer? <span class="text-red-400">Click here to login</span></div>
+                    <div class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 bg-gray-100 w-full border border-gray-100 px-5 py-5 text-xl text-gray-700 font-semibold font-rubic mt-5 text-xs lg:text-base xl:text-base">Have a coupon? <span class="text-red-400"> Click here to enter your code</span></div>
+                </div>
+                <div class="w-full">
+                    <h1 class="text-gray-600 text-lg font-rubic pb-4 dark:text-gray-100">Billing Details</h1>
+                    <div class="px-5 py-5 border border-gray-200 dark:border-gray-600">
+                        <form action="">
+                            <div class="w-full">
+                                <h1 class="text-gray-600 text-lg font-rubic pb-2 dark:text-gray-100">Personal Information</h1>
+                                <div class=" xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between lg:items-center">
+                                    <input class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 border border-gray-50 bg-gray-100 focus:bg-transparent dark:border-gray-500 text-xs md:text-sm lg:text-sm xl:text-sm border-transparent border-gray-200 focus:outline-none focus:ring-1 focus:ring-red-600 focus:border-transparent xl:w-3/6 xl:h-12 lg:w-3/6 lg:h-12 w-full h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5 px-5 xl:mr-5 lg:mr-3" type="text" placeholder="First name">
+                                    <input class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 border border-gray-50 bg-gray-100 focus:bg-transparent border-transparent border-gray-200 text-xs md:text-sm lg:text-sm xl:text-sm focus:outline-none focus:ring-1 focus:ring-red-600 focus:border-transparent xl:w-3/6 xl:h-12 lg:w-3/6 lg:h-12 w-full h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5 px-5 xl:mr-5 lg:mr-3" type="text" placeholder="Last name">
+                                </div>
+                                <div class="xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between lg:items-center pt-10">
+                                    <input class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 border border-gray-50 bg-gray-100 focus:bg-transparent dark:border-gray-500 text-xs md:text-sm lg:text-sm xl:text-sm border-transparent border-gray-200 focus:outline-none focus:ring-1 focus:ring-red-600 focus:border-transparent xl:w-3/6 xl:h-12 lg:w-3/6 lg:h-12 w-full h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5 px-5 xl:mr-5 lg:mr-3" type="text" placeholder="Email address">
+                                    <input class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 border border-gray-50 bg-gray-100 focus:bg-transparent border-transparent border-gray-200 text-xs md:text-sm lg:text-sm xl:text-sm focus:outline-none focus:ring-1 focus:ring-red-600 focus:border-transparent xl:w-3/6 xl:h-12 lg:w-3/6 lg:h-12 w-full h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5 px-5 xl:mr-5 lg:mr-3" type="text" placeholder="Phone number">
+                                </div>
+                                <div class="xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between lg:items-center pt-10">
+                                    <input class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 border border-gray-50 bg-gray-100 focus:bg-transparent dark:border-gray-500 text-xs md:text-sm lg:text-sm xl:text-sm border-transparent border-gray-200 focus:outline-none focus:ring-1 focus:ring-red-600 focus:border-transparent xl:w-3/6 xl:h-12 lg:w-3/6 lg:h-12 w-full h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5 px-5 xl:mr-5 lg:mr-3" type="text" placeholder="Company name (optional)">
+                                    <input class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 border border-gray-50 bg-gray-100 focus:bg-transparent border-transparent border-gray-200 text-xs md:text-sm lg:text-sm xl:text-sm focus:outline-none focus:ring-1 focus:ring-red-600 focus:border-transparent xl:w-3/6 xl:h-12 lg:w-3/6 lg:h-12 w-full h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5 px-5 xl:mr-5 lg:mr-3" type="text" placeholder="Company address (optional)">
+                                </div>
+                            </div>
+                            <div class="mt-10">
+                                <h1 class="text-gray-600 text-lg font-rubic pb-4 dark:text-gray-100">Country</h1>
+                                <div class="relative inline-flex">
+                                    <svg class="w-2 h-2 absolute top-0 right-0 m-4 pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 412 232"><path d="M206 171.144L42.678 7.822c-9.763-9.763-25.592-9.763-35.355 0-9.763 9.764-9.763 25.592 0 35.355l181 181c4.88 4.882 11.279 7.323 17.677 7.323s12.796-2.441 17.678-7.322l181-181c9.763-9.764 9.763-25.592 0-35.355-9.763-9.763-25.592-9.763-35.355 0L206 171.144z" fill="#648299" fill-rule="nonzero"/></svg>
+                                    <select class="border border-gray-300 dark:border-gray-600 text-gray-600 h-12 w-56 pl-5 pr-10 dark:text-gray-100 dark:bg-gray-800 bg-white appearance-none outline-none">
+                                      <option>select country</option>
+                                      <option>Australia</option>
+                                      <option>Canada</option>
+                                      <option>Morocco</option>
+                                      <option>Saudi Arabia</option>
+                                      <option>United Kingdom (UK)</option>
+                                      <option>United States (US)</option>
+                                    </select>
+                                  </div>
+                            </div>
+                            <div class="w-full mt-10">
+                                <h1 class="text-gray-600 text-lg font-rubic pb-2 dark:text-gray-100">Address</h1>
+                                <div class=" xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between lg:items-center">
+                                    <input class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 bg-gray-100 border border-gray-50 focus:bg-transparent dark:border-gray-500 text-xs md:text-sm lg:text-sm xl:text-sm border-transparent border-gray-200 focus:outline-none focus:ring-1 focus:ring-red-600 focus:border-transparent xl:w-3/6 xl:h-12 lg:w-3/6 lg:h-12 w-full h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5 px-5 xl:mr-5 lg:mr-3" type="text" placeholder="House number and street name">
+                                    <input class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 bg-gray-100 border border-gray-50 focus:bg-transparent border-transparent border-gray-200 text-xs md:text-sm lg:text-sm xl:text-sm focus:outline-none focus:ring-1 focus:ring-red-600 focus:border-transparent xl:w-3/6 xl:h-12 lg:w-3/6 lg:h-12 w-full h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5 px-5 xl:mr-5 lg:mr-3" type="text" placeholder="Apartment, suite, unit etc. (optional)">
+                                </div>
+                            </div>
+
+                            <div class="mt-10">
+                                <div class="w-full xl:flex xl:justify-around xl:items-center lg:flex lg:justify-between lg:items-center">
+                                    <div class="xl:w-4/12 lg:w-4/12 w-full lg:mr-5 xl:mr-5">
+                                        <h1 class="text-gray-600 text-lg font-rubic pb-2 dark:text-gray-100">Town / City</h1>
+                                            <input class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 border border border-gray-50 w-full h-12 bg-gray-100 focus:bg-transparent border-transparent border-gray-200 text-xs md:text-sm lg:text-sm xl:text-sm focus:outline-none focus:ring-1 focus:ring-red-600 focus:border-transparent xl:mb-0 lg:mb-0 md:mb-5 mb-5 px-5 xl:mr-5 lg:mr-3" type="text" placeholder="City">
+                                    </div>
+                                    <div class="xl:w-4/12 lg:w-4/12 w-full">
+                                        <h1 class="text-gray-600 text-lg font-rubic pb-2 dark:text-gray-100">State</h1>
+                                            <input class=" dark:bg-transparent dark:border-gray-600 dark:text-gray-100 border border-gray-50 w-full h-12 bg-gray-100 focus:bg-transparent border-transparent border-gray-200 text-xs md:text-sm lg:text-sm xl:text-sm focus:outline-none focus:ring-1 focus:ring-red-600 focus:border-transparent xl:mb-0 lg:mb-0 md:mb-5 mb-5 px-5 xl:mr-5 lg:mr-3" type="text" placeholder="State">
+                                    </div>
+                                    <div class="xl:w-4/12 lg:w-4/12 w-full lg:ml-5 xl:ml-5 lg:mr-3 xl:mr-5">
+                                        <h1 class="text-gray-600 text-lg font-rubic pb-2 dark:text-gray-100">Zip</h1>
+                                            <input class="dark:bg-transparent dark:border-gray-600 dark:text-gray-100 border border-gray-50  w-full h-12 bg-gray-100 focus:bg-transparent border-transparent border-gray-200 text-xs md:text-sm lg:text-sm xl:text-sm focus:outline-none focus:ring-1 focus:ring-red-600 focus:border-transparent xl:mb-0 lg:mb-0 md:mb-5 mb-5 px-5 xl:mr-5 lg:mr-3" type="text" placeholder="Zip">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex items-center pt-5">
+                                <input class="inp-check" type="checkbox" id="createaccound" />
+                                <label class="inp-title dark:text-gray-100" for="createaccound">Create an account?</label>
+                            </div>
+                            <div class="w-full mt-10">
+                                <h1 class="text-gray-600 text-lg font-rubic pb-2 dark:text-gray-100">Other Notes (optional)</h1>
+                                <textarea class="bg-gray-100 focus:bg-transparent border-transparent border-gray-200 text-xs md:text-sm lg:text-sm xl:text-sm focus:outline-none focus:ring-1 focus:ring-red-600 focus:border-transparent dark:bg-gray-800 dark:border-gray-500 mt-5 autoexpand tracking-wide py-2 h-32 px-5 mb-3 leading-relaxed appearance-none block w-full bg-white border border-gray-200 border border-gray-200 outline-none"
+                                id="message" type="text" placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid bg-gray-100 py-20 mt-20 dark:bg-gray-800 border-t border-gray-100 dark:border-t dark:border-gray-600">
+            <div class="container mx-auto">
+                <div class="footer">
+                    <div class="">
+                        <div class="main-footer">
+                            <div class="footer-single-blog">
+                                <h1 class="footer-single-blog-header font-rubic">About Us</h1>
+                                <p class="footer-single-blog-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididun</p>
+                                <p class="footer-single-blog-title">Address: 123 Main Street, Anytown, CA 12345 - USA.</p>
+                                <p class="footer-single-blog-title">Address: 123 Main Street, Anytown, CA 12345 - USA.</p>
+                                <p class="footer-single-blog-title">Email: <a href="#" class="hover:text-red-600 transition duration-400">yourmail@example.com</a></p>
+                                <ul class="flex justify-left items-center">
+                                    <li class="">
+                                        <a href="#" class="">
+                                            <i class="fab fa-facebook-f social-link"></i>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="">
+                                            <i class="fab fa-twitter social-link"></i>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="">
+                                            <i class="fab fa-google social-link"></i>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="">
+                                            <i class="fab fa-linkedin social-link"></i>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="">
+                                            <i class="fab fa-instagram social-link"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-single-blog-info">
+                                <h1 class="footer-single-blog-info-heading font-rubic">Information</h1>
+                                <ul class="">
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">About Us</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Delivery Information</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Privacy Policy</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Terms & Conditions</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Customer Service</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Return Policy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-single-blog-info">
+                                <h1 class="footer-single-blog-info-heading font-rubic">My Account</h1>
+                                <ul class="">
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">My Account</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Order History</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">WishList</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">News Letter</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Order Information</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">International Order</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-newslatter">
+                                <h1 class="footer-single-blog-info-heading font-rubic">Join Our News Letter Now</h1>
+                                <ul class="">
+                                    <li class="text-md text-gray-800 font-rubic dark:text-gray-100">
+                                        Get E-mail updates about our latest shop and special offers.
+                                    </li>
+                                    <li class="my-5">
+                                        <input type="text" class="footer-input" placeholder="Your Email Address..." />
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="footer-button">subscribe</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-gray-200 dark:bg-gray-800 border-t border-gray-100 dark:border-t dark:border-gray-600">
+            <div class="container mx-auto">
+                <div class="max-w-xs md:max-w-2xl lg:max-w-screen-xl xl:max-w-screen-xl mx-auto py-5">
+                    <div class="lg:flex lg:items-center lg:justify-between xl:items-center xl:flex xl:justify-between">
+                        <div class="">
+                            <p class="text-gray-800 dark:text-gray-800">Copyright © Phuler. All Right Reserved.</p>
+                        </div>
+                        <div class="xl:my-0 lg:my-0 my-2">
+                            <a href="#" class="">
+                                <img class="" src="images/payment.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const checkbox = document.querySelector("#toggle");
+            const html = document.querySelector("html");
+            const toggleDarkMode = function () {
+                checkbox.checked ? html.classList.add("dark") : html.classList.remove("dark");
+            };
+            toggleDarkMode();
+            checkbox.addEventListener("click", toggleDarkMode);
+        </script>
+        <script type="text/javascript">
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
+        <script>
+            var bTnOne = document.getElementById("button1");
+            var btntwo = document.getElementById("button2");
+
+            bTnOne.addEventListener("click", function () {
+                var x = document.getElementById("content2");
+                var y = document.getElementById("content1");
+                if (y.style.display === "none" && x.style.display === "none") {
+                    y.style.display = "none";
+                    x.style.display = "block";
+                } else {
+                    y.style.display = "block";
+                    x.style.display = "none";
+                }
+            });
+            btntwo.addEventListener("click", function () {
+                var x = document.getElementById("content2");
+                var y = document.getElementById("content1");
+                if (y.style.display === "none" && x.style.display === "none") {
+                    y.style.display = "block";
+                    x.style.display = "none";
+                } else {
+                    y.style.display = "none";
+                    x.style.display = "block";
+                }
+            });
+        </script>
+        <script>
+            function range() {
+                return {
+                    minprice: 300,
+                    maxprice: 800,
+                    min: 0,
+                    max: 1200,
+                    minthumb: 0,
+                    maxthumb: 0,
+
+                    mintrigger() {
+                        this.minprice = Math.min(this.minprice, this.maxprice - 0);
+                        this.minthumb = ((this.minprice - this.min) / (this.max - this.min)) * 100;
+                    },
+
+                    maxtrigger() {
+                        this.maxprice = Math.max(this.maxprice, this.minprice + 0);
+                        this.maxthumb = 100 - ((this.maxprice - this.min) / (this.max - this.min)) * 100;
+                    },
+                };
+            }
+        </script>
+
+        <script>
+            function decrement(e) {
+            const btn = e.target.parentNode.parentElement.querySelector(
+                'button[data-action="decrement"]'
+            );
+            const target = btn.nextElementSibling;
+            let value = Number(target.value);
+            value--;
+            target.value = value;
+            }
+        
+            function increment(e) {
+            const btn = e.target.parentNode.parentElement.querySelector(
+                'button[data-action="decrement"]'
+            );
+            const target = btn.nextElementSibling;
+            let value = Number(target.value);
+            value++;
+            target.value = value;
+            }
+        
+            const decrementButtons = document.querySelectorAll(
+            `button[data-action="decrement"]`
+            );
+        
+            const incrementButtons = document.querySelectorAll(
+            `button[data-action="increment"]`
+            );
+        
+            decrementButtons.forEach(btn => {
+            btn.addEventListener("click", decrement);
+            });
+        
+            incrementButtons.forEach(btn => {
+            btn.addEventListener("click", increment);
+            });
+        </script>
+           <script>
+            let tabsContainer = document.querySelector("#tabs");
+
+                let tabTogglers = tabsContainer.querySelectorAll("a");
+                console.log(tabTogglers);
+
+                tabTogglers.forEach(function(toggler) {
+                toggler.addEventListener("click", function(e) {
+                e.preventDefault();
+
+                let tabName = this.getAttribute("href");
+
+                let tabContents = document.querySelector("#tab-contents");
+
+                for (let i = 0; i < tabContents.children.length; i++) {
+
+                tabTogglers[i].parentElement.classList.remove("opacity-100", "bg-pink-600");  tabContents.children[i].classList.remove("hidden");
+                if ("#" + tabContents.children[i].id === tabName) {
+                continue;
+                }
+                tabContents.children[i].classList.add("hidden");
+
+                }
+                e.target.parentElement.classList.add("-mb-px", "opacity-100", "bg-pink-600");
+                });
+                });
+
+                document.getElementById("default-tab").click();
+
+        </script>
+    </body>
+</html>
