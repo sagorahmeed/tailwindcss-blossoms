@@ -229,7 +229,7 @@
                                 </div>
                             </div>
                             <div class="flex items-center pt-5">
-                                <input class="inp-check" type="checkbox" id="createaccount" />
+                                <input class="inp-check rounded border-gray-400" type="checkbox" id="createaccount" />
                                 <label class="inp-title dark:text-gray-100" for="createaccount">Create an account?</label>
                             </div>
                             <div class="w-full mt-10">
@@ -246,18 +246,31 @@
                             <h1 class="text-gray-600 text-lg font-rubic pb-2 dark:text-gray-100">Payment Method</h1>
                             <div class="w-full border border-gray-300 px-5 py-5 dark:border-gray-600">
                                 <div class="flex justify-start items-center">
-                                    <input class="inp-check rounded-full" type="checkbox" id="checkpayments" />
-                                    <label class="inp-title dark:text-gray-100" for="checkpayments" id="payMethod">Check payments</label>
+                                    <input class="inp-check focus:ring-transparent rounded-full" type="checkbox" id="checkpayments" />
+                                    <label class="inp-title dark:text-gray-100 cursor-pointer" for="checkpayments" id="checkBtn">Check payments</label>
+                                </div>
+                                <div class="mt-1 p-4 bg-white border border-gray-200 dark:border-gray-500 dark:bg-gray-800 hidden" id="checkpayment">
+                                    <p class="text-sm text-gray-800 dark:text-gray-100">Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
                                 </div>
                             </div>
-                            <div class="flex justify-start items-center border-t-0 border border-gray-300 px-5 py-5 dark:border-gray-600">
-                                <input class="inp-check rounded-full" type="checkbox" id="chasondelivery" />
-                                <label class="inp-title dark:text-gray-100" for="chasondelivery" id="cashMethod">Cash on delivery</label>
+                            <div class=" border-t-0 border border-gray-300 px-5 py-5 dark:border-gray-600">
+                               <div class="flex justify-start items-center">
+                                    <input class="inp-check focus:ring-transparent rounded-full" type="checkbox" id="chasondelivery" />
+                                    <label class="inp-title dark:text-gray-100 cursor-pointer" for="chasondelivery" id="cashpaymentbtn">Cash on delivery</label>
+                               </div>
+                               <div class="mt-1 p-4 bg-white border border-gray-200 dark:border-gray-500 dark:bg-gray-800 hidden" id="cashpayment">
+                                <p class="text-sm text-gray-800 dark:text-gray-100">Pay with cash upon delivery.</p>
                             </div>
-                            <div class="flex justify-start items-center border-t-0 border border-gray-300 px-5 py-5 dark:border-gray-600">
-                                <input class="inp-check rounded-full" type="checkbox" id="paypal" />
-                                <label class="inp-title dark:text-gray-100" for="paypal" id="paypalMethod">PayPal</label>
-                                <img src="images/payment-3.png" class="h-auto w-20 ml-3" alt="">
+                            </div>
+                            <div class="border-t-0 border border-gray-300 px-5 py-5 dark:border-gray-600">
+                                <div class="flex justify-start items-center">
+                                    <input class="inp-check focus:ring-transparent rounded-full" type="checkbox" id="paypal" />
+                                    <label class="inp-title dark:text-gray-100 cursor-pointer" for="paypal" id="paypalmethodbtn">PayPal</label>
+                                    <img src="images/payment-3.png" class="h-auto w-20 ml-3" alt="">
+                                </div>
+                                <div class="mt-1 p-4 bg-white border border-gray-200 dark:border-gray-500 dark:bg-gray-800 hidden" id="paypalmethod">
+                                    <p class="text-sm text-gray-800 dark:text-gray-100">Pay via PayPal; you can pay with your credit card if you don’t have a PayPal account.</p>
+                                </div>
                             </div>
                             <p class="text-gray-500 dark:text-white py-5">
                                 Your personal data will be used to process your order, support your experience throughout this website, and for other purposes described in our privacy policy.
@@ -513,7 +526,24 @@
                 couponsec.classList.toggle("hidden");
             })
         </script>
+          <script type="text/javascript">
+            const checkButton = document.getElementById("checkBtn");
+            const checkCon = document.getElementById("checkpayment");
+            checkButton.addEventListener('click', function(){
+                checkCon.classList.toggle('hidden');
+            })
 
+            const cashButton = document.getElementById("cashpaymentbtn");
+            const cashcon = document.getElementById("cashpayment");
+            cashButton.addEventListener('click', function(){
+                cashcon.classList.toggle('hidden');
+            })
 
+            const paybtn = document.getElementById("paypalmethodbtn");
+            const paypalcon = document.getElementById("paypalmethod");
+            paybtn.addEventListener('click', function(){
+                paypalcon.classList.toggle('hidden');
+            })
+         </script>
     </body>
 </html>
