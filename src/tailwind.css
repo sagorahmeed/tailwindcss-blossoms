@@ -238,7 +238,7 @@ dropdown{
     @apply dark:bg-gray-600 dark:hover:text-white bg-gray-100 text-gray-400 hover:text-gray-700 hover:bg-gray-200 h-full w-20 rounded-r cursor-pointer;
 }
 .total-value-btn{
-    @apply dark:bg-gray-600 dark:text-gray-100 dark:hover:text-white outline-none focus:outline-none text-center w-full bg-gray-100 font-semibold hover:text-black focus:text-black flex items-center text-gray-500  outline-none;
+    @apply border-transparent dark:bg-gray-600 dark:text-gray-100 dark:hover:text-white outline-none focus:outline-none text-center w-full bg-gray-100 font-semibold hover:text-black focus:text-black flex items-center text-gray-500  outline-none;
 }
 .gallery-shopping-cart-icon{
     @apply dark:bg-gray-600 dark:text-gray-100 dark:hover:bg-red-500 dark:hover:text-white p-3 bg-gray-100 rounded text-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out;
@@ -316,7 +316,7 @@ dropdown{
     @apply lg:max-w-xs xl:max-w-sm leading-loose xl:my-0 lg:my-0 my-10;
 }
 .footer-input{
-    @apply bg-transparent border-b-2 border-gray-400 w-full text-sm outline-none pb-2;
+    @apply w-full dark:bg-gray-800 dark:border-gray-600 border border-gray-300 px-3 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 pb-2;
 }
 .footer-button{
     @apply bg-red-600 text-gray-100 px-10 py-2 rounded hover:bg-red-700 transition duration-700 ease-in-out uppercase;
