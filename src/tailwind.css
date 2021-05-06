@@ -6,6 +6,9 @@
 }
 
 @tailwind components;
+.body{
+    @apply bg-white text-gray-800 dark:text-gray-100 dark:bg-gray-800;
+}
 /* ====navbar :start */
 .actived-menu{
     @apply px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 dark:text-gray-100 focus:outline-none;
