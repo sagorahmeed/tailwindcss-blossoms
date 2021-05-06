@@ -69,10 +69,10 @@ dropdown{
     @apply xl:leading-none lg:leading-none md:leading-loose leading-loose xl:flex xl:justify-around xl:items-center lg:flex lg:justify-around lg:items-center md:flex md:justify-end md:items-center;
 }
 .option-left{
-    @apply px-6 sm:px-8 md:px-12 lg:px-4 xl:px-12 bg-transparent border py-2 rounded;
+    @apply px-6 border-gray-200 sm:px-8 md:px-12 lg:px-4 xl:px-12 bg-transparent border py-2 rounded;
 }
 .option-right{
-    @apply px-8 sm:px-10 md:px-20 lg:px-6 xl:px-16 bg-transparent border py-2 rounded;
+    @apply px-8 sm:px-10 border-gray-200 md:px-20 lg:px-6 xl:px-16 bg-transparent border py-2 rounded;
 }
 
 /* pricing desc start */
@@ -106,7 +106,7 @@ dropdown{
     @apply flex items-center;
 }
 .cart-icon-link{
-    @apply bg-gray-100 rounded-md h-14 w-14 border dark:hover:bg-red-500 border-gray-300 dark:bg-gray-800 dark:border-gray-600 flex justify-center items-center hover:bg-red-600 mr-2 transition duration-700 ease-in-out;
+    @apply bg-gray-50 rounded-md h-14 w-14 border dark:hover:bg-red-500 border-gray-50 dark:bg-gray-800 dark:border-gray-600 flex justify-center items-center hover:bg-red-600 mr-2 transition duration-700 ease-in-out;
 }
 .cart-icon{
     @apply text-gray-400 text-lg transition duration-700 ease-in-out;
@@ -120,7 +120,7 @@ dropdown{
     @apply grid grid-cols-1 grid-rows-1 sm:grid sm:grid-cols-2 sm:grid-rows-2 md:grid md:grid-cols-2 md:grid-rows-2 lg:grid lg:grid-cols-3 lg:grid-rows-3 xl:grid xl:grid-cols-3 xl:grid-rows-3 gap-4;
 }
 .prod-single-cart{
-    @apply bg-white shadow-md mt-4 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0;
+    @apply bg-white shadow-xl transition duration-300 hover:shadow mt-4 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0;
 }
 .prod-cart-content{
     @apply bg-white border-gray-100 dark:bg-gray-800 border dark:border-gray-600;
@@ -135,10 +135,10 @@ dropdown{
     @apply line-through text-red-600 ml-2;
 }
 .prod-cart-icon-link{
-    @apply bg-white border dark:bg-transparent dark:hover:bg-red-500 dark:border-gray-600 dark:text-white border-gray-300 p-4 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition  duration-700 ease-in-out;
+    @apply bg-gray-50 border dark:bg-transparent dark:hover:bg-red-500 dark:border-gray-600 dark:text-white border-gray-50 p-4 ml-2 rounded hover:bg-red-600 hover:border-red-600 group transition  duration-700 ease-in-out;
 }
 .prod-cart-icon-link-1st{
-    @apply bg-white border border-gray-300 dark:hover:bg-red-500 dark:bg-transparent dark:border-gray-600 dark:text-white p-4 rounded hover:bg-red-600 hover:border-red-600 group transition  duration-700 ease-in-out;
+    @apply bg-gray-50 border border-gray-50 dark:hover:bg-red-500 dark:bg-transparent dark:border-gray-600 dark:text-white p-4 rounded hover:bg-red-600 hover:border-red-600 group transition  duration-700 ease-in-out;
 }
 .prod-cart-icon{
     @apply flex justify-center items-center text-gray-400 group-hover:text-white transition  duration-700 ease-in-out;
@@ -276,6 +276,12 @@ dropdown{
 
 /*===============single-product page end */
 
+
+/* ============Register page start */
+
+
+
+/* ============Register page end */
 
 /* footer start */
 
