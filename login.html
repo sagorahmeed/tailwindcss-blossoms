@@ -100,6 +100,12 @@
                     >
                         Login
                     </a>
+                    <a
+                        class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 dark:text-gray-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="contact.html"
+                    >
+                        Contact us
+                    </a>
                     <div @click.away="open = false" class="relative" x-data="{ open: false }">
                         <button
                             @click="open = !open"
@@ -150,30 +156,30 @@
             <div class="container mx-auto">
                 <div class="flex justify-center px-6 my-12">
                     <!-- Row -->
-                    <div class="w-full xl:w-3/4 lg:w-11/12 flex shadow-lg">
+                    <div class="loginrow">
                         <!-- Col -->
-                        <div class="w-full h-auto bg-gray-400 hidden lg:block lg:w-1/2 bg-cover rounded-l-lg" style="background-image: url('https://source.unsplash.com/K4mSJ7kc0As/600x800');"></div>
+                        <div class="loging-bg-img" style="background-image: url('https://source.unsplash.com/K4mSJ7kc0As/600x800');"></div>
                         <!-- Col -->
-                        <div class="w-full lg:w-1/2 bg-white dark:bg-gray-800 p-5 rounded-lg lg:rounded-l-none border border-gray-50 dark:border-gray-600">
+                        <div class="logindesc">
                             <h3 class="pt-4 text-2xl text-center">Welcome Back!</h3>
-                            <form class="xl:px-8 lg:px-8 md:px-8 pt-6 pb-8 mb-4 rounded">
+                            <form class="loginform">
                                 <div class="mb-4">
-                                    <label class="block mb-2 text-sm font-bold text-gray-700 dark:text-gray-100" for="username">
+                                    <label class="input-label" for="username">
                                         Username
                                     </label>
                                     <input
-                                        class="w-full px-3 py-2 text-sm dark:bg-gray-800 dark:border-gray-600 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                                        class="login-input"
                                         id="username"
                                         type="text"
                                         placeholder="Username"
                                     />
                                 </div>
                                 <div class="mb-4">
-                                    <label class="block mb-2 text-sm font-bold text-gray-700 dark:text-gray-100" for="password">
+                                    <label class="input-label" for="password">
                                         Password
                                     </label>
                                     <input
-                                        class="w-full px-3 py-2 text-sm dark:bg-gray-800 dark:border-gray-600 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500"
+                                        class="login-input"
                                         id="password"
                                         type="password"
                                         placeholder="******************"
@@ -181,24 +187,24 @@
                                     <p class="mt-2 text-xs italic text-red-500">Please choose a password.</p>
                                 </div>
                                 <div class="mb-4">
-                                    <input class="mr-2 leading-tight rounded border-gray-400" type="checkbox" id="checkbox_id" />
+                                    <input class="rem-title" type="checkbox" id="checkbox_id" />
                                     <label class="text-sm" for="checkbox_id">
                                         Remember Me
                                     </label>
                                 </div>
                                 <div class="mb-6 text-center">
-                                    <button class="w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700 focus:outline-none focus:shadow-outline" type="button">
+                                    <button class="login-button" type="button">
                                         Sign In
                                     </button>
                                 </div>
                                 <hr class="mb-6 border-t border-gray-50 dark:border-gray-600" />
                                 <div class="text-center">
-                                    <a class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800" href="register.html">
+                                    <a class="reate-acc" href="register.html">
                                         Create an Account!
                                     </a>
                                 </div>
                                 <div class="text-center">
-                                    <a class="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800" href="./forgot-password.html">
+                                    <a class="reate-acc" href="./forgot-password.html">
                                         Forgot Password?
                                     </a>
                                 </div>
@@ -313,10 +319,10 @@
                 </div>
             </div>
         </div>
-        <div class="container-fluid bg-gray-200 dark:bg-gray-800 border-t border-gray-100 dark:border-t dark:border-gray-600">
+        <div class="copyrightsec container-fluid">
             <div class="container mx-auto">
-                <div class="max-w-xs md:max-w-2xl lg:max-w-screen-xl xl:max-w-screen-xl mx-auto py-5">
-                    <div class="lg:flex lg:items-center lg:justify-between xl:items-center xl:flex xl:justify-between">
+                <div class="copymainblog">
+                    <div class="copyrightblog">
                         <div class="">
                             <p class="text-gray-800 dark:text-gray-800">Copyright © Phuler. All Right Reserved.</p>
                         </div>

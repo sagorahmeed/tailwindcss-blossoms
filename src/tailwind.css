@@ -123,7 +123,7 @@ dropdown{
     @apply grid grid-cols-1 grid-rows-1 sm:grid sm:grid-cols-2 sm:grid-rows-2 md:grid md:grid-cols-2 md:grid-rows-2 lg:grid lg:grid-cols-3 lg:grid-rows-3 xl:grid xl:grid-cols-3 xl:grid-rows-3 gap-4;
 }
 .prod-single-cart{
-    @apply bg-white shadow-xl transition duration-300 hover:shadow mt-4 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0;
+    @apply bg-white shadow transition duration-300 hover:shadow-xl mt-4 sm:mt-0 md:mt-0 lg:mt-0 xl:mt-0;
 }
 .prod-cart-content{
     @apply bg-white border-gray-100 dark:bg-gray-800 border dark:border-gray-600;
@@ -280,10 +280,73 @@ dropdown{
 /*===============single-product page end */
 
 
+
+
+
+
+
+
+/* ============login page start */
+.loginrow{
+    @apply w-full xl:w-3/4 lg:w-11/12 flex shadow-lg rounded-lg;
+}
+.loging-bg-img{
+    @apply w-full h-auto bg-gray-400 hidden lg:block lg:w-1/2 bg-cover rounded-l-lg;
+}
+.logindesc{
+    @apply w-full lg:w-1/2 bg-white dark:bg-gray-800 p-5 rounded-lg lg:rounded-l-none border border-gray-50 dark:border-gray-600;
+}
+.loginform{
+    @apply xl:px-8 lg:px-8 md:px-8 pt-6 pb-8 mb-4 rounded;
+}
+.input-label{
+    @apply block mb-2 text-sm font-bold text-gray-700 dark:text-gray-100;
+}
+.rem-title{
+    @apply mr-2 leading-tight rounded border-gray-400;
+}
+.login-button{
+    @apply w-full px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700;
+}
+.reate-acc{
+    @apply inline-block text-sm text-blue-500 align-baseline hover:text-blue-800;
+}
+.login-input{
+    @apply w-full px-3 py-2 text-sm dark:bg-gray-800 dark:border-gray-600 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500;
+}
+/* ============login page end */
+
+
+
 /* ============Register page start */
 
-
-
+.register-main-heading{
+    @apply flex items-center justify-center px-5 py-5 mt-44;
+}
+.register-body{
+    @apply bg-gray-100 dark:bg-gray-800 text-gray-500 rounded-xl shadow w-full overflow-hidden;
+}
+.register-blog{
+    @apply w-full md:w-1/2 py-10 px-5 md:px-10 border border-gray-50 dark:border-gray-600;
+}
+.register-heading{
+    @apply font-bold text-3xl text-gray-900 dark:text-gray-100;
+}
+.reg-firstName-input{
+    @apply w-full pr-3 py-2 text-white rounded-lg border-2 dark:border-gray-500 dark:bg-transparent border-gray-200 outline-none focus:border-indigo-500;
+}
+.reg-lastName-input{
+    @apply w-full pr-3 py-2 rounded-lg text-white dark:border-gray-500 dark:bg-transparent border-2 border-gray-200 outline-none focus:border-indigo-500;
+}
+.reg-email-input{
+    @apply w-full pr-3 py-2 rounded-lg text-white dark:border-gray-500 dark:bg-transparent border-2 border-gray-200 outline-none focus:border-indigo-500;
+}
+.reg-pas-input{
+    @apply w-full pr-3 py-2 text-white dark:border-gray-500 dark:bg-transparent rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500;
+}
+.reg-button{
+    @apply block w-full bg-indigo-500 hover:bg-indigo-700 text-white border dark:hover:bg-indigo-500 border-indigo-50 dark:border-gray-500 dark:bg-transparent focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold;
+}
 /* ============Register page end */
 
 /* footer start */
@@ -329,6 +392,15 @@ dropdown{
 }
 .footer-button{
     @apply bg-red-600 text-gray-100 px-10 py-2 rounded hover:bg-red-700 transition duration-700 ease-in-out uppercase;
+}
+.copyrightsec{
+    @apply bg-gray-200 dark:bg-gray-800 border-t border-gray-100 dark:border-gray-600;
+}
+.copymainblog{
+    @apply max-w-xs md:max-w-2xl lg:max-w-screen-xl xl:max-w-screen-xl mx-auto py-5;
+}
+.copyrightblog{
+    @apply lg:flex lg:items-center lg:justify-between xl:items-center xl:flex xl:justify-between;
 }
 /* footer start */
 
