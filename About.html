@@ -27,7 +27,7 @@
         <div class="w-full text-gray-700 bg-gray-100 fixed top-0 z-40">
             <div x-data="{ open: false }" class="py-2 flex flex-col max-w-screen-xl mx-auto md:items-center md:justify-between md:flex-row xl:px-0 lg:px-10 md:px-5 px-5">
                 <div class="p-4 flex flex-row items-center justify-between">
-                    <a href="index.html" class="text-lg font-semibold tracking-widest text-gray-900 uppercase h-auto w-20 rounded-lg dark:text-white focus:outline-none focus:shadow-outline">
+                    <a href="#" class="text-lg font-semibold tracking-widest text-gray-900 uppercase h-auto w-20 rounded-lg dark:text-white focus:outline-none focus:shadow-outline">
                         <h1 class="text-gray-800 font-rubic dark:text-gray-800">Logo</h1>
                     </a>
                     <div class="md:ml-1 lg:ml-36 xl:ml-56">
@@ -80,7 +80,7 @@
                         class="px-4 py-2 mt-2 text-sm font-semibold text-gray-900 bg-gray-200 rounded-lg dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 dark:text-gray-100 focus:outline-none focus:shadow-outline"
                         href="index.html"
                     >
-                    Shop
+                        Shop
                     </a>
                     <a
                         class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 dark:text-gray-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
@@ -100,12 +100,18 @@
                     >
                         Login
                     </a>
-                    <a
-                        class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 dark:text-gray-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                        href="contact.html"
-                    >
-                        Contact us
-                    </a>
+                <a
+                    class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 dark:text-gray-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    href="contact.html"
+                >
+                    Contact us
+                </a>
+                <a
+                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 dark:text-gray-800 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                href="About.html"
+            >
+                About us
+            </a>
                     <div @click.away="open = false" class="relative" x-data="{ open: false }">
                         <button
                             @click="open = !open"
@@ -266,14 +272,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="xl:grid xl:grid-cols-2 xl:grid-rows-1 gap-4 py-20">
+                    <div class="xl:grid xl:grid-cols-2 xl:grid-rows-1 lg:grid lg:grid-cols-2 lg:grid-rows-1 md:grid md:grid-cols-2 md:grid-rows-1 gap-4 py-20">
                         <div class="">
                             <h1 class="text-gray-800 text-2xl text-medium">SEND NEWSLETTER</h1>
                             <p class="text-gray-500 text-sm pt-3">Enter Your Email Address For Our Mailing List To Keep Your Self Update</p>
                         </div>
-                        <div class="flex">
+                        <div class="xl:flex ld:flex md:flex xl:mt-0 lg:mt-0 mt-10">
                             <input type="text" class="w-full border-t-0 border-l-0 border-r-0 border-1 border-gray-300 h-12" placeholder="email@example.com" />
-                            <button class="bg-red-600 text-white px-6 uppercase font-medium h-12" type="button">subscribe</button>
+                            <button class="bg-red-600 text-white px-6 uppercase font-medium h-12 xl:w-36 lg:w-36 md:w-36 w-full xl:mt-0 lg:mt-0 md:mt-0 mt-5" type="button">subscribe</button>
                         </div>
                     </div>
                 </div>
