@@ -3,7 +3,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Shop Page</title>
+        <title>My account</title>
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;1,300&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="public/styles.css" />
@@ -188,10 +188,10 @@
                             </div>
 
                             <a
-                                href="contact.html"
+                                href="blog.html"
                                 class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                             >
-                                Contact us
+                               Blog
                             </a>
 
                             <a
@@ -291,8 +291,10 @@
             </div>
         </div>
 
-       <div class="text-center py-20 mt-32">
-           <h1 class="text-4xl text-gry-900 font-bold">Cooming Soon :)</h1>
+       <div class="container-fluid mx-auto mt-44">
+           <div class="container mx-auto">
+               
+           </div>
        </div>
 
         <div class="container-fluid bg-gray-100 py-20 mt-20 dark:bg-gray-800 border-t border-gray-100 dark:border-t dark:border-gray-600">
@@ -512,6 +514,36 @@
                     },
                 };
             }
+        </script>
+          <script>
+            let tabsContainer = document.querySelector("#tabs");
+
+                let tabTogglers = tabsContainer.querySelectorAll("a");
+                console.log(tabTogglers);
+
+                tabTogglers.forEach(function(toggler) {
+                toggler.addEventListener("click", function(e) {
+                e.preventDefault();
+
+                let tabName = this.getAttribute("href");
+
+                let tabContents = document.querySelector("#tab-contents");
+
+                for (let i = 0; i < tabContents.children.length; i++) {
+
+                tabTogglers[i].parentElement.classList.remove("opacity-100", "bg-pink-600");  tabContents.children[i].classList.remove("hidden");
+                if ("#" + tabContents.children[i].id === tabName) {
+                continue;
+                }
+                tabContents.children[i].classList.add("hidden");
+
+                }
+                e.target.parentElement.classList.add("-mb-px", "opacity-100", "bg-pink-600");
+                });
+                });
+
+                document.getElementById("default-tab").click();
+
         </script>
     </body>
 </html>
