@@ -1,0 +1,526 @@
+<html lang="en" class="dark">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>404 Not Found</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;1,300&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="public/styles.css" />
+        <script src="app.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+        <style>
+            input[type="range"]::-webkit-slider-thumb {
+                pointer-events: all;
+                width: 24px;
+                height: 24px;
+                -webkit-appearance: none;
+                /* @apply w-6 h-6 appearance-none pointer-events-auto; */
+            }
+        </style>
+        <style>
+            .dropdown:focus-within .dropdown-menu {
+                opacity: 1;
+                transform: translate(0) scale(1);
+                visibility: visible;
+            }
+        </style>
+         <style>
+            .dropdown:hover > .dropdown-content {
+                display: block;
+            }
+        </style>
+        <style>
+            dialog[open] {
+                animation: appear 0.15s cubic-bezier(0, 1.8, 1, 1.8);
+            }
+
+            dialog::backdrop {
+                background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(54, 54, 54, 0.5));
+                backdrop-filter: blur(3px);
+            }
+
+            @keyframes appear {
+                from {
+                    opacity: 0;
+                    transform: translateX(-3rem);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+        </style>
+    </head>
+
+    <body class="body">
+        <div class="container-fluid bg-white shadow py-3 w-full fixed top-0">
+            <div class="container mx-auto">
+                <div
+                    class="w-full py-4 flex justify-between items-center max-w-xs md:max-w-2xl lg:max-w-screen-xl xl:max-w-screen-xl mx-auto"
+                    x-data="{ open: false }"
+                    class="flex flex-col px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 relative"
+                >
+                    <div class="">
+                        <a href="index.html" class="text-gray-800">LOGO</a>
+                    </div>
+                    <div class="">
+                        <div class="md:ml-1 lg:ml-36 xl:ml-56">
+                            <div class="flex justify-end items-center space-x-2">
+                                <svg
+                                    width="24"
+                                    height="24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20"
+                                    fill="currentColor"
+                                    class="text-yellow-500 dark:text-gray-400 ransition-colors duration-200 xl:visible lg:visible md:visible invisible"
+                                >
+                                    <path
+                                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                    ></path>
+                                </svg>
+
+                                <div class="">
+                                    <input type="checkbox" name="" id="toggle" class="hidden" />
+                                    <label for="toggle" class="cursor-pointer">
+                                        <div class="w-10 h-5 flex items-center bg-green-400 dark:bg-gray-800 rounded-full p-1">
+                                            <div class="toggle-dot w-4 h-4 bg-white rounded-full shadow-md transform transition duration-500 ease-in-out"></div>
+                                        </div>
+                                    </label>
+                                </div>
+                                <svg width="24" height="24" fill="currentColor" class="dark:text-gray-800 transition-colors duration-200 text-gray-300 xl:visible lg:visible md:visible invisible">
+                                    <path
+                                        fill-rule="evenodd"
+                                        clip-rule="evenodd"
+                                        d="M9.353 2.939a1 1 0 01.22 1.08 8 8 0 0010.408 10.408 1 1 0 011.301 1.3A10.003 10.003 0 0112 22C6.477 22 2 17.523 2 12c0-4.207 2.598-7.805 6.273-9.282a1 1 0 011.08.22z"
+                                    ></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="block xl:hidden lg:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
+                        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                            <path
+                                x-show="!open"
+                                fill-rule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM9 15a1 1 0 011-1h6a1 1 0 110 2h-6a1 1 0 01-1-1z"
+                                clip-rule="evenodd"
+                            ></path>
+                            <path
+                                x-show="open"
+                                fill-rule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clip-rule="evenodd"
+                            ></path>
+                        </svg>
+                    </button>
+                    <div>
+                        <ul
+                        :class="{'flex': open, 'hidden': !open}"
+                        class="leading-loose flex-col flex-grow py-10 pt-10 md:pb-0 h-screen xl:h-auto xl:h-auto lg:h-auto w-60 sm:w-80 md:w-96 lg:w-full xl:w-full hidden xl:flex-row lg:flex-row xl:inline-flex lg:inline-flex xl:static lg:static absolute left-0 top-20 xl:bg-transparent lg:bg-transparent bg-transparent bg-gray-50 px-3 xl:py-0 lg:py-0 md:py-10"
+                    >
+                            <a
+                                href="index.html"
+                                class="px-4 py-2 mt-2 text-sm font-semibold bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            >
+                                Home
+                            </a>
+                            <a
+                                href="shop.html"
+                                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            >
+                                Shop
+                            </a>
+                            <div
+                                @click.away="open = false"
+                                class="relative px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                x-data="{ open: false }"
+                            >
+                                <button @click="open = !open" class="flex flex-row items-center w-full text-left md:w-auto md:inline focus:outline-none">
+                                    <span class="text-sm font-semibold">Pages</span>
+                                    <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
+                                        <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                                <div
+                                    x-show="open"
+                                    x-transition:enter="transition ease-out duration-100"
+                                    x-transition:enter-start="transform opacity-0 scale-95"
+                                    x-transition:enter-end="transform opacity-100 scale-100"
+                                    x-transition:leave="transition ease-in duration-75"
+                                    x-transition:leave-start="transform opacity-100 scale-100"
+                                    x-transition:leave-end="transform opacity-0 scale-95"
+                                    class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48"
+                                >
+                                    <div class="px-2 py-2 bg-white rounded-md shadow dark:bg-gray-800">
+                                        <a
+                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:text-gray-100 dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                            href="contact.html"
+                                        >
+                                            Contact us
+                                        </a>
+                                        <a
+                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent dark:text-gray-100 rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                            href="account.html"
+                                        >
+                                            My Account
+                                        </a>
+                                        <a
+                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:text-gray-100 dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                            href="register.html"
+                                        >
+                                            Register
+                                        </a>
+                                        <a
+                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent dark:text-gray-100 rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                            href="login.html"
+                                        >
+                                            Login
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a
+                                href="contact.html"
+                                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            >
+                                Contact us
+                            </a>
+
+                            <a
+                                href="About.html"
+                                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            >
+                                About us
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="flex justify-center items-center">
+                        <div class="">
+                            <div class="dropdown inline-block relative">
+                                <button class="inline-flex items-center focus:outline-none relative">
+                                    <i class="fas fa-shopping-cart text-gray-500 mr-7 hover:text-red-600 cursor-pointer transition duration-300 ease-in-out"></i>
+                                    <p class="absolute -top-3 right-3 h-4 w-4 bg-red-600 rounded-full text-white flex justify-center items-center text-xs">3</p>
+                                </button>
+                                <ul class="dropdown-content bg-white z-10 absolute xl:right-0 lg:right-0 md:right-0 sm:right-0 -right-4 hidden text-gray-700 pt-1 xl:w-80 lg:w-80 md:w-80 w-80">
+                                    <li class="shadow-lg px-3 py-3 mt-5">
+                                        <div class="border-b-2 border-gray-200 pb-5">
+                                            <div class="flex justify-between items-center">
+                                                <div class="">
+                                                    <a href="#" class="">
+                                                        <img src="images/product-3.jpg" class="h-auto w-20 border border-gray-200" alt="" />
+                                                    </a>
+                                                </div>
+                                                <a href="#" class="">
+                                                    <div class="group">
+                                                        <h1 class="text-gray-900 font-semibold group-hover:text-red-600 transition duration-300 ease-in-out">Odio tortor consequat</h1>
+                                                        <p class="">1× <span class="text-red-600">$98.00</span></p>
+                                                    </div>
+                                                </a>
+                                                <div class="">
+                                                    <a href="#" class=""><i class="far fa-trash-alt hover:text-red-600 cursor-pointer transition duration-300 ease-in-out"></i></a>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex justify-between items-center pt-5">
+                                                <div class="">
+                                                    <a href="#" class="">
+                                                        <img src="images/product-3.jpg" class="h-auto w-20 border border-gray-200" alt="" />
+                                                    </a>
+                                                </div>
+                                                <a href="#" class="">
+                                                    <div class="group">
+                                                        <h1 class="text-gray-900 font-semibold group-hover:text-red-600 transition duration-300 ease-in-out">Odio tortor consequat</h1>
+                                                        <p class="">1× <span class="text-red-600">$98.00</span></p>
+                                                    </div>
+                                                </a>
+                                                <div class="">
+                                                    <a href="#" class=""><i class="far fa-trash-alt hover:text-red-600 cursor-pointer transition duration-300 ease-in-out"></i></a>
+                                                </div>
+                                            </div>
+
+                                            <div class="flex justify-between items-center pt-5">
+                                                <div class="">
+                                                    <a href="#" class="">
+                                                        <img src="images/product-3.jpg" class="h-auto w-20 border border-gray-200" alt="" />
+                                                    </a>
+                                                </div>
+                                                <a href="#" class="">
+                                                    <div class="group">
+                                                        <h1 class="text-gray-900 font-semibold group-hover:text-red-600 transition duration-300 ease-in-out">Odio tortor consequat</h1>
+                                                        <p class="">1× <span class="text-red-600">$98.00</span></p>
+                                                    </div>
+                                                </a>
+                                                <div class="">
+                                                    <a href="#" class=""><i class="far fa-trash-alt hover:text-red-600 cursor-pointer transition duration-300 ease-in-out"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="border-b-2 border-gray-200 py-5">
+                                            <div class="flex justify-between items-center">
+                                                <h1 class="text-gray-900 font-medium text-lg">Total:</h1>
+                                                <p class="text-gray-900 font-medium text-lg">$166.00</p>
+                                            </div>
+                                        </div>
+                                        <div class="">
+                                            <div class="flex justify-between items-center pt-5">
+                                                <a href="#" class="font-semibold bg-gray-900 text-white px-6 py-2 hover:text-white hover:bg-red-600 transition duration-300 ease-in-out rounded">View Cart</a>
+                                                <a href="checkout.html" class="font-semibold bg-gray-900 text-white px-6 py-2 hover:text-white hover:bg-red-600 transition duration-300 ease-in-out rounded">Checkout</a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="">
+                            <section class="">
+                                <button onclick="document.getElementById('myModal').showModal()" id="btn" class="focus:outline-none">
+                                    <i class="fas fa-search text-lg pt-1 hover:text-red-600 text-gray-500 transition duration-300 ease-in-out"></i>
+                                </button>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mx-auto mt-44">
+            <div class="container mx-auto">
+                <div class="max-w-xs md:max-w-2xl lg:max-w-screen-xl xl:max-w-screen-xl mx-auto">
+                   <div class="text-center pb-10">
+                        <img class="xl:w-2/3 lg:w-2/3 md:w-2/3 w-96 mx-auto" src="images/error.jpg" alt="">
+                        <h2 class="xl:text-2xl lg:text-xl md:text-lg text-sm font-semibold font-rubik">OPPS! PAGE NOT BE FOUND</h2>
+                        <p class="py-7 text-gray-600 font-rubik xl:text-lg lg:text-lg md:text-lg text-sm">Sorry, But the page you are looking for does't exist!</p>
+                        <a href="index.html" class="bg-pink-500 text-white px-5 py-3 font-semibold xl:text-sm lg:text-sm md:text-sm text-xs">GO TO HOME PAGE</a>
+                   </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid bg-gray-100 py-20 mt-20 dark:bg-gray-800 border-t border-gray-100 dark:border-t dark:border-gray-600">
+            <div class="container mx-auto">
+                <div class="footer">
+                    <div class="">
+                        <div class="main-footer">
+                            <div class="footer-single-blog">
+                                <h1 class="footer-single-blog-header font-rubic">About Us</h1>
+                                <p class="footer-single-blog-title">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididun</p>
+                                <p class="footer-single-blog-title">Address: 123 Main Street, Anytown, CA 12345 - USA.</p>
+                                <p class="footer-single-blog-title">Address: 123 Main Street, Anytown, CA 12345 - USA.</p>
+                                <p class="footer-single-blog-title">Email: <a href="#" class="hover:text-red-600 transition duration-400">yourmail@example.com</a></p>
+                                <ul class="flex justify-left items-center">
+                                    <li class="">
+                                        <a href="#" class="">
+                                            <i class="fab fa-facebook-f social-link"></i>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="">
+                                            <i class="fab fa-twitter social-link"></i>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="">
+                                            <i class="fab fa-google social-link"></i>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="">
+                                            <i class="fab fa-linkedin social-link"></i>
+                                        </a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="">
+                                            <i class="fab fa-instagram social-link"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-single-blog-info">
+                                <h1 class="footer-single-blog-info-heading font-rubic">Information</h1>
+                                <ul class="">
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">About Us</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Delivery Information</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Privacy Policy</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Terms & Conditions</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Customer Service</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Return Policy</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-single-blog-info">
+                                <h1 class="footer-single-blog-info-heading font-rubic">My Account</h1>
+                                <ul class="">
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">My Account</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Order History</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">WishList</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">News Letter</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">Order Information</a>
+                                    </li>
+                                    <li class="">
+                                        <a href="#" class="footer-info-link">International Order</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-newslatter">
+                                <h1 class="footer-single-blog-info-heading font-rubic">Join Our News Letter Now</h1>
+                                <ul class="">
+                                    <li class="text-md text-gray-800 font-rubic dark:text-gray-100">
+                                        Get E-mail updates about our latest shop and special offers.
+                                    </li>
+                                    <li class="my-5">
+                                        <input type="text" class="footer-input" placeholder="Your Email Address..." />
+                                    </li>
+                                    <li class="">
+                                        <button type="button" class="footer-button">subscribe</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="copyrightsec container-fluid">
+            <div class="container mx-auto">
+                <div class="copymainblog">
+                    <div class="copyrightblog">
+                        <div class="">
+                            <p class="text-gray-800 dark:text-gray-800">Copyright © Phuler. All Right Reserved.</p>
+                        </div>
+                        <div class="xl:my-0 lg:my-0 my-2">
+                            <a href="#" class="">
+                                <img class="" src="images/payment.png" alt="" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <dialog id="myModal" class="h-96 w-11/12 md:w-1/2 p-5 bg-gray-900 rounded-md">
+            <div class="">
+                <!-- Header -->
+                <div class="flex w-full h-auto justify-end items-center">
+                    <div onclick="document.getElementById('myModal').close();" class="flex w-1/12 h-auto justify-center cursor-pointer pt-5">
+                        <i class="fas fa-times text-xl text-gray-100"></i>
+                    </div>
+                    <!--Header End-->
+                </div>
+                <!-- Modal Content-->
+                <div class="h-auto pt-28 flex justify-center items-center">
+                    <div class="xl:flex xl:justify-center xl:items-center lg:flex lg:justify-center lg:items-center md:flex md:justify-center md:items-center">
+                        <input class="xl:w-full w-full h-10 border border-gray-500 bg-transparent text-white" type="search" placeholder="search" />
+                        <a
+                            href="#"
+                            class="xl:w-32 lg:w-32 md:w-32 w-full bg-red-600 text-white h-10 flex justify-center items-center border-2 border-red-600 font-semibold xl:mt-0 lg:mt-0 md:mt-0 mt-2 xl:rounded-none lg:rounded-none md:rounded-none rounded"
+                        >
+                            Search
+                        </a>
+                    </div>
+                </div>
+                <!-- End of Modal Content-->
+            </div>
+        </dialog>
+        <script>
+            const checkbox = document.querySelector("#toggle");
+            const html = document.querySelector("html");
+            const toggleDarkMode = function () {
+                checkbox.checked ? html.classList.add("dark") : html.classList.remove("dark");
+            };
+            toggleDarkMode();
+            checkbox.addEventListener("click", toggleDarkMode);
+        </script>
+        <script type="text/javascript">
+            var coll = document.getElementsByClassName("collapsible");
+            var i;
+
+            for (i = 0; i < coll.length; i++) {
+                coll[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                    if (content.style.maxHeight) {
+                        content.style.maxHeight = null;
+                    } else {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
+        <script>
+            var bTnOne = document.getElementById("button1");
+            var btntwo = document.getElementById("button2");
+
+            bTnOne.addEventListener("click", function () {
+                var x = document.getElementById("content2");
+                var y = document.getElementById("content1");
+                if (y.style.display === "none" && x.style.display === "none") {
+                    y.style.display = "none";
+                    x.style.display = "block";
+                } else {
+                    y.style.display = "block";
+                    x.style.display = "none";
+                }
+            });
+            btntwo.addEventListener("click", function () {
+                var x = document.getElementById("content2");
+                var y = document.getElementById("content1");
+                if (y.style.display === "none" && x.style.display === "none") {
+                    y.style.display = "block";
+                    x.style.display = "none";
+                } else {
+                    y.style.display = "none";
+                    x.style.display = "block";
+                }
+            });
+        </script>
+        <script>
+            function range() {
+                return {
+                    minprice: 300,
+                    maxprice: 800,
+                    min: 0,
+                    max: 1200,
+                    minthumb: 0,
+                    maxthumb: 0,
+
+                    mintrigger() {
+                        this.minprice = Math.min(this.minprice, this.maxprice - 0);
+                        this.minthumb = ((this.minprice - this.min) / (this.max - this.min)) * 100;
+                    },
+
+                    maxtrigger() {
+                        this.maxprice = Math.max(this.maxprice, this.minprice + 0);
+                        this.maxthumb = 100 - ((this.maxprice - this.min) / (this.max - this.min)) * 100;
+                    },
+                };
+            }
+        </script>
+    </body>
+</html>

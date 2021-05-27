@@ -66,7 +66,7 @@
                     class="flex flex-col px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 relative"
                 >
                     <div class="">
-                        <a href="index.html" class="text-gray-800">LOGO</a>
+                        <a href="error.html" class="text-gray-800">LOGO</a>
                     </div>
                     <div class="">
                         <div class="md:ml-1 lg:ml-36 xl:ml-56">
@@ -205,10 +205,11 @@
                     </div>
                     <div class="flex justify-center items-center">
                         <div class="">
+                            <div id="demo"></div>
                             <div class="dropdown inline-block relative">
                                 <button class="inline-flex items-center focus:outline-none relative">
                                     <i class="fas fa-shopping-cart text-gray-500 mr-7 hover:text-red-600 cursor-pointer transition duration-300 ease-in-out"></i>
-                                    <p class="absolute -top-3 right-3 h-4 w-4 bg-red-600 rounded-full text-white flex justify-center items-center text-xs">3</p>
+                                    <p id="demo" class="absolute -top-3 right-3 h-4 w-4 bg-red-600 rounded-full text-white flex justify-center items-center text-xs">3</p>
                                 </button>
                                 <ul class="dropdown-content z-10 bg-white absolute xl:right-0 lg:right-0 md:right-0 sm:right-0 -right-4 hidden text-gray-700 pt-1 xl:w-80 lg:w-80 md:w-80 w-80">
                                     <li class="shadow-lg px-3 py-3 mt-5">
@@ -514,5 +515,12 @@
                 };
             }
         </script>
+        <script>
+            function myFunction() {
+              var str = "Hello World!";
+              var n = str.length;
+              document.getElementById("demo").innerHTML = n;
+            }
+            </script>
     </body>
 </html>
