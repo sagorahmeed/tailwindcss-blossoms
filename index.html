@@ -58,7 +58,7 @@
     </head>
 
     <body class="body">
-        <div class="container-fluid bg-white shadow py-3 w-full fixed top-0">
+        <div class="container-fluid bg-white shadow py-3 w-full fixed top-0 z-40">
             <div class="container mx-auto">
                 <div
                     class="w-full py-4 flex justify-between items-center px-4"
@@ -105,7 +105,7 @@
                         </div>
                     </div>
                     <button class="block xl:hidden lg:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
-                        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 dark:text-gray-800">
                             <path
                                 x-show="!open"
                                 fill-rule="evenodd"
@@ -127,24 +127,24 @@
                         >
                             <a
                                 href="index.html"
-                                class="px-4 py-2 mt-2 text-sm font-semibold bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                class="px-4 py-2 mt-2 text-sm font-semibold bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark:text-gray-800 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline font-rubic"
                             >
                                 Home
                             </a>
                             <a
                             href="shop.html"
-                            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark:text-gray-800 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline font-rubic"
                         >
                             Shop
                         </a>
 
                             <div
                                 @click.away="open = false"
-                                class="relative px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                class="relative px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark:text-gray-800 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline font-rubic"
                                 x-data="{ open: false }"
                             >
                                 <button @click="open = !open" class="flex flex-row items-center w-full text-left md:w-auto md:inline focus:outline-none">
-                                    <span class="text-sm font-semibold">Pages</span>
+                                    <span class="text-sm font-semibold dark:text-gray-800 font-rubic">Pages</span>
                                     <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
                                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                                     </svg>
@@ -161,25 +161,25 @@
                                 >
                                     <div class="px-2 py-2 bg-white rounded-md shadow dark:bg-gray-800">
                                         <a
-                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:text-gray-100 dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-800 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline font-rubic"
                                             href="contact.html"
                                         >
                                             Contact us
                                         </a>
                                         <a
-                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent dark:text-gray-100 rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-800 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline font-rubic"
                                             href="account.html"
                                         >
                                             My Account
                                         </a>
                                         <a
-                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:text-gray-100 dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-800 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline font-rubic"
                                             href="register.html"
                                         >
                                             Register
                                         </a>
                                         <a
-                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent dark:text-gray-100 rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-800 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline font-rubic"
                                             href="login.html"
                                         >
                                             Login
@@ -189,13 +189,13 @@
                             </div>
                             <a
                             href="blog.html"
-                            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark:text-gray-800 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline font-rubic"
                         >
                             Blog
                         </a>   
                             <a
                                 href="contact.html"
-                                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark:text-gray-800 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline font-rubic"
                             >
                                 Contact us
                             </a>
@@ -204,7 +204,7 @@
                         </ul>
                     </div>
                     <div class="flex justify-center items-center">
-                        <div class="mr-5">
+                        <div class="xl:mr-5 lg:mr-5 md:mr-5 mr-0">
                             <div id="demo"></div>
                             <div class="dropdown inline-block relative">
                                 <button class="inline-flex items-center focus:outline-none relative">
@@ -312,11 +312,51 @@
             </div>
         </div>
 
-       <div class="text-center py-20 mt-32">
-           <h1 class="text-4xl text-gry-900 font-bold">Cooming Soon :)</h1>
+       <div class="container-fluid mx-auto pt-12" >
+        <div class="sliderAx h-auto">
+            <div id="slider-1" class="container-fluid mx-auto">
+              <div class="bg-cover bg-center  h-auto text-white px-10 object-fill h-5/6 relative" style="background-image: url(images/banner2.jpg)">
+                <div class="absolute left-10 top-0 flex items-center h-full">
+                    <button id="sButton1" onclick="sliderButton1()" class="bg-gray-50 text-gray-500 rounded-full h-10 w-10" ><i class="fas fa-chevron-left flex justify-center items-center"></i></button>
+                </div>
+             <div class="max-w-sm md:max-w-xl lg:max-w-screen-md xl:max-w-screen-xl mx-auto flex items-center h-full">
+                <div class="xl:max-w-lg">
+                    <p class="font-bold text-red-400 text-xl uppercase">Flowe & gift</p>
+                    <h1 class="xl:text-6xl lg:text-4xl md:text-2xl text-xl text-gray-900 font-bold font-rubic py-4">GET UP TO 75%</h1>
+                    <p class="text-lg text-gray-500 leading-relaxed mb-10 leading-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis voluptatibus perferendis ipsa, accusamus nam voluptates!</p>
+                    <a href="#" class="bg-red-400 py-4 px-8 text-white font-bold uppercase font-rubic rounded-full hover:bg-red-500 hover:text-gray-100 transition duration-300 ease-in-out">Shop Now</a>
+                </div>
+              </div> 
+              <div class="absolute right-10 top-0 flex items-center h-full">
+                <button id="sButton2" onclick="sliderButton2() " class="bg-gray-50 text-gray-500 rounded-full h-10 w-10"><i class="fas fa-chevron-right flex justify-center items-center"></i></button>
+              </div> 
+          </div>
+            <br>
+            </div>
+      
+            <div id="slider-2" class="container-fluid mx-auto">
+                <div class="bg-cover bg-center  h-auto text-white px-10 object-fill h-5/6 relative" style="background-image: url(images/banner.jpg)">
+                    <div class="absolute left-10 top-0 flex items-center h-full">
+                        <button id="sButton1" onclick="sliderButton1()" class="bg-gray-50 text-gray-500 rounded-full h-10 w-10" ><i class="fas fa-chevron-left flex justify-center items-center"></i></button>
+                    </div>
+                 <div class="max-w-sm md:max-w-xl lg:max-w-screen-md xl:max-w-screen-xl mx-auto flex items-center h-full">
+                    <div class="xl:max-w-lg">
+                        <p class="font-bold text-red-400 text-xl uppercase">Flowe & gift</p>
+                        <h1 class="xl:text-6xl lg:text-4xl md:text-2xl text-xl text-gray-900 font-bold font-rubic py-4">GET UP TO 75%</h1>
+                        <p class="text-lg text-gray-500 leading-relaxed mb-10 leading-none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis voluptatibus perferendis ipsa, accusamus nam voluptates!</p>
+                        <a href="#" class="bg-red-400 py-4 px-8 text-white font-bold uppercase font-rubic rounded-full hover:bg-red-500 hover:text-gray-100 transition duration-300 ease-in-out">Shop Now</a>
+                    </div>
+                  </div> 
+                  <div class="absolute right-10 top-0 flex items-center h-full">
+                    <button id="sButton2" onclick="sliderButton2() " class="bg-gray-50 text-gray-500 rounded-full h-10 w-10"><i class="fas fa-chevron-right flex justify-center items-center"></i></button>
+                  </div> 
+              </div>
+            <br>
+            </div>
+          </div>
        </div>
 
-        <div class="container-fluid bg-gray-100 py-20 mt-20 dark:bg-gray-800 border-t border-gray-100 dark:border-t dark:border-gray-600">
+        <div class="container-fluid bg-gray-100 py-20 dark:bg-gray-800 border-t border-gray-100 dark:border-t dark:border-gray-600">
             <div class="container mx-auto">
                 <div class="footer">
                     <div class="">
@@ -460,6 +500,83 @@
                 <!-- End of Modal Content-->
             </div>
         </dialog>
+        <script>
+            var cont=0;
+        function loopSlider(){
+          var xx= setInterval(function(){
+                switch(cont)
+                {
+                case 0:{
+                    $("#slider-1").fadeOut(400);
+                    $("#slider-2").delay(400).fadeIn(400);
+                    $("#sButton1").removeClass("");
+                    $("#sButton2").addClass("");
+                cont=1;
+                
+                break;
+                }
+                case 1:
+                {
+                
+                    $("#slider-2").fadeOut(400);
+                    $("#slider-1").delay(400).fadeIn(400);
+                    $("#sButton2").removeClass("");
+                    $("#sButton1").addClass("");
+                   
+                cont=0;
+                
+                break;
+                }
+                
+                
+                }},8000);
+        
+        }
+        
+        function reinitLoop(time){
+        clearInterval(xx);
+        setTimeout(loopSlider(),time);
+        }
+        
+        
+        
+        function sliderButton1(){
+        
+            $("#slider-2").fadeOut(400);
+            $("#slider-1").delay(400).fadeIn(400);
+            $("#sButton2").removeClass("");
+            $("#sButton1").addClass("");
+            reinitLoop(4000);
+            cont=0
+            
+            }
+            
+            function sliderButton2(){
+            $("#slider-1").fadeOut(400);
+            $("#slider-2").delay(400).fadeIn(400);
+            $("#sButton1").removeClass("");
+            $("#sButton2").addClass("");
+            reinitLoop(4000);
+            cont=1
+            
+            }
+        
+            $(window).ready(function(){
+                $("#slider-2").hide();
+                $("#sButton1").addClass("");
+                
+        
+                loopSlider();
+             
+                
+            
+            
+            
+            
+            });
+        
+          
+          </script>
         <script>
             const checkbox = document.querySelector("#toggle");
             const html = document.querySelector("html");

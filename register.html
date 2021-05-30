@@ -58,15 +58,15 @@
     </head>
 
     <body class="body">
-        <div class="container-fluid bg-white shadow py-3 w-full fixed top-0">
+        <div class="container-fluid bg-white shadow py-3 w-full fixed top-0 z-40">
             <div class="container mx-auto">
                 <div
-                    class="w-full py-4 flex justify-between items-center max-w-xs md:max-w-2xl lg:max-w-screen-xl xl:max-w-screen-xl mx-auto"
+                    class="w-full py-4 flex justify-between items-center px-4"
                     x-data="{ open: false }"
                     class="flex flex-col px-4 mx-auto md:items-center md:justify-between md:flex-row md:px-6 lg:px-8 relative"
                 >
                     <div class="">
-                        <a href="index.html" class="text-gray-800">LOGO</a>
+                        <a href="error.html" class="text-gray-800">LOGO</a>
                     </div>
                     <div class="">
                         <div class="md:ml-1 lg:ml-36 xl:ml-56">
@@ -105,7 +105,7 @@
                         </div>
                     </div>
                     <button class="block xl:hidden lg:hidden rounded-lg focus:outline-none focus:shadow-outline" @click="open = !open">
-                        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6">
+                        <svg fill="currentColor" viewBox="0 0 20 20" class="w-6 h-6 dark:text-gray-800">
                             <path
                                 x-show="!open"
                                 fill-rule="evenodd"
@@ -123,27 +123,28 @@
                     <div>
                         <ul
                             :class="{'flex': open, 'hidden': !open}"
-                            class="leading-loose flex-col flex-grow py-10 pt-10 md:pb-0 h-screen xl:h-auto xl:h-auto lg:h-auto w-60 sm:w-80 md:w-96 lg:w-full xl:w-full hidden xl:flex-row lg:flex-row xl:inline-flex lg:inline-flex xl:static lg:static absolute left-0 top-20 xl:bg-transparent lg:bg-transparent bg-transparent bg-gray-50 px-3 xl:py-0 lg:py-0 md:py-10"
+                            class="leading-loose flex-col flex-grow py-20 pt-10 md:pb-0 h-screen xl:h-auto xl:h-auto lg:h-auto w-64 sm:w-80 md:w-96 lg:w-full xl:w-full hidden xl:flex-row lg:flex-row xl:inline-flex lg:inline-flex xl:static lg:static absolute left-0 top-20 xl:bg-transparent lg:bg-transparent bg-transparent bg-gray-50 px-3 xl:py-0 lg:py-0 md:py-10"
                         >
                             <a
-                                href="#"
-                                class="px-4 py-2 mt-2 text-sm font-semibold bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                href="index.html"
+                                class="px-4 py-2 mt-2 text-sm font-semibold bg-gray-200 rounded-lg dark-mode:bg-gray-700 dark:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark:text-gray-800 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline font-rubic"
                             >
                                 Home
                             </a>
                             <a
                             href="shop.html"
-                            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark:text-gray-800 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline font-rubic"
                         >
                             Shop
                         </a>
+
                             <div
                                 @click.away="open = false"
-                                class="relative px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                class="relative px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark:text-gray-800 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline font-rubic"
                                 x-data="{ open: false }"
                             >
                                 <button @click="open = !open" class="flex flex-row items-center w-full text-left md:w-auto md:inline focus:outline-none">
-                                    <span class="text-sm font-semibold">Pages</span>
+                                    <span class="text-sm font-semibold dark:text-gray-800 font-rubic">Pages</span>
                                     <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
                                         <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
                                     </svg>
@@ -160,19 +161,25 @@
                                 >
                                     <div class="px-2 py-2 bg-white rounded-md shadow dark:bg-gray-800">
                                         <a
-                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent dark:text-gray-100 rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                                            href="login.html"
+                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-800 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline font-rubic"
+                                            href="contact.html"
+                                        >
+                                            Contact us
+                                        </a>
+                                        <a
+                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-800 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline font-rubic"
+                                            href="account.html"
                                         >
                                             My Account
                                         </a>
                                         <a
-                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:text-gray-100 dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-800 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline font-rubic"
                                             href="register.html"
                                         >
                                             Register
                                         </a>
                                         <a
-                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent dark:text-gray-100 rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-800 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline font-rubic"
                                             href="login.html"
                                         >
                                             Login
@@ -180,30 +187,31 @@
                                     </div>
                                 </div>
                             </div>
-
                             <a
-                                href="#"
-                                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                            href="blog.html"
+                            class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark:text-gray-800 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline font-rubic"
+                        >
+                            Blog
+                        </a>   
+                            <a
+                                href="contact.html"
+                                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark:text-gray-800 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline font-rubic"
                             >
                                 Contact us
                             </a>
 
-                            <a
-                                href="About.html"
-                                class="px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 xl:ml-4 lg:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                            >
-                                About us
-                            </a>
+                           
                         </ul>
                     </div>
                     <div class="flex justify-center items-center">
-                        <div class="">
+                        <div class="xl:mr-5 lg:mr-5 md:mr-5 mr-0">
+                            <div id="demo"></div>
                             <div class="dropdown inline-block relative">
                                 <button class="inline-flex items-center focus:outline-none relative">
                                     <i class="fas fa-shopping-cart text-gray-500 mr-7 hover:text-red-600 cursor-pointer transition duration-300 ease-in-out"></i>
-                                    <p class="absolute -top-3 right-3 h-4 w-4 bg-red-600 rounded-full text-white flex justify-center items-center text-xs">3</p>
+                                    <p id="demo" class="absolute -top-3 right-3 h-4 w-4 bg-red-600 rounded-full text-white flex justify-center items-center text-xs">3</p>
                                 </button>
-                                <ul class="dropdown-content z-10 bg-white absolute xl:right-0 lg:right-0 md:right-0 sm:right-0 -right-4 hidden text-gray-700 pt-1 xl:w-80 lg:w-80 md:w-80 w-80">
+                                <ul class="dropdown-content z-10 bg-white absolute xl:right-0 lg:right-0 md:right-0 sm:right-0 -right-16 hidden text-gray-700 pt-1 xl:w-80 lg:w-80 md:w-80 w-80">
                                     <li class="shadow-lg px-3 py-3 mt-5">
                                         <div class="border-b-2 border-gray-200 pb-5">
                                             <div class="flex justify-between items-center">
@@ -279,6 +287,25 @@
                                     <i class="fas fa-search text-lg pt-1 hover:text-red-600 text-gray-500 transition duration-300 ease-in-out"></i>
                                 </button>
                             </section>
+                        </div>
+                    </div>
+                    <div class="flex justify-center items-center xl:ml-0 lg:ml-4 md:ml-0 ml-0">
+                        <div class="group">
+                            <div id="demo"></div>
+                            <div class="dropdown inline-block relative group">
+                                <button class="inline-flex items-center focus:outline-none relative flex items-center">
+                                    <img src="images/user.jpeg" class="xl:w-10 lg:w-10 md:w-10 w-8 h-auto rounded-full" alt="image">
+                                    <h1 class="text-gray-600 text-sm font-medium xl:block lg:block md:block hidden ml-2 group-hover:text-red-600 transition duration-300 ease-in-out">John Doe</h1>
+                                </button>
+                                <ul class="dropdown-content z-10 bg-white rounded shadow-lg absolute xl:right-0 lg:right-0 md:right-0 sm:right-0 -right-4 hidden text-gray-700 pt-1 w-44">
+                                    <li class="shadow-lg px-3 py-3 mt-5">
+                                        <h1 class="pb-1 border-b border-gray-300 xl:hidden lg:hidden md:hidden block mb-3 font-semibold">John Doe</h1>
+                                        <div class="py-1"><a href="account.html" class="text-gray-600 font-rubic hover:text-red-600 transition duration-300 ease-in-out">My Account</a></div>
+                                        <div class="py-1"><a href="register.html" class="text-gray-600 font-rubic hover:text-red-600 transition duration-300 ease-in-out">Register</a></div>
+                                        <div class="py-1"><a href="login.html" class="text-gray-600 font-rubic hover:text-red-600 transition duration-300 ease-in-out">Login</a></div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
