@@ -13,6 +13,18 @@
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
         <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
         <style>
+            .snap-x {
+                scroll-snap-type: x mandatory;
+                
+              scroll-behavior: smooth;
+              -webkit-overflow-scrolling: touch;
+            }
+            .snap-start {
+              scroll-snap-align: start;
+            }
+            
+            </style>
+        <style>
             input[type="range"]::-webkit-slider-thumb {
                 pointer-events: all;
                 width: 24px;
@@ -355,7 +367,1175 @@
             </div>
           </div>
        </div>
+       <div class="container-fluid mx-auto pt-10">
+           <div class="container mx-auto">
+           <div class="flex justify-center items-center max-w-sm md:max-w-xl lg:max-w-screen-md xl:max-w-screen-xl mx-auto">
+            <div class="mt-4  rounded">
+                <!-- Tabs -->
+                <ul id="tabs" class="inline-flex justify-center w-full px-1 pt-2 pb-20">
+                  <li class="-mb-px font-semibold text-gray-800 xl:text-sm lg:text-sm md:text-sm text-xs border-b border-red-400 rounded-t opacity-50 uppercase font-rubic"><a id="default-tab" href="#first">New Arrival</a></li>
+                  <li class=" ml-4 font-semibold text-gray-800 rounded-t opacity-50 uppercase xl:text-sm lg:text-sm md:text-sm text-xs font-rubic"><a href="#second">Top Sales</a></li>
+                  <li class="ml-4 font-semibold text-gray-800 rounded-t opacity-50 uppercase xl:text-sm lg:text-sm md:text-sm text-xs font-rubic"><a href="#third">Off Sales</a></li>
+                </ul>
 
+                <!-- Tab Contents -->
+                <div id="tab-contents">
+                  <div id="first" class="p-4">
+                     <div class="xl:grid xl:grid-cols-4 xl:grid-rows-1 lg:grid lg:grid-cols-4 lg:grid-rows-1 md:grid md:grid-cols-2 md:grid-rows-2 gap-6">
+                        <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                            <a href="single-product-.html" class="">
+                                <div class="relative">
+                                    <div class="overflow-hidden relative">
+                                        <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/home22.png" alt="">
+                                        <span class="absolute left-0 top-4 bg-green-600 text-white px-4 font-semibold font-rubic rounded-sm">10%</span>
+                                    </div>
+                                    <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                        <div class="absolute bottom-3">
+                                           <div class="">
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                    <i class="fas fa-search flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-random flex justify-center items-center"></i>
+                                                </a>
+                                           </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="py-2 border-b border-gray-200">
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">Pink Flowe tree</h1>
+                                 </div>
+                                 <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                            </a>
+                        </div>
+                         <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                            <a href="single-product-.html" class="">
+                                <div class="relative">
+                                    <div class="overflow-hidden relative">
+                                        <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/joy-full.png" alt="">
+                                        <span class="absolute left-0 top-4 bg-red-500 text-white px-4 font-semibold font-rubic rounded-sm">Hot</span>
+                                    </div>
+                                    <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                        <div class="absolute bottom-3">
+                                           <div class="">
+                                                <a href="#" class="p-4 bg-gray-600 text-white border border-gray-400 p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                    <i class="fas fa-search flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-random flex justify-center items-center"></i>
+                                                </a>
+                                           </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="py-2 border-b border-gray-200">
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">premium joyful</h1>
+                                 </div>
+                                 <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                            </a>
+                        </div>
+                        <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                            <a href="single-product-.html" class="">
+                                <div class="relative">
+                                    <div class="overflow-hidden">
+                                        <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/white-full.png" alt="">
+                                        <span class="absolute left-0 top-4 bg-green-600 text-white px-4 font-semibold font-rubic rounded-sm">12%</span>
+                                    </div>
+                                    <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                        <div class="absolute bottom-3">
+                                           <div class="">
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                    <i class="fas fa-search flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-random flex justify-center items-center"></i>
+                                                </a>
+                                           </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="py-2 border-b border-gray-200">
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">The white rose</h1>
+                                 </div>
+                                 <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                            </a>
+                        </div>
+                        <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                            <a href="single-product-.html" class="">
+                                <div class="relative">
+                                    <div class="overflow-hidden">
+                                        <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/red-rose.png" alt="">
+                                        <span class="absolute left-0 top-4 bg-red-500 text-white px-4 font-semibold font-rubic rounded-sm">Hot</span>
+                                    </div>
+                                    <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                        <div class="absolute bottom-3">
+                                           <div class="">
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                    <i class="fas fa-search flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-random flex justify-center items-center"></i>
+                                                </a>
+                                           </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="py-2 border-b border-gray-200">
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">red rose bouqet</h1>
+                                 </div>
+                                 <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                            </a>
+                        </div>
+                     </div>
+                     <div class="mt-5" >
+                         <button id="showConBtn" class="text-gray-500 focus:outline-none">Show More</button>
+                     </div>
+                     <div class="pt-10 hidden" id="moreContent">
+                        <div class="xl:grid xl:grid-cols-4 xl:grid-rows-1 lg:grid lg:grid-cols-4 lg:grid-rows-1 md:grid md:grid-cols-2 md:grid-rows-2 gap-6">
+                            <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                                <a href="single-product-.html" class="">
+                                    <div class="relative">
+                                        <div class="overflow-hidden relative">
+                                            <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/home22.png" alt="">
+                                            <span class="absolute left-0 top-4 bg-green-600 text-white px-4 font-semibold font-rubic rounded-sm">10%</span>
+                                        </div>
+                                        <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                            <div class="absolute bottom-3">
+                                               <div class="">
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                        <i class="fas fa-search flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-random flex justify-center items-center"></i>
+                                                    </a>
+                                               </div>
+                                            </div>
+                                        </div>
+                                     </div>
+                                     <div class="py-2 border-b border-gray-200">
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">Pink Flowe tree</h1>
+                                     </div>
+                                     <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                                </a>
+                            </div>
+                             <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                                <a href="single-product-.html" class="">
+                                    <div class="relative">
+                                        <div class="overflow-hidden relative">
+                                            <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/joy-full.png" alt="">
+                                            <span class="absolute left-0 top-4 bg-red-500 text-white px-4 font-semibold font-rubic rounded-sm">Hot</span>
+                                        </div>
+                                        <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                            <div class="absolute bottom-3">
+                                               <div class="">
+                                                    <a href="#" class="p-4 bg-gray-600 text-white border border-gray-400 p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                        <i class="fas fa-search flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-random flex justify-center items-center"></i>
+                                                    </a>
+                                               </div>
+                                            </div>
+                                        </div>
+                                     </div>
+                                     <div class="py-2 border-b border-gray-200">
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">premium joyful</h1>
+                                     </div>
+                                     <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                                </a>
+                            </div>
+                            <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                                <a href="single-product-.html" class="">
+                                    <div class="relative">
+                                        <div class="overflow-hidden">
+                                            <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/white-full.png" alt="">
+                                            <span class="absolute left-0 top-4 bg-green-600 text-white px-4 font-semibold font-rubic rounded-sm">12%</span>
+                                        </div>
+                                        <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                            <div class="absolute bottom-3">
+                                               <div class="">
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                        <i class="fas fa-search flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-random flex justify-center items-center"></i>
+                                                    </a>
+                                               </div>
+                                            </div>
+                                        </div>
+                                     </div>
+                                     <div class="py-2 border-b border-gray-200">
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">The white rose</h1>
+                                     </div>
+                                     <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                                </a>
+                            </div>
+                            <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                                <a href="single-product-.html" class="">
+                                    <div class="relative">
+                                        <div class="overflow-hidden">
+                                            <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/red-rose.png" alt="">
+                                            <span class="absolute left-0 top-4 bg-red-500 text-white px-4 font-semibold font-rubic rounded-sm">Hot</span>
+                                        </div>
+                                        <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                            <div class="absolute bottom-3">
+                                               <div class="">
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                        <i class="fas fa-search flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-random flex justify-center items-center"></i>
+                                                    </a>
+                                               </div>
+                                            </div>
+                                        </div>
+                                     </div>
+                                     <div class="py-2 border-b border-gray-200">
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">red rose bouqet</h1>
+                                     </div>
+                                     <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                                </a>
+                            </div>
+                         </div>
+                     </div>
+                  </div>
+                  <div id="second" class="hidden p-4">
+                    <div class="xl:grid xl:grid-cols-4 xl:grid-rows-1 lg:grid lg:grid-cols-4 lg:grid-rows-1 md:grid md:grid-cols-2 md:grid-rows-2 gap-6">
+                        <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                            <a href="single-product-.html" class="">
+                                <div class="relative">
+                                    <div class="overflow-hidden relative">
+                                        <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/home22.png" alt="">
+                                        <span class="absolute left-0 top-4 bg-green-600 text-white px-4 font-semibold font-rubic rounded-sm">10%</span>
+                                    </div>
+                                    <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                        <div class="absolute bottom-3">
+                                           <div class="">
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                    <i class="fas fa-search flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-random flex justify-center items-center"></i>
+                                                </a>
+                                           </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="py-2 border-b border-gray-200">
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">Pink Flowe tree</h1>
+                                 </div>
+                                 <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                            </a>
+                        </div>
+                         <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                            <a href="single-product-.html" class="">
+                                <div class="relative">
+                                    <div class="overflow-hidden relative">
+                                        <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/joy-full.png" alt="">
+                                        <span class="absolute left-0 top-4 bg-red-500 text-white px-4 font-semibold font-rubic rounded-sm">Hot</span>
+                                    </div>
+                                    <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                        <div class="absolute bottom-3">
+                                           <div class="">
+                                                <a href="#" class="p-4 bg-gray-600 text-white border border-gray-400 p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                    <i class="fas fa-search flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-random flex justify-center items-center"></i>
+                                                </a>
+                                           </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="py-2 border-b border-gray-200">
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">premium joyful</h1>
+                                 </div>
+                                 <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                            </a>
+                        </div>
+                        <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                            <a href="single-product-.html" class="">
+                                <div class="relative">
+                                    <div class="overflow-hidden">
+                                        <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/white-full.png" alt="">
+                                        <span class="absolute left-0 top-4 bg-green-600 text-white px-4 font-semibold font-rubic rounded-sm">12%</span>
+                                    </div>
+                                    <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                        <div class="absolute bottom-3">
+                                           <div class="">
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                    <i class="fas fa-search flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-random flex justify-center items-center"></i>
+                                                </a>
+                                           </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="py-2 border-b border-gray-200">
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">The white rose</h1>
+                                 </div>
+                                 <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                            </a>
+                        </div>
+                        <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                            <a href="single-product-.html" class="">
+                                <div class="relative">
+                                    <div class="overflow-hidden">
+                                        <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/red-rose.png" alt="">
+                                        <span class="absolute left-0 top-4 bg-red-500 text-white px-4 font-semibold font-rubic rounded-sm">Hot</span>
+                                    </div>
+                                    <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                        <div class="absolute bottom-3">
+                                           <div class="">
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                    <i class="fas fa-search flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-random flex justify-center items-center"></i>
+                                                </a>
+                                           </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="py-2 border-b border-gray-200">
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">red rose bouqet</h1>
+                                 </div>
+                                 <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                            </a>
+                        </div>
+                     </div>
+                     <div class="mt-5" >
+                         <button id="saleshowConBtn" class="text-gray-500 focus:outline-none">Show More</button>
+                     </div>
+                     <div class="pt-10 hidden" id="salemoreContent">
+                        <div class="xl:grid xl:grid-cols-4 xl:grid-rows-1 lg:grid lg:grid-cols-4 lg:grid-rows-1 md:grid md:grid-cols-2 md:grid-rows-2 gap-6">
+                            <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                                <a href="single-product-.html" class="">
+                                    <div class="relative">
+                                        <div class="overflow-hidden relative">
+                                            <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/home22.png" alt="">
+                                            <span class="absolute left-0 top-4 bg-green-600 text-white px-4 font-semibold font-rubic rounded-sm">10%</span>
+                                        </div>
+                                        <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                            <div class="absolute bottom-3">
+                                               <div class="">
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                        <i class="fas fa-search flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-random flex justify-center items-center"></i>
+                                                    </a>
+                                               </div>
+                                            </div>
+                                        </div>
+                                     </div>
+                                     <div class="py-2 border-b border-gray-200">
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">Pink Flowe tree</h1>
+                                     </div>
+                                     <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                                </a>
+                            </div>
+                             <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                                <a href="single-product-.html" class="">
+                                    <div class="relative">
+                                        <div class="overflow-hidden relative">
+                                            <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/joy-full.png" alt="">
+                                            <span class="absolute left-0 top-4 bg-red-500 text-white px-4 font-semibold font-rubic rounded-sm">Hot</span>
+                                        </div>
+                                        <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                            <div class="absolute bottom-3">
+                                               <div class="">
+                                                    <a href="#" class="p-4 bg-gray-600 text-white border border-gray-400 p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                        <i class="fas fa-search flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-random flex justify-center items-center"></i>
+                                                    </a>
+                                               </div>
+                                            </div>
+                                        </div>
+                                     </div>
+                                     <div class="py-2 border-b border-gray-200">
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">premium joyful</h1>
+                                     </div>
+                                     <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                                </a>
+                            </div>
+                            <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                                <a href="single-product-.html" class="">
+                                    <div class="relative">
+                                        <div class="overflow-hidden">
+                                            <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/white-full.png" alt="">
+                                            <span class="absolute left-0 top-4 bg-green-600 text-white px-4 font-semibold font-rubic rounded-sm">12%</span>
+                                        </div>
+                                        <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                            <div class="absolute bottom-3">
+                                               <div class="">
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                        <i class="fas fa-search flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-random flex justify-center items-center"></i>
+                                                    </a>
+                                               </div>
+                                            </div>
+                                        </div>
+                                     </div>
+                                     <div class="py-2 border-b border-gray-200">
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">The white rose</h1>
+                                     </div>
+                                     <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                                </a>
+                            </div>
+                            <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                                <a href="single-product-.html" class="">
+                                    <div class="relative">
+                                        <div class="overflow-hidden">
+                                            <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/red-rose.png" alt="">
+                                            <span class="absolute left-0 top-4 bg-red-500 text-white px-4 font-semibold font-rubic rounded-sm">Hot</span>
+                                        </div>
+                                        <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                            <div class="absolute bottom-3">
+                                               <div class="">
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                        <i class="fas fa-search flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-random flex justify-center items-center"></i>
+                                                    </a>
+                                               </div>
+                                            </div>
+                                        </div>
+                                     </div>
+                                     <div class="py-2 border-b border-gray-200">
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">red rose bouqet</h1>
+                                     </div>
+                                     <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                                </a>
+                            </div>
+                         </div>
+                     </div>
+                  </div>
+                  <div id="third" class="hidden p-4">
+                    <div class="xl:grid xl:grid-cols-4 xl:grid-rows-1 lg:grid lg:grid-cols-4 lg:grid-rows-1 md:grid md:grid-cols-2 md:grid-rows-2 gap-6">
+                        <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                            <a href="single-product-.html" class="">
+                                <div class="relative">
+                                    <div class="overflow-hidden relative">
+                                        <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/home22.png" alt="">
+                                        <span class="absolute left-0 top-4 bg-green-600 text-white px-4 font-semibold font-rubic rounded-sm">10%</span>
+                                    </div>
+                                    <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                        <div class="absolute bottom-3">
+                                           <div class="">
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                    <i class="fas fa-search flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-random flex justify-center items-center"></i>
+                                                </a>
+                                           </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="py-2 border-b border-gray-200">
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">Pink Flowe tree</h1>
+                                 </div>
+                                 <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                            </a>
+                        </div>
+                         <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                            <a href="single-product-.html" class="">
+                                <div class="relative">
+                                    <div class="overflow-hidden relative">
+                                        <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/joy-full.png" alt="">
+                                        <span class="absolute left-0 top-4 bg-red-500 text-white px-4 font-semibold font-rubic rounded-sm">Hot</span>
+                                    </div>
+                                    <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                        <div class="absolute bottom-3">
+                                           <div class="">
+                                                <a href="#" class="p-4 bg-gray-600 text-white border border-gray-400 p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                    <i class="fas fa-search flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-random flex justify-center items-center"></i>
+                                                </a>
+                                           </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="py-2 border-b border-gray-200">
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">premium joyful</h1>
+                                 </div>
+                                 <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                            </a>
+                        </div>
+                        <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                            <a href="single-product-.html" class="">
+                                <div class="relative">
+                                    <div class="overflow-hidden">
+                                        <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/white-full.png" alt="">
+                                        <span class="absolute left-0 top-4 bg-green-600 text-white px-4 font-semibold font-rubic rounded-sm">12%</span>
+                                    </div>
+                                    <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                        <div class="absolute bottom-3">
+                                           <div class="">
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                    <i class="fas fa-search flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-random flex justify-center items-center"></i>
+                                                </a>
+                                           </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="py-2 border-b border-gray-200">
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">The white rose</h1>
+                                 </div>
+                                 <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                            </a>
+                        </div>
+                        <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                            <a href="single-product-.html" class="">
+                                <div class="relative">
+                                    <div class="overflow-hidden">
+                                        <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/red-rose.png" alt="">
+                                        <span class="absolute left-0 top-4 bg-red-500 text-white px-4 font-semibold font-rubic rounded-sm">Hot</span>
+                                    </div>
+                                    <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                        <div class="absolute bottom-3">
+                                           <div class="">
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                    <i class="fas fa-search flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                </a>
+                                                <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                    <i class="fas fa-random flex justify-center items-center"></i>
+                                                </a>
+                                           </div>
+                                        </div>
+                                    </div>
+                                 </div>
+                                 <div class="py-2 border-b border-gray-200">
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <i class="far fa-star text-gray-400 text-sm"></i>
+                                    <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">red rose bouqet</h1>
+                                 </div>
+                                 <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                            </a>
+                        </div>
+                     </div>
+                     <div class="mt-5" >
+                         <button id="offshowConBtn" class="text-gray-500 focus:outline-none">Show More</button>
+                     </div>
+                     <div class="pt-10 hidden" id="offmoreContent">
+                        <div class="xl:grid xl:grid-cols-4 xl:grid-rows-1 lg:grid lg:grid-cols-4 lg:grid-rows-1 md:grid md:grid-cols-2 md:grid-rows-2 gap-6">
+                            <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                                <a href="single-product-.html" class="">
+                                    <div class="relative">
+                                        <div class="overflow-hidden relative">
+                                            <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/home22.png" alt="">
+                                            <span class="absolute left-0 top-4 bg-green-600 text-white px-4 font-semibold font-rubic rounded-sm">10%</span>
+                                        </div>
+                                        <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                            <div class="absolute bottom-3">
+                                               <div class="">
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                        <i class="fas fa-search flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-random flex justify-center items-center"></i>
+                                                    </a>
+                                               </div>
+                                            </div>
+                                        </div>
+                                     </div>
+                                     <div class="py-2 border-b border-gray-200">
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">Pink Flowe tree</h1>
+                                     </div>
+                                     <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                                </a>
+                            </div>
+                             <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                                <a href="single-product-.html" class="">
+                                    <div class="relative">
+                                        <div class="overflow-hidden relative">
+                                            <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/joy-full.png" alt="">
+                                            <span class="absolute left-0 top-4 bg-red-500 text-white px-4 font-semibold font-rubic rounded-sm">Hot</span>
+                                        </div>
+                                        <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                            <div class="absolute bottom-3">
+                                               <div class="">
+                                                    <a href="#" class="p-4 bg-gray-600 text-white border border-gray-400 p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                        <i class="fas fa-search flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-random flex justify-center items-center"></i>
+                                                    </a>
+                                               </div>
+                                            </div>
+                                        </div>
+                                     </div>
+                                     <div class="py-2 border-b border-gray-200">
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">premium joyful</h1>
+                                     </div>
+                                     <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                                </a>
+                            </div>
+                            <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                                <a href="single-product-.html" class="">
+                                    <div class="relative">
+                                        <div class="overflow-hidden">
+                                            <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/white-full.png" alt="">
+                                            <span class="absolute left-0 top-4 bg-green-600 text-white px-4 font-semibold font-rubic rounded-sm">12%</span>
+                                        </div>
+                                        <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                            <div class="absolute bottom-3">
+                                               <div class="">
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                        <i class="fas fa-search flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-random flex justify-center items-center"></i>
+                                                    </a>
+                                               </div>
+                                            </div>
+                                        </div>
+                                     </div>
+                                     <div class="py-2 border-b border-gray-200">
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">The white rose</h1>
+                                     </div>
+                                     <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                                </a>
+                            </div>
+                            <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                                <a href="single-product-.html" class="">
+                                    <div class="relative">
+                                        <div class="overflow-hidden">
+                                            <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/red-rose.png" alt="">
+                                            <span class="absolute left-0 top-4 bg-red-500 text-white px-4 font-semibold font-rubic rounded-sm">Hot</span>
+                                        </div>
+                                        <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                            <div class="absolute bottom-3">
+                                               <div class="">
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                        <i class="fas fa-search flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                                    </a>
+                                                    <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                        <i class="fas fa-random flex justify-center items-center"></i>
+                                                    </a>
+                                               </div>
+                                            </div>
+                                        </div>
+                                     </div>
+                                     <div class="py-2 border-b border-gray-200">
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <i class="far fa-star text-gray-400 text-sm"></i>
+                                        <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">red rose bouqet</h1>
+                                     </div>
+                                     <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                                </a>
+                            </div>
+                         </div>
+                     </div>
+                  </div>
+                </div>
+              </div>
+           </div>
+           </div>
+       </div>
+       <div class="container mx-auto py-20">
+            <div class="max-w-xs md:max-w-xl lg:max-w-screen-md xl:max-w-screen-xl mx-auto">
+                <div class="xl:grid xl:grid-cols-2 xl:grid-rows-1 lg:grid lg:grid-cols-2 lg:grid-rows-1 md:grid md:grid-cols-2 md:grid-rows-1 gap-6">
+                    <div class="overflow-hidden">
+                        <a href="#" class="">
+                        <img class="w-full h-auto hover:scale-110 transition duration-700 ease-in-out transform" src="images/8.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="overflow-hidden xl:mt-0 lg:mt-0 md:mt-0 mt-10">
+                    <a href="#" class="">
+                        <img class="w-full h-auto hover:scale-110 transition duration-700 ease-in-out transform" src="images/9.jpg" alt="">
+                    </a>
+                </div>
+                </div>
+            </div>
+       </div>
+       <div class="container-mx-auto py-20">
+        <div class="max-w-xs md:max-w-xl lg:max-w-screen-md xl:max-w-screen-xl mx-auto">
+            <h1 class="text-center font-bold xl:text-2xl border-b border-red-400 w-44 mx-auto pb-2 text-gray-800 pt-10">Top Product</h1>
+            <div class="xl:grid xl:grid-cols-4 xl:grid-rows-1 lg:grid lg:grid-cols-4 lg:grid-rows-1 md:grid md:grid-cols-2 md:grid-rows-2 gap-6 pt-10">
+                <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                    <a href="single-product-.html" class="">
+                        <div class="relative">
+                            <div class="overflow-hidden relative">
+                                <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/home22.png" alt="">
+                                <span class="absolute left-0 top-4 bg-green-600 text-white px-4 font-semibold font-rubic rounded-sm">10%</span>
+                            </div>
+                            <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                <div class="absolute bottom-3">
+                                   <div class="">
+                                        <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                            <i class="fas fa-search flex justify-center items-center"></i>
+                                        </a>
+                                        <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                            <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                        </a>
+                                        <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                            <i class="fas fa-random flex justify-center items-center"></i>
+                                        </a>
+                                   </div>
+                                </div>
+                            </div>
+                         </div>
+                         <div class="py-2 border-b border-gray-200">
+                            <i class="far fa-star text-gray-400 text-sm"></i>
+                            <i class="far fa-star text-gray-400 text-sm"></i>
+                            <i class="far fa-star text-gray-400 text-sm"></i>
+                            <i class="far fa-star text-gray-400 text-sm"></i>
+                            <i class="far fa-star text-gray-400 text-sm"></i>
+                            <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">Pink Flowe tree</h1>
+                         </div>
+                         <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                    </a>
+                </div>
+                 <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                    <a href="single-product-.html" class="">
+                        <div class="relative">
+                            <div class="overflow-hidden relative">
+                                <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/joy-full.png" alt="">
+                                <span class="absolute left-0 top-4 bg-red-500 text-white px-4 font-semibold font-rubic rounded-sm">Hot</span>
+                            </div>
+                            <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                <div class="absolute bottom-3">
+                                   <div class="">
+                                        <a href="#" class="p-4 bg-gray-600 text-white border border-gray-400 p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                            <i class="fas fa-search flex justify-center items-center"></i>
+                                        </a>
+                                        <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                            <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                        </a>
+                                        <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                            <i class="fas fa-random flex justify-center items-center"></i>
+                                        </a>
+                                   </div>
+                                </div>
+                            </div>
+                         </div>
+                         <div class="py-2 border-b border-gray-200">
+                            <i class="far fa-star text-gray-400 text-sm"></i>
+                            <i class="far fa-star text-gray-400 text-sm"></i>
+                            <i class="far fa-star text-gray-400 text-sm"></i>
+                            <i class="far fa-star text-gray-400 text-sm"></i>
+                            <i class="far fa-star text-gray-400 text-sm"></i>
+                            <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">premium joyful</h1>
+                         </div>
+                         <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                    </a>
+                </div>
+                <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                    <a href="single-product-.html" class="">
+                        <div class="relative">
+                            <div class="overflow-hidden">
+                                <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/white-full.png" alt="">
+                                <span class="absolute left-0 top-4 bg-green-600 text-white px-4 font-semibold font-rubic rounded-sm">12%</span>
+                            </div>
+                            <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                <div class="absolute bottom-3">
+                                   <div class="">
+                                        <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                            <i class="fas fa-search flex justify-center items-center"></i>
+                                        </a>
+                                        <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                            <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                        </a>
+                                        <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                            <i class="fas fa-random flex justify-center items-center"></i>
+                                        </a>
+                                   </div>
+                                </div>
+                            </div>
+                         </div>
+                         <div class="py-2 border-b border-gray-200">
+                            <i class="far fa-star text-gray-400 text-sm"></i>
+                            <i class="far fa-star text-gray-400 text-sm"></i>
+                            <i class="far fa-star text-gray-400 text-sm"></i>
+                            <i class="far fa-star text-gray-400 text-sm"></i>
+                            <i class="far fa-star text-gray-400 text-sm"></i>
+                            <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">The white rose</h1>
+                         </div>
+                         <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                    </a>
+                </div>
+                <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                    <a href="single-product-.html" class="">
+                        <div class="relative">
+                            <div class="overflow-hidden">
+                                <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/red-rose.png" alt="">
+                                <span class="absolute left-0 top-4 bg-red-500 text-white px-4 font-semibold font-rubic rounded-sm">Hot</span>
+                            </div>
+                            <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                <div class="absolute bottom-3">
+                                   <div class="">
+                                        <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                            <i class="fas fa-search flex justify-center items-center"></i>
+                                        </a>
+                                        <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                            <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                        </a>
+                                        <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                            <i class="fas fa-random flex justify-center items-center"></i>
+                                        </a>
+                                   </div>
+                                </div>
+                            </div>
+                         </div>
+                         <div class="py-2 border-b border-gray-200">
+                            <i class="far fa-star text-gray-400 text-sm"></i>
+                            <i class="far fa-star text-gray-400 text-sm"></i>
+                            <i class="far fa-star text-gray-400 text-sm"></i>
+                            <i class="far fa-star text-gray-400 text-sm"></i>
+                            <i class="far fa-star text-gray-400 text-sm"></i>
+                            <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">red rose bouqet</h1>
+                         </div>
+                         <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                    </a>
+                </div>
+             </div>
+             <div class="mt-5" >
+                 <button id="prodshowConBtn" class="text-gray-500 focus:outline-none">Show More</button>
+             </div>
+             <div class="pt-10 hidden" id="prodmoreContent">
+                <div class="xl:grid xl:grid-cols-4 xl:grid-rows-1 lg:grid lg:grid-cols-4 lg:grid-rows-1 md:grid md:grid-cols-2 md:grid-rows-2 gap-6">
+                    <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                        <a href="single-product-.html" class="">
+                            <div class="relative">
+                                <div class="overflow-hidden relative">
+                                    <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/home22.png" alt="">
+                                    <span class="absolute left-0 top-4 bg-green-600 text-white px-4 font-semibold font-rubic rounded-sm">10%</span>
+                                </div>
+                                <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                    <div class="absolute bottom-3">
+                                       <div class="">
+                                            <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                <i class="fas fa-search flex justify-center items-center"></i>
+                                            </a>
+                                            <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                            </a>
+                                            <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                <i class="fas fa-random flex justify-center items-center"></i>
+                                            </a>
+                                       </div>
+                                    </div>
+                                </div>
+                             </div>
+                             <div class="py-2 border-b border-gray-200">
+                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">Pink Flowe tree</h1>
+                             </div>
+                             <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                        </a>
+                    </div>
+                     <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                        <a href="single-product-.html" class="">
+                            <div class="relative">
+                                <div class="overflow-hidden relative">
+                                    <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/joy-full.png" alt="">
+                                    <span class="absolute left-0 top-4 bg-red-500 text-white px-4 font-semibold font-rubic rounded-sm">Hot</span>
+                                </div>
+                                <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                    <div class="absolute bottom-3">
+                                       <div class="">
+                                            <a href="#" class="p-4 bg-gray-600 text-white border border-gray-400 p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                <i class="fas fa-search flex justify-center items-center"></i>
+                                            </a>
+                                            <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                            </a>
+                                            <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                <i class="fas fa-random flex justify-center items-center"></i>
+                                            </a>
+                                       </div>
+                                    </div>
+                                </div>
+                             </div>
+                             <div class="py-2 border-b border-gray-200">
+                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">premium joyful</h1>
+                             </div>
+                             <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                        </a>
+                    </div>
+                    <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                        <a href="single-product-.html" class="">
+                            <div class="relative">
+                                <div class="overflow-hidden">
+                                    <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/white-full.png" alt="">
+                                    <span class="absolute left-0 top-4 bg-green-600 text-white px-4 font-semibold font-rubic rounded-sm">12%</span>
+                                </div>
+                                <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                    <div class="absolute bottom-3">
+                                       <div class="">
+                                            <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                <i class="fas fa-search flex justify-center items-center"></i>
+                                            </a>
+                                            <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                            </a>
+                                            <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                <i class="fas fa-random flex justify-center items-center"></i>
+                                            </a>
+                                       </div>
+                                    </div>
+                                </div>
+                             </div>
+                             <div class="py-2 border-b border-gray-200">
+                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">The white rose</h1>
+                             </div>
+                             <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                        </a>
+                    </div>
+                    <div class="group w-full xl:mt-0 lg:mt-0 md:mt-0 mt-7">
+                        <a href="single-product-.html" class="">
+                            <div class="relative">
+                                <div class="overflow-hidden">
+                                    <img class="hover:scale-110 transform transition duration-700 ease-in-out" src="images/red-rose.png" alt="">
+                                    <span class="absolute left-0 top-4 bg-red-500 text-white px-4 font-semibold font-rubic rounded-sm">Hot</span>
+                                </div>
+                                <div class="flex justify-center items-center transform group-hover:-translate-y-6 transition duration-700 ease-in-out opacity-0 group-hover:opacity-100">
+                                    <div class="absolute bottom-3">
+                                       <div class="">
+                                            <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out">
+                                                <i class="fas fa-search flex justify-center items-center"></i>
+                                            </a>
+                                            <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                <i class="fas fa-shopping-bag flex justify-center items-center"></i>
+                                            </a>
+                                            <a href="#" class="p-4 bg-gray-600 text-gray-300 border border-gray-400 hover:bg-red-600 hover:text-white transition duration-300 ease-in-out border-l-0">
+                                                <i class="fas fa-random flex justify-center items-center"></i>
+                                            </a>
+                                       </div>
+                                    </div>
+                                </div>
+                             </div>
+                             <div class="py-2 border-b border-gray-200">
+                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                <i class="far fa-star text-gray-400 text-sm"></i>
+                                <h1 class="uppercase text-gray-700 text-sm font-rubic pt-1">red rose bouqet</h1>
+                             </div>
+                             <p class="text-gray-500 font-semibold pt-2 font-rubic">$18.00</p>
+                        </a>
+                    </div>
+                 </div>
+             </div>
+        </div>
+       </div>
         <div class="container-fluid bg-gray-100 py-20 dark:bg-gray-800 border-t border-gray-100 dark:border-t dark:border-gray-600">
             <div class="container mx-auto">
                 <div class="footer">
@@ -500,6 +1680,64 @@
                 <!-- End of Modal Content-->
             </div>
         </dialog>
+        <script>
+            const ConBtn = document.getElementById("showConBtn");
+            const EleCont = document.getElementById("moreContent");
+            ConBtn.addEventListener('click', function(){
+                EleCont.classList.toggle('hidden');
+            });
+        </script>
+        <script>
+            const saleConBtn = document.getElementById("saleshowConBtn");
+            const saleEleCont = document.getElementById("salemoreContent");
+            saleConBtn.addEventListener('click', function(){
+                saleEleCont.classList.toggle('hidden');
+            });
+        </script>
+        <script>
+            const offConBtn = document.getElementById("offshowConBtn");
+            const offEleCont = document.getElementById("offmoreContent");
+            offConBtn.addEventListener('click', function(){
+                offEleCont.classList.toggle('hidden');
+            });
+        </script>
+          <script>
+            const prodoffConBtn = document.getElementById("prodshowConBtn");
+            const prodoffEleCont = document.getElementById("prodmoreContent");
+            prodoffConBtn.addEventListener('click', function(){
+                prodoffEleCont.classList.toggle('hidden');
+            });
+        </script>
+        <script>
+            let tabsContainer = document.querySelector("#tabs");
+
+                let tabTogglers = tabsContainer.querySelectorAll("a");
+                console.log(tabTogglers);
+
+                tabTogglers.forEach(function(toggler) {
+                toggler.addEventListener("click", function(e) {
+                e.preventDefault();
+
+                let tabName = this.getAttribute("href");
+
+                let tabContents = document.querySelector("#tab-contents");
+
+                for (let i = 0; i < tabContents.children.length; i++) {
+
+                tabTogglers[i].parentElement.classList.remove("border-red-400", "border-b",  "-mb-px", "opacity-100");  tabContents.children[i].classList.remove("hidden");
+                if ("#" + tabContents.children[i].id === tabName) {
+                continue;
+                }
+                tabContents.children[i].classList.add("hidden");
+
+                }
+                e.target.parentElement.classList.add("border-red-400", "border-b-4", "-mb-px", "opacity-100");
+                });
+                });
+
+                document.getElementById("default-tab").click();
+
+        </script>
         <script>
             var cont=0;
         function loopSlider(){
