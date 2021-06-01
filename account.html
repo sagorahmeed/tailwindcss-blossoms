@@ -174,6 +174,12 @@
                                         </a>
                                         <a
                                             class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-800 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline font-rubic"
+                                            href="wishlist.html"
+                                        >
+                                            WishList
+                                        </a>
+                                        <a
+                                            class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark:bg-transparent dark:hover:bg-gray-600 dark:focus:bg-gray-600 dark:focus:text-white dark:hover:text-white dark:text-gray-800 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline font-rubic"
                                             href="register.html"
                                         >
                                             Register
@@ -313,9 +319,122 @@
         </div>
 
        <div class="container-fluid mx-auto mt-44">
-           <div class="container mx-auto">
-               
-           </div>
+        <div class="container mx-auto mt-20">
+            <div class="max-w-xs md:max-w-2xl lg:max-w-screen-xl xl:max-w-screen-xl mx-auto mt-4">
+                <!-- Tabs -->
+                <div class="flex items-center pt-10 pb-5">
+                    <i class="fas fa-user-circle text-gray-700 mb-1"></i>
+                    <p class="text-gray-700 ml-2 font-rubic font-semibold">Profile</p>
+                </div>
+               <div class="xl:flex lg:flex md:flex">
+                  <ul id="tabs" class="xl:w-1/5 lg:w-1/5 md:w-2/5 w-full text-center text-center bg-blue-50 h-screen rounded-lg">
+                    <li class="py-6">
+                        <div class="text-center">
+                            <img class="w-20 h-auto mx-auto rounded-lg" src="images/user.jpeg" alt="">
+                            <h1 class="capitalize text-gray-700 font-rubic pt-3 font-semibold">james nord</h1>
+                            <p class="text-gray-600 text-sm font-rubic">JoulesLabs@gmail.com</p>
+                        </div>
+                    </li>
+                    <li class="flex items-center justify-left px-4 py-3 font-semibold text-gray-500  w-full uppercase"><i class="fas fa-user-circle mb-1 text-blue-500"></i><a id="default-tab"  class="ml-3 text-sm" href="#first">Personal Information</a></li>
+                    <li class="flex items-center justify-left px-4 py-3 font-semibold text-gray-500  w-full uppercase"><i class="fas fa-user-circle text-purple-500"></i><a id="default-tab"  class="ml-3 text-sm" href="#second">Account Information</a></li>
+                  </ul>
+          
+                  <!-- Tab Contents -->
+                  <div class="xl:w-4/5 lg:w-4/5 md:w-3/5 w-full xl:ml-10 lg:ml-8 md:ml-5 ml-0">
+                      <div id="tab-contents">
+                          <div id="first" class="bg-blue-50 px-8 py-10 rounded-lg">
+                              <div class="">
+                                  <h1 class="font-semibold font-xl font-rubic pb-3">Personal Information</h1>
+                                <div class="xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between lg:items-center">
+                                    <input class="dark:bg-gray-800 dark:border-gray-600 border border-gray-300 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 xl:w-3/6 xl:h-12 lg:w-3/6 lg:h-12 w-full h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5 xl:mr-2 lg:mr-2 mr-0" type="text" placeholder="First name">
+                                    <input class="dark:bg-gray-800 dark:border-gray-600 border border-gray-300 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 xl:w-3/6 xl:h-12 lg:w-3/6 lg:h-12 w-full h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5 xl:ml-2 lg:ml-2 ml-0" type="text" placeholder="Last name">
+                                </div>
+                                <div class="mt-7">
+                                    <input class="dark:bg-gray-800 dark:border-gray-600 border border-gray-300 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 w-full h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5" type="text" placeholder="Last name">
+                                </div>
+                                <div class="mt-7 xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between lg:items-center">
+                                    <input class="dark:bg-gray-800 dark:border-gray-600 border border-gray-300 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 xl:w-3/6 lg:w-3/6 w-full h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5 xl:mr-2 lg:mr-2 mr-0" type="text" placeholder="Phone Number">
+                                    
+                                    <select class="xl:w-3/6 lg:w-3/6 w-full text-gray-500 border border-gray-300 h-12 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 xl:ml-2 lg:ml-2 ml-0">
+                                        <option value="">Selct Gender</option>
+                                        <option value="small">Male</option>
+                                        <option value="medium">Femal</option>
+                                        <option value="large">Other</option>
+                                    </select>
+                                </div>
+                                <div class="mt-7 xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between lg:items-center">
+                                    <select class="xl:w-3/6 lg:w-3/6 w-full text-gray-500 border border-gray-300 h-12 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 xl:mr-2 lg:mr-2 mr-0">
+                                        <option value="">Selct Country</option>
+                                        <option value="small">America</option>
+                                        <option value="medium">Dubai</option>
+                                        <option value="large">Canada</option>
+                                    </select>
+                                    
+                                    <select class="xl:w-3/6 lg:w-3/6 w-full text-gray-500 border border-gray-300 h-12 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 xl:ml-2 lg:ml-2 ml-0">
+                                        <option value="">Selct City</option>
+                                        <option value="small">Damang</option>
+                                        <option value="medium">Ispiano</option>
+                                        <option value="large">Miliopans</option>
+                                    </select>
+                                </div>
+                                <div class="mt-7 xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between lg:items-center">
+                                    <input class="dark:bg-gray-800 dark:border-gray-600 border border-gray-300 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 xl:w-3/6 xl:h-12 lg:w-3/6 lg:h-12 w-full h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5 xl:mr-2 lg:mr-2 mr-0" type="text" placeholder="Street">
+                                    <input class="dark:bg-gray-800 dark:border-gray-600 border border-gray-300 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 xl:w-3/6 xl:h-12 lg:w-3/6 lg:h-12 w-full h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5 xl:ml-2 lg:ml-2 ml-0" type="text" placeholder="Portal Code">
+                                </div>
+                                <div class="mt-7 flex justify-end items-center">
+                                    <a href="#" class="bg-yellow-300 text-white w-32 py-3 rounded-lg text-center hover:bg-yellow-400 transition duration-300 ease-in-out">Save</a>
+                                </div>
+                              </div>
+                          </div>
+                          <div id="second" class="bg-blue-50 px-8 py-10 rounded-lg">
+                            <div class="">
+                                <h1 class="font-semibold font-xl font-rubic pb-3">Account Information</h1>
+                              <div class="xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between lg:items-center">
+                                  <input class="dark:bg-gray-800 dark:border-gray-600 border border-gray-300 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 xl:w-3/6 xl:h-12 lg:w-3/6 lg:h-12 w-full h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5 xl:mr-2 lg:mr-2 mr-0" type="text" placeholder="First name">
+                                  <input class="dark:bg-gray-800 dark:border-gray-600 border border-gray-300 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 xl:w-3/6 xl:h-12 lg:w-3/6 lg:h-12 w-full h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5 xl:ml-2 lg:ml-2 ml-0" type="text" placeholder="Last name">
+                              </div>
+                              <div class="mt-7">
+                                  <input class="dark:bg-gray-800 dark:border-gray-600 border border-gray-300 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 w-full h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5" type="text" placeholder="Last name">
+                              </div>
+                              <div class="mt-7 xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between lg:items-center">
+                                  <input class="dark:bg-gray-800 dark:border-gray-600 border border-gray-300 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 xl:w-3/6 lg:w-3/6 w-full h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5 xl:mr-2 lg:mr-2 mr-0" type="text" placeholder="Phone Number">
+                                  
+                                  <select class="xl:w-3/6 lg:w-3/6 w-full text-gray-500 border border-gray-300 h-12 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 xl:ml-2 lg:ml-2 ml-0">
+                                      <option value="">Selct Gender</option>
+                                      <option value="small">Male</option>
+                                      <option value="medium">Femal</option>
+                                      <option value="large">Other</option>
+                                  </select>
+                              </div>
+                              <div class="mt-7 xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between lg:items-center">
+                                  <select class="xl:w-3/6 lg:w-3/6 w-full text-gray-500 border border-gray-300 h-12 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 xl:mr-2 lg:mr-2 mr-0">
+                                      <option value="">Selct Country</option>
+                                      <option value="small">America</option>
+                                      <option value="medium">Dubai</option>
+                                      <option value="large">Canada</option>
+                                  </select>
+                                  
+                                  <select class="xl:w-3/6 lg:w-3/6 w-full text-gray-500 border border-gray-300 h-12 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 xl:ml-2 lg:ml-2 ml-0">
+                                      <option value="">Selct City</option>
+                                      <option value="small">Damang</option>
+                                      <option value="medium">Ispiano</option>
+                                      <option value="large">Miliopans</option>
+                                  </select>
+                              </div>
+                              <div class="mt-7 xl:flex xl:justify-between xl:items-center lg:flex lg:justify-between lg:items-center">
+                                  <input class="dark:bg-gray-800 dark:border-gray-600 border border-gray-300 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 xl:w-3/6 xl:h-12 lg:w-3/6 lg:h-12 w-full h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5 xl:mr-2 lg:mr-2 mr-0" type="text" placeholder="Street">
+                                  <input class="dark:bg-gray-800 dark:border-gray-600 border border-gray-300 py-2 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 xl:w-3/6 xl:h-12 lg:w-3/6 lg:h-12 w-full h-12 xl:mb-0 lg:mb-0 md:mb-5 mb-5 xl:ml-2 lg:ml-2 ml-0" type="text" placeholder="Portal Code">
+                              </div>
+                              <div class="mt-7 flex justify-end items-center">
+                                  <a href="#" class="bg-yellow-300 text-white w-32 py-3 rounded-lg text-center hover:bg-yellow-400 transition duration-300 ease-in-out">Save</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                  </div>
+               </div>
+              </div>
+        </div>
        </div>
 
         <div class="container-fluid bg-gray-100 py-20 mt-20 dark:bg-gray-800 border-t border-gray-100 dark:border-t dark:border-gray-600">
@@ -390,7 +509,7 @@
                                         <a href="#" class="footer-info-link">Order History</a>
                                     </li>
                                     <li class="">
-                                        <a href="#" class="footer-info-link">WishList</a>
+                                        <a href="wishlist.html" class="footer-info-link">WishList</a>
                                     </li>
                                     <li class="">
                                         <a href="#" class="footer-info-link">News Letter</a>
@@ -462,6 +581,37 @@
                 <!-- End of Modal Content-->
             </div>
         </dialog>
+        
+        <script>
+            let tabsContainer = document.querySelector("#tabs");
+
+                let tabTogglers = tabsContainer.querySelectorAll("a");
+                console.log(tabTogglers);
+
+                tabTogglers.forEach(function(toggler) {
+                toggler.addEventListener("click", function(e) {
+                e.preventDefault();
+
+                let tabName = this.getAttribute("href");
+
+                let tabContents = document.querySelector("#tab-contents");
+
+                for (let i = 0; i < tabContents.children.length; i++) {
+
+                tabTogglers[i].parentElement.classList.remove("opacity-100", "bg-white");  tabContents.children[i].classList.remove("hidden");
+                if ("#" + tabContents.children[i].id === tabName) {
+                continue;
+                }
+                tabContents.children[i].classList.add("hidden");
+
+                }
+                e.target.parentElement.classList.add("-mb-px", "opacity-100", "bg-white");
+                });
+                });
+
+                document.getElementById("default-tab").click();
+
+        </script>
         <script>
             const checkbox = document.querySelector("#toggle");
             const html = document.querySelector("html");
@@ -535,36 +685,6 @@
                     },
                 };
             }
-        </script>
-          <script>
-            let tabsContainer = document.querySelector("#tabs");
-
-                let tabTogglers = tabsContainer.querySelectorAll("a");
-                console.log(tabTogglers);
-
-                tabTogglers.forEach(function(toggler) {
-                toggler.addEventListener("click", function(e) {
-                e.preventDefault();
-
-                let tabName = this.getAttribute("href");
-
-                let tabContents = document.querySelector("#tab-contents");
-
-                for (let i = 0; i < tabContents.children.length; i++) {
-
-                tabTogglers[i].parentElement.classList.remove("opacity-100", "bg-pink-600");  tabContents.children[i].classList.remove("hidden");
-                if ("#" + tabContents.children[i].id === tabName) {
-                continue;
-                }
-                tabContents.children[i].classList.add("hidden");
-
-                }
-                e.target.parentElement.classList.add("-mb-px", "opacity-100", "bg-pink-600");
-                });
-                });
-
-                document.getElementById("default-tab").click();
-
         </script>
     </body>
 </html>
