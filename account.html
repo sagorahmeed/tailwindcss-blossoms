@@ -327,7 +327,7 @@
                     <p class="text-gray-700 ml-2 font-rubic font-semibold">Profile</p>
                 </div>
                <div class="xl:flex lg:flex md:flex">
-                  <ul id="tabs" class="xl:w-1/5 lg:w-1/5 md:w-2/5 w-full text-center text-center bg-blue-50 h-screen rounded-lg">
+                  <ul id="tabs" class="xl:w-1/4 lg:w-1/4 md:w-2/4 w-full text-center text-center bg-blue-50 h-auto rounded-lg xl:mb-0 lg:mb-0 md:mb-0 mb-20 xl:pb-0 lg:pb-0 md:pb-0 pb-44">
                     <li class="py-6">
                         <div class="text-center">
                             <img class="w-20 h-auto mx-auto rounded-lg" src="images/user.jpeg" alt="">
@@ -340,7 +340,7 @@
                   </ul>
           
                   <!-- Tab Contents -->
-                  <div class="xl:w-4/5 lg:w-4/5 md:w-3/5 w-full xl:ml-10 lg:ml-8 md:ml-5 ml-0">
+                  <div class="xl:w-3/4 lg:w-3/4 md:w-2/4 w-full xl:ml-10 lg:ml-8 md:ml-5 ml-0">
                       <div id="tab-contents">
                           <div id="first" class="bg-blue-50 px-8 py-10 rounded-lg">
                               <div class="">
@@ -370,7 +370,7 @@
                                         <option value="large">Canada</option>
                                     </select>
                                     
-                                    <select class="xl:w-3/6 lg:w-3/6 w-full text-gray-500 border border-gray-300 h-12 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 xl:ml-2 lg:ml-2 ml-0">
+                                    <select class="xl:w-3/6 lg:w-3/6 w-full text-gray-500 border border-gray-300 h-12 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 xl:ml-2 lg:ml-2 ml-0 xl:mt-0 lg:mt-0 mt-7">
                                         <option value="">Selct City</option>
                                         <option value="small">Damang</option>
                                         <option value="medium">Ispiano</option>
@@ -414,7 +414,7 @@
                                       <option value="large">Canada</option>
                                   </select>
                                   
-                                  <select class="xl:w-3/6 lg:w-3/6 w-full text-gray-500 border border-gray-300 h-12 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 xl:ml-2 lg:ml-2 ml-0">
+                                  <select class="xl:w-3/6 lg:w-3/6 w-full text-gray-500 border border-gray-300 h-12 rounded-lg shadow-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 xl:ml-2 lg:ml-2 ml-0 xl:mt-0 lg:mt-0 mt-7">
                                       <option value="">Selct City</option>
                                       <option value="small">Damang</option>
                                       <option value="medium">Ispiano</option>
@@ -598,14 +598,14 @@
 
                 for (let i = 0; i < tabContents.children.length; i++) {
 
-                tabTogglers[i].parentElement.classList.remove("opacity-100", "bg-white");  tabContents.children[i].classList.remove("hidden");
+                tabTogglers[i].parentElement.classList.remove("opacity-100", "bg-white","border-r-4", "border-yellow-300");  tabContents.children[i].classList.remove("hidden");
                 if ("#" + tabContents.children[i].id === tabName) {
                 continue;
                 }
                 tabContents.children[i].classList.add("hidden");
 
                 }
-                e.target.parentElement.classList.add("-mb-px", "opacity-100", "bg-white");
+                e.target.parentElement.classList.add("-mb-px", "opacity-100", "bg-white", "border-r-4", "border-yellow-300");
                 });
                 });
 
